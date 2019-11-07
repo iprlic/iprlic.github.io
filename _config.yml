@@ -16,11 +16,13 @@
 title: Ivan Prlić - Software Engineer
 email: ivan@prlic.io
 description: >- # this means to ignore newlines until "baseurl:"
-  Personal site of Ivan Prlić
+  My personal site
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://prlic.io" # the base hostname & protocol for your site, e.g. http://example.com
+linkedin_username: iprlic
 twitter_username: ivan_prlic
 github_username:  iprlic
+
 
 social:
   name: Ivan Prlić

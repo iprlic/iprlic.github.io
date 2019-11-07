@@ -10,4 +10,8 @@
 <url>
 <loc>http://localhost:4000/</loc>
 </url>
+<url>
+<loc>http://localhost:4000/roo-exchange/</loc>
+<lastmod>2019-08-21T12:51:40+02:00</lastmod>
+</url>
 </urlset>
