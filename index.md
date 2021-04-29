@@ -3,8 +3,7 @@ layout: home
 header:
   title: DevOps & Cloud Architecture
   text: >
-    Start Bootstrap can help you build better websites using the Bootstrap
-    framework! Just download a theme and start customizing, no strings attached!
+   All the help you need in your DevOps and Сloud transformation
   action: # action button is optional
     label: Find Out More
     url: '#about'
@@ -26,25 +25,24 @@ sections:
     #background_style: bg-info
     title: At Your Service
     services:
-      - title: Sturdy Templates
+      - title: DevOps as a Service
         text: Our templates are updated regularly so they don't break.
-        icon: fa-gem text-info
-        url: https://startbootstrap.com/
-      - title: Ready to Ship
+        icon: fa-users
+      - title: DevOps & Cloud Consulting
         text: You can use this theme as is, or you can make changes!
-        icon: fa-paper-plane
-      - title: Up to Date
+        icon: fa-cogs
+      - title: Cloud Training
         text: We update dependencies to keep things fresh.
-        icon: fa-laptop-code
-      - title: Made with Love
+        icon: fa-rocket
+      - title: Cloud Migration Services
         text: You have to make your websites with love these days!
-        icon: fa-heart
-      - title: Other 1
+        icon: fa-cloud-upload-alt
+      - title: Serverless architecture design
         text: Some not-so long text here.
-        icon: fa-heart
-      - title: Other 2
+        icon: fa-code
+      - title: Continuous integration and deployment (CI/CD)
         text: Some not-so long text here.
-        icon: fa-heart
+        icon: fa-infinity
 
   - type: portfolio.html
     # this section has always ID 'portfolio'
@@ -92,30 +90,11 @@ sections:
     title: Our Crew!
     background_style: bg-info text-white
     members:
-      - title: Christina M. Aponte
-        text: Singer and Songwriter
-        image: assets/img/members/person1.jpg
+      - title: Ivan Prlić
+        text: Cloud Architect & DevOps Consultant
+        image: assets/img/members/headshot_zoomed.jpg
         url: '#'
-      - title: Gary D. Stevens
-        text: Bass guitar.
-        image: assets/img/members/person2.jpg
-        url: '#'
-      - title: Devon J. Fletcher
-        text: Lead guitar.
-        image: assets/img/members/person3.jpg
-        url: '#'
-      - title: Todd E. Anderson
-        text: Drums, percussion.
-        image: assets/img/members/person5.jpg
-        url: '#'
-      - title: Daniel T. Riley
-        text: Musician, songwriter, producer.
-        image: assets/img/members/person6.jpg
-        url: '#'
-      - title: Ella P. Walter
-        text: PR.
-        image: assets/img/members/person7.jpg
-        url: '#'
+
 
   - type: timeline.html
     section_id: timeline
@@ -149,7 +128,7 @@ sections:
       icon: fa-phone
     - title: E-Mail
       icon: fa-envelope
-      url: mailto:contact@yourwebsite.com
+      url: mailto:info@prlic.io
     - title: Twitter
       icon: fa-twitter
       icon_type: fab
