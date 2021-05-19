@@ -44,46 +44,46 @@ sections:
         text: Some not-so long text here.
         icon: fa-infinity
 
-  - type: portfolio.html
-    # this section has always ID 'portfolio'
-    #section_id: portfolio
-    #background_style: bg-dark
-    projects:
-      - title: DevOps & Infrastructure Consulting
-        text: We know Amazon Web Services and Google Cloud Platform inside out. We have a pulse on the best tools to come out of the open source world. Let's work together to upgrade your existing infrastructure to increase reliability, optimize for developer joy, and reduce your cloud costs
-        # the images are located in:
-        # img/portfolio/fullsize
-        # img/portfolio/thumbnails
-        icon: 1.jpg
-        url: '#'
-      - title: Technical Project Management
-        text: This is a very short project description.
-        icon: 2.jpg
-        url: '#'
-      - title: DevOps as a Service
-        text: This is a very short project description.
-        icon: 3.jpg
-        url: '#'
-      - title: Cloud Training
-        text: This is a very short project description.
-        icon: 4.jpg
-        url: '#'
-      - title: Cloud Architecture
-        text: This is a very short project description.
-        icon: 5.jpg
-        url: '#'
-      - title: Project 6
-        text: This is a very short project description.
-        icon: 6.jpg
-        url: '#'
+#  - type: portfolio.html
+#    # this section has always ID 'portfolio'
+#    #section_id: portfolio
+#    #background_style: bg-dark
+#    projects:
+#      - title: DevOps & Infrastructure Consulting
+#        text: We know Amazon Web Services and Google Cloud Platform inside out. We have a pulse on the best tools #to come out of the open source world. Let's work together to upgrade your existing infrastructure to #increase reliability, optimize for developer joy, and reduce your cloud costs
+#        # the images are located in:
+#        # img/portfolio/fullsize
+#        # img/portfolio/thumbnails
+#        icon: 1.jpg
+#        url: '#'
+#      - title: Technical Project Management
+#        text: This is a very short project description.
+#        icon: 2.jpg
+#        url: '#'
+#      - title: DevOps as a Service
+#        text: This is a very short project description.
+#        icon: 3.jpg
+#        url: '#'
+#      - title: Cloud Training
+#        text: This is a very short project description.
+#        icon: 4.jpg
+#        url: '#'
+#      - title: Cloud Architecture
+#        text: This is a very short project description.
+#        icon: 5.jpg
+#        url: '#'
+#      - title: Project 6
+#        text: This is a very short project description.
+#        icon: 6.jpg
+#        url: '#'
 
-  - type: aside.html
-    section_id: aside
-    title: Free Download at Start Bootstrap!
-    actions:
-      - title: Download Now!
-        url: https://startbootstrap.com/themes/creative/
-        class: btn-light
+#  - type: aside.html
+#    section_id: aside
+#    title: Free Download at Start Bootstrap!
+#    actions:
+#      - title: Download Now!
+#        url: https://startbootstrap.com/themes/creative/
+#        class: btn-light
 
   - type: members.html
     section_id: members
@@ -96,26 +96,26 @@ sections:
         url: '#'
 
 
-  - type: timeline.html
-    section_id: timeline
-    title: Major Achievements!
-    background_style: bg-dark text-primary
-    last_image: assets/img/timeline-end.png
-    actions:
-      - image: assets/img/portfolio/thumbnails/1.jpg
-        title: >+
-          2017-2018
-          **Humble Beginnings**
-        text: >-
-          We begun with small group of people willing to work hard and make our
-          teaching skills worth , in front of all others!
-      - image: assets/img/portfolio/thumbnails/2.jpg
-        title: >+
-          November 2019
-          An Coaching started
-        text: >-
-          We started to gather like minded people and started our stategies
-          and future plans to them. As a result , interested people joined us!
+#  - type: timeline.html
+#    section_id: timeline
+#    title: Major Achievements!
+#    background_style: bg-dark text-primary
+#    last_image: assets/img/timeline-end.png
+#    actions:
+#      - image: assets/img/portfolio/thumbnails/1.jpg
+#        title: >+
+#          2017-2018
+#          **Humble Beginnings**
+#        text: >-
+#          We begun with small group of people willing to work hard and make our
+#          teaching skills worth , in front of all others!
+#      - image: assets/img/portfolio/thumbnails/2.jpg
+#        title: >+
+#          November 2019
+#          An Coaching started
+#        text: >-
+#          We started to gather like minded people and started our stategies
+#          and future plans to them. As a result , interested people joined us!
 
   - type: contact.html
     section_id: contacts
@@ -124,18 +124,14 @@ sections:
       Ready to start your next project with us? Give us a call or send us an email
       and we will get back to you as soon as possible!
     actions:
-    - title: +1 (202) 555-014
-      icon: fa-phone
+    - title: GitHub
+      icon: fa-github
+      url: https://github.com/iprlic
     - title: E-Mail
       icon: fa-envelope
       url: mailto:info@prlic.io
-    - title: Twitter
-      icon: fa-twitter
+    - title: Linkedin
+      icon: fa-linkedin
       icon_type: fab
-      url: '#'
-    - title: Facebook
-      icon: fa-facebook
-      icon_type: fab
-      url: '#'
-
+      url: https://www.linkedin.com/in/iprlic/
 ---
