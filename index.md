@@ -14,10 +14,10 @@ sections:
     section_id: about
     background_style: bg-primary
     title: We've got what you need!
-    text: Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!
+    text: Whether you’re looking to migrate, modernize or innovate we’ll help you harness the power of the cloud.
     actions:
       - title: Get Started!
-        url: '#page-top'
+        url: '#services'
         class: btn-light
 
   - type: services.html
@@ -26,23 +26,26 @@ sections:
     title: At Your Service
     services:
       - title: DevOps as a Service
-        text: Our templates are updated regularly so they don't break.
+        text: Get your AWS, GCP or Azure infrastructure defined as code. Automate your infrastructure provisioning. No internal capabilities required. We take care of your DevOps engineering needs. 
         icon: fa-users
       - title: DevOps & Cloud Consulting
-        text: You can use this theme as is, or you can make changes!
+        text: Unsure on how to set up your CI/CD pipelines? Can't tell if SQS or SNS is the right service for your architecture? Let us help you in making the right decision.
         icon: fa-cogs
       - title: Cloud Training
-        text: We update dependencies to keep things fresh.
+        text: We offer DevOps engineering, IaaC, Cloud Architecture training to help you empower your team and help them achive Cloud expertize they need to build your product.
         icon: fa-rocket
       - title: Cloud Migration Services
-        text: You have to make your websites with love these days!
+        text: Considering migration from on premises to AWS, from AWS to GCP or even from a cloud provider back to on premises? We've done this multiple times and can help you minimize the risks, reduce the costs and achive your goals in a timely manner.
         icon: fa-cloud-upload-alt
-      - title: Serverless architecture design
-        text: Some not-so long text here.
+      - title: Serverless Arhitecture Design
+        text: Your serveless functions are getting hard to manage and deploy? We have vast experience in managing serverless systems using either serverless.com or AWS SAM.
         icon: fa-code
       - title: Continuous integration and deployment (CI/CD)
-        text: Some not-so long text here.
+        text: Need help setting up your CI/CD pipelines? We can help you wheather you're using Jenkins, GitLab Pipelines, Azure DevOps, Spinnaker, GitHub Actions, Drone...
         icon: fa-infinity
+      - title: Technical Project Management
+        text: We are knowledgeable on both engineering and delivery best practices, utilize the most effective processes and tools to build high performing teams. Let us help you create the best team you can.
+        icon: fa-chart-area
 
 #  - type: portfolio.html
 #    # this section has always ID 'portfolio'
@@ -121,15 +124,19 @@ sections:
     section_id: contacts
     title: Let's Get In Touch!
     text: >-
-      Ready to start your next project with us? Give us a call or send us an email
+      Ready to start your next project with us? Send us an email
       and we will get back to you as soon as possible!
     actions:
-    - title: GitHub
-      icon: fa-github
-      url: https://github.com/iprlic
     - title: E-Mail
       icon: fa-envelope
-      url: mailto:info@prlic.io
+      url: mailto:info@prlic.io?subject=Initial contact
+    #- title: Phone
+    #  icon: fa-phone
+    #  url: tel:+385 91 38 333 38
+    - title: GitHub
+      icon: fa-github
+      icon_type: fab
+      url: https://github.com/iprlic
     - title: Linkedin
       icon: fa-linkedin
       icon_type: fab

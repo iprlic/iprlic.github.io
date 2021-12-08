@@ -13,16 +13,18 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Prlić Consulting d.o.o.
+title: Prlić Consulting d.o.o
 email: ivan@prlic.io
 description: >- # this means to ignore newlines until "baseurl:"
-  My personal site
+  DevOps Consulting & Cloud Architecture
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://prlic.io" # the base hostname & protocol for your site, e.g. http://example.com
 linkedin_username: iprlic
 twitter_username: ivan_prlic
 github_username:  iprlic
-
+author: Copyright &copy; 2021 - Prlić Consulting d.o.o.
+recaptcha_key: 6LdR7T0dAAAAAETUVUtZu4vx1j8Vg3GSpN-kBc_c
+form_post_url: https://61b09d9e3c954f001722a505.mockapi.io/form
 
 social:
   name: Ivan Prlić
