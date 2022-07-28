@@ -94,7 +94,7 @@ sections:
     background_style: bg-info text-white
     members:
       - title: Ivan Prlić
-        text: Cloud Architect & DevOps Consultant
+        text: Founder & CEO
         image: assets/img/members/headshot_zoomed.jpg
         url: '#'
 
@@ -133,12 +133,12 @@ sections:
     #- title: Phone
     #  icon: fa-phone
     #  url: tel:+385 91 38 333 38
-    - title: GitHub
-      icon: fa-github
-      icon_type: fab
-      url: https://github.com/iprlic
-    - title: Linkedin
-      icon: fa-linkedin
-      icon_type: fab
-      url: https://www.linkedin.com/in/iprlic/
+    #- title: GitHub
+      #icon: fa-github
+      #icon_type: fab
+      #url: https://github.com/iprlic
+    #- title: Linkedin
+      #icon: fa-linkedin
+      #icon_type: fab
+      #url: https://www.linkedin.com/in/iprlic/
 ---
