@@ -95,7 +95,7 @@ sections:
     members:
       - title: Ivan Prlić
         text: Founder & CEO
-        image: assets/img/members/headshot_zoomed.jpg
+        image: assets/img/members/headshot_zoomed.webp
         url: '#'
 
 
