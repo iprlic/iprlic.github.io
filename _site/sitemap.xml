@@ -1,21 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://prlic.io/jekyll/2019/08/21/first-post.html</loc>
-<lastmod>2019-08-21T00:00:00+02:00</lastmod>
-</url>
-<url>
-<loc>https://prlic.io/ruby/algorithms/2019/12/04/advent-of-code.html</loc>
-<lastmod>2019-12-04T00:00:00+01:00</lastmod>
-</url>
-<url>
-<loc>https://prlic.io/about/</loc>
-</url>
-<url>
-<loc>https://prlic.io/</loc>
-</url>
-<url>
-<loc>https://prlic.io/roo-exchange/</loc>
-<lastmod>2022-07-28T12:41:39+02:00</lastmod>
+<loc>http://localhost:4000/</loc>
 </url>
 </urlset>
