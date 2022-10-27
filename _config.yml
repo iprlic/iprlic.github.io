@@ -22,7 +22,7 @@ url: "https://prlic.io" # the base hostname & protocol for your site, e.g. http:
 #linkedin_username: iprlic
 #twitter_username: ivan_prlic
 #github_username:  iprlic
-author: Copyright &copy; 2021 - Prlić Consulting d.o.o.
+author: Copyright &copy; 2022 - Prlić Consulting d.o.o.
 recaptcha_key: 6LdR7T0dAAAAAETUVUtZu4vx1j8Vg3GSpN-kBc_c
 form_post_url: https://europe-central2-prc-web-354213.cloudfunctions.net/send-email
 

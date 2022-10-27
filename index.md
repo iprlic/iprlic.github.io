@@ -88,15 +88,15 @@ sections:
 #        url: https://startbootstrap.com/themes/creative/
 #        class: btn-light
 
-  - type: members.html
-    section_id: members
-    title: Our Crew!
-    background_style: bg-info text-white
-    members:
-      - title: Ivan Prlić
-        text: Founder & CEO
-        image: assets/img/members/headshot_zoomed.webp
-        url: '#'
+#  - type: members.html
+#    section_id: members
+#    title: Our Crew!
+#    background_style: bg-info text-white
+#    members:
+#      - title: Ivan Prlić
+#        text: Founder & CEO
+#        image: assets/img/members/headshot_zoomed.webp
+#        url: '#'
 
 
 #  - type: timeline.html
