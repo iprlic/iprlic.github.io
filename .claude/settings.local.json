@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -v \"^\\\\./$\")",
+      "Bash(git:*)",
+      "Bash(bundle exec:*)",
+      "Read(//Users/ip/**)",
+      "Read(//usr/local/**)",
+      "Read(//Users/ip/.bundle/**)",
+      "Bash(curl -sI \"https://logo.clearbit.com/volvocars.com\")",
+      "Bash(curl:*)",
+      "Bash(pkill -f \"jekyll serve\")",
+      "WebFetch(domain:www.credly.com)",
+      "WebSearch",
+      "Bash(python3 -m json.tool)",
+      "Bash(convert --version)",
+      "Bash(rsvg-convert -w 1200 -h 630 /tmp/og-image.svg -o /Users/ip/Projects/Personal/iprlic.github.io/assets/img/og-image.png)",
+      "Bash(rsvg-convert -w 32 -h 32 /Users/ip/Projects/Personal/iprlic.github.io/assets/img/favicon.svg -o /Users/ip/Projects/Personal/iprlic.github.io/assets/img/favicon.png)",
+      "Bash(/Users/ip/Projects/Personal/iprlic.github.io/404.html:*)"
+    ]
+  }
+}

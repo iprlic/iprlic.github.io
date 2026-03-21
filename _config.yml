@@ -13,16 +13,18 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Prlić Consulting d.o.o
+title: Ivan Prlić | Solutions Architect & AI Consultant
+nav_title: Prlić Consulting d.o.o.
 email: ivan@prlic.io
-description: >- # this means to ignore newlines until "baseurl:"
-  DevOps Consulting & Cloud Architecture
+description: >-
+  Ivan Prlić — Solutions Architect and AI & DevOps Consultant. 20+ years experience helping enterprises build and modernize cloud systems on AWS, GCP, and Azure. AWS Authorized Instructor. 14 professional certifications.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://prlic.io" # the base hostname & protocol for your site, e.g. http://example.com
 #linkedin_username: iprlic
 #twitter_username: ivan_prlic
 #github_username:  iprlic
-author: Copyright &copy; 2022 - Prlić Consulting d.o.o.
+author: Ivan Prlić
+image: /assets/img/og-image.png
 recaptcha_key: 6LdR7T0dAAAAAETUVUtZu4vx1j8Vg3GSpN-kBc_c
 form_post_url: https://europe-central2-prc-web-354213.cloudfunctions.net/send-email
 

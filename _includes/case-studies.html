@@ -1,0 +1,22 @@
+<section id="{{ section.section_id }}" class="page-section {{ section.background_style }}">
+  <div class="container">
+    <h2 class="text-center mt-0">{{ section.title }}</h2>
+    <hr class="divider my-4">
+    <div class="row mt-4">
+      {% for study in section.studies %}
+      <div class="col-lg-6 mb-4 d-flex">
+        <div class="case-study-card p-4 w-100">
+          <div class="case-study-tag mb-2">{{ study.tag }}</div>
+          <h3 class="case-study-title">{{ study.title }}</h3>
+          <p class="case-study-body">{{ study.body }}</p>
+          <div class="case-study-outcomes">
+            {% for outcome in study.outcomes %}
+            <span class="case-study-outcome">{{ outcome }}</span>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

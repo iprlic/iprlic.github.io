@@ -1,0 +1,9 @@
+header:
+  - title: Services
+    url: "#services"
+  - title: Work
+    url: "#work"
+  - title: Certifications
+    url: "#certifications"
+  - title: Contact
+    url: "#contacts"

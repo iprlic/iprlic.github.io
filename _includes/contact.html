@@ -1,0 +1,20 @@
+<section id="{{ section.section_id }}" class="contact-section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-7 text-center">
+        <h2 class="contact-title">{{ section.title }}</h2>
+        <hr class="divider light mt-3 mb-4" style="margin-left:auto;margin-right:auto;">
+        <p class="contact-text">{{ section.text }}</p>
+        <div class="contact-actions">
+          {% for action in section.actions %}
+          {% assign fa = action.icon_type | default: "fas" %}
+          <a href="{{ action.url }}" class="contact-btn">
+            <i class="{{ fa }} {{ action.icon }}"></i>
+            {{ action.title }}
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

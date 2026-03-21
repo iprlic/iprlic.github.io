@@ -1,0 +1,21 @@
+<section class="page-section {{ section.background_style }}" id="{{ section.section_id }}">
+  <div class="container">
+    <h2 class="text-center mt-0">{{ section.title }}</h2>
+    <hr class="divider my-4">
+    <div class="row justify-content-center mt-3">
+      {% for service in section.services %}
+      <div class="col-lg-3 col-md-6 mb-4 d-flex">
+        <div class="service-card text-center p-4 w-100">
+          <div class="service-icon-wrap mx-auto mb-3">
+            <i class="fas {{ service.icon }} text-primary"></i>
+          </div>
+          <h3 class="h5 mb-3">{{ service.title }}</h3>
+          <div class="text-muted">
+            {{ service.text | markdownify }}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
