@@ -81,6 +81,12 @@ a:hover        { color: #1d4ed8; }
   border-radius: 6px !important;
 }
 
+@media (max-width: 991px) {
+  #mainNav .navbar-nav .nav-item:last-child {
+    margin-top: 0.5rem;
+  }
+}
+
 /* ── Hero ──────────────────────────────────────────────── */
 header.masthead {
   background-image: none !important;

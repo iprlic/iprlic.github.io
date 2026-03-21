@@ -4,8 +4,8 @@ header:
   title: Ivan Prlić
   subtitle: Solutions Architect · AI & DevOps Consultant · Fractional CTO
   text: >
-    I help engineering teams design, build, and modernize cloud systems
-    and integrate AI where it actually makes a difference.
+    I help engineering teams design, build, and modernize cloud systems —
+    and integrate AI that ships to production.
   action:
     label: See My Work
     url: '#work'
@@ -51,10 +51,10 @@ sections:
         icon: fa-brain
       - title: Cloud Architecture
         text: >-
-          Architecture design across AWS, GCP, and Azure. Serverless, microservices, Kubernetes (EKS, GKE),
-          event-driven systems with Kafka and SQS/SNS, and API management with ApiGee and WSO2.
-          I apply Domain-Driven Design to break down legacy systems into maintainable, scalable platforms.
-          Clients include Volvo USA, Ricoh, TUI Group, Hospitality Digital (Metro GmbH), and the European Commission.
+          Architecture design across AWS, GCP, and Azure — serverless, microservices, Kubernetes (EKS, GKE),
+          event-driven systems with Kafka and SQS/SNS, and API management with Apigee and WSO2.
+          I apply Domain-Driven Design to decompose legacy monoliths into maintainable, independently
+          deployable services. Delivered for enterprises in automotive, travel, retail, and public sector.
         icon: fa-cloud
       - title: Cloud Migration
         text: >-
@@ -95,7 +95,7 @@ sections:
           I work with founders and leadership teams to set technical direction, make architecture decisions,
           evaluate build vs. buy trade-offs, and structure engineering teams for growth. Available for
           ongoing retainers and critical project phases.
-        icon: fa-chess-king
+        icon: fa-user-tie
 
   - type: case-studies.html
     section_id: work
@@ -110,9 +110,9 @@ sections:
           Designed a fully serverless architecture on AWS using API Gateway, Lambda, the Serverless
           Framework, and Kafka for event streaming. The startup was subsequently acquired by Carbon Health.
         outcomes:
-          - Infrastructure costs reduced
-          - Faster time to market
-          - Reliability improved
+          - Pay-per-request model eliminated idle infrastructure costs
+          - Shipped to production in weeks, not months
+          - Auto-scaling handled unpredictable clinical load without intervention
       - tag: Legal Tech · AWS · Generative AI
         title: LLM-Powered Legal Document Search
         body: >-
@@ -122,19 +122,19 @@ sections:
           sourced answers rather than raw search results, all within a private AWS environment.
         outcomes:
           - Search time reduced from hours to seconds
-          - No data leaves the private environment
-          - Reliability improved
+          - All data stays within the client's private AWS environment
+          - Answers are sourced and referenced, not hallucinated
       - tag: Travel · AWS · DevOps
         title: Cloud Native Platform for a Global Travel Group
         body: >-
           One of the world's largest travel companies needed a complete cloud native infrastructure
           foundation built from scratch, production-ready and observable from day one. Delivered
           the full stack on AWS — ECS, DynamoDB, Lambda, SNS/SQS, ALB, and CloudFront — with
-          Terraform for IaC, GitLab CI/CD, ApiGee for API management, and Datadog for monitoring.
+          Terraform for IaC, GitLab CI/CD, Apigee for API management, and Datadog for monitoring.
         outcomes:
-          - Infrastructure costs reduced
-          - Deployment time reduced
-          - Full observability from day one
+          - Full observability and alerting live from day one
+          - Infrastructure fully reproducible via Terraform — no manual state
+          - Multi-environment CI/CD pipelines replaced manual deployments
       - tag: Retail · AWS · Kubernetes
         title: E-Commerce Platform Migration to Kubernetes
         body: >-
@@ -143,9 +143,9 @@ sections:
           for deployments, RDS for the database layer, and S3 for storage. The team went from
           manual, error-prone deployments to a fully repeatable, environment-consistent process.
         outcomes:
-          - Infrastructure costs reduced
-          - Deployment time reduced
-          - Reliability improved
+          - Removed dependency on fixed-capacity servers, scaling is now automatic
+          - Deployments became fully repeatable across all environments
+          - Eliminated class of production incidents caused by manual release steps
 
   - type: certifications.html
     section_id: certifications

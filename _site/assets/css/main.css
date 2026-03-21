@@ -34,6 +34,8 @@ a:hover { color: #1d4ed8; }
 
 .nav-cta { font-size: 0.8rem !important; font-weight: 600 !important; padding: 0.4rem 1rem !important; border-radius: 6px !important; }
 
+@media (max-width: 991px) { #mainNav .navbar-nav .nav-item:last-child { margin-top: 0.5rem; } }
+
 /* ── Hero ──────────────────────────────────────────────── */
 header.masthead { background-image: none !important; background-color: #0f172a; position: relative; overflow: hidden; padding-top: 8rem; padding-bottom: 8rem; }
 
