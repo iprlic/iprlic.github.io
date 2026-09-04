@@ -144,6 +144,8 @@ All layout/include overrides live locally and take precedence over the remote th
 - Design: dark navy (`#0f172a`) + blue (`#2563eb`), Inter font
 - Bootstrap 4.5 is loaded via the theme — use Bootstrap grid/utilities freely
 - CSS specificity: Bootstrap uses `!important` heavily. Use a `.component-class .child` selector or `!important` overrides when fighting Bootstrap rules.
+- **The remote theme fights back.** Creative v6.0.4 sets `font-family: "Merriweather Sans"` (a font this site never loads, so it falls back to a system font) and its orange `#f4623a` on selectors more specific than plain element/class rules: `h1-h6` **and `.h1-.h6`**, `.btn`, `#mainNav .navbar-brand`, `#mainNav .navbar-nav .nav-item .nav-link`, `.btn-outline-primary`, and `.nav-link.active` (with `!important`). A "Remote theme overrides" block near the top of `main.scss` matches that specificity — check it first if text renders in the wrong font or something turns orange. Watch for `class="h5"` on an `<h3>` (services.html does this): the class beats a bare element selector.
+- The theme colours nav links `rgba(255,255,255,0.7)` until `.navbar-scrolled` is applied, which is invisible against this site's always-white navbar. The override block pins them for both states; any new nav rule must use the full `#mainNav .navbar-nav .nav-item .nav-link` chain or it will silently lose.
 - Scope component CSS to the component's own class, never to `#section-id` — includes get reused across pages under different `section_id` values. (`.about-section .about-title`, not `#about .about-title`.)
 - `bg-dark` class applies `background-color: #343a40 !important` — avoid it on custom dark sections, use `.about-section { background-color: #0f172a !important }` instead
 

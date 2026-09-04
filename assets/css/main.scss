@@ -55,6 +55,79 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
   letter-spacing: -0.02em;
 }
 
+/* ── Remote theme overrides ────────────────────────────── */
+/* The Creative theme ships its own font stack and orange accent, on selectors
+   more specific than plain element/class rules. Two consequences if these are
+   not overridden:
+     1. It asks for "Merriweather Sans", which this site never loads, so nav,
+        buttons and any .h1-.h6 heading silently fall back to a system font
+        while the rest of the page is Inter.
+     2. Its #f4623a orange resurfaces on the active nav link (with !important)
+        and on .btn-outline-primary, clashing with the blue palette.
+   Selectors below deliberately match the theme's specificity. Check here first
+   if something renders in the wrong font or turns orange. */
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
+.btn,
+#mainNav .navbar-brand,
+#mainNav .navbar-nav .nav-item .nav-link {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Nav links: the theme sets rgba(255,255,255,0.7) until .navbar-scrolled, which
+   is invisible against this site's always-white navbar. */
+#mainNav .navbar-nav .nav-item .nav-link,
+#mainNav.navbar-scrolled .navbar-nav .nav-item .nav-link {
+  color: #64748b;
+  font-weight: 500;
+  font-size: 0.825rem;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link:hover,
+#mainNav .navbar-nav .nav-item .nav-link:active,
+#mainNav.navbar-scrolled .navbar-nav .nav-item .nav-link:hover {
+  color: #0f172a;
+  font-weight: 600;
+}
+
+/* Theme marks this !important, so matching it is the only way to win. */
+#mainNav .navbar-nav .nav-item .nav-link.active {
+  color: #0f172a !important;
+  font-weight: 600;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link.nav-link-accent {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link.nav-link-accent:hover {
+  color: #1d4ed8;
+}
+
+#mainNav.navbar-scrolled .navbar-brand:hover {
+  color: #2563eb;
+}
+
+/* Outline buttons — the nav "Book a Call" — were rendering theme orange. */
+.btn-outline-primary {
+  color: #2563eb;
+  border-color: #2563eb;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:not(:disabled):not(.disabled):active {
+  background-color: #2563eb;
+  border-color: #2563eb;
+  color: #fff;
+}
+
+.btn-link { color: #2563eb; }
+.badge-primary { background-color: #2563eb; }
+.border-primary { border-color: #2563eb !important; }
+
 /* ── Color overrides ───────────────────────────────────── */
 .text-primary  { color: #2563eb !important; }
 .bg-primary    { background-color: #2563eb !important; }
@@ -131,7 +204,9 @@ a:hover        { color: #1d4ed8; }
    breakpoint and ~1200px that leaves only ~16px of clearance from the brand,
    so tighten the link padding over that range only. */
 @media (min-width: 992px) and (max-width: 1199px) {
-  #mainNav .nav-link {
+  /* Specificity has to match the theme-override block above, or the font-size
+     shrink loses to it and only the !important paddings apply. */
+  #mainNav .navbar-nav .nav-item .nav-link {
     padding-left: 0.55rem !important;
     padding-right: 0.55rem !important;
     font-size: 0.8rem;
