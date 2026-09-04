@@ -1,0 +1,23 @@
+# UI strings that are hardcoded in includes rather than supplied per page.
+# Anything that lives in a page's front matter is translated there instead.
+#
+# `switch_label` / `switch_title` name the OTHER language, since they label the
+# button that switches to it.
+
+en:
+  book_a_call: Book a Call
+  readiness_privacy: Scored in your browser. Nothing is recorded or sent anywhere.
+  switch_label: HR
+  switch_title: Prebaci na hrvatski
+  fit_yes: A good fit if
+  fit_no: Not a fit if
+  skip_to_content: Skip to content
+
+hr:
+  book_a_call: Dogovorite poziv
+  readiness_privacy: Rezultat se računa u vašem pregledniku. Ništa se ne bilježi niti šalje.
+  switch_label: EN
+  switch_title: Switch to English
+  fit_yes: Dobro se poklapa ako
+  fit_no: Nije za vas ako
+  skip_to_content: Prijeđi na sadržaj

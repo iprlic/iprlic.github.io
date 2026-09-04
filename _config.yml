@@ -13,7 +13,10 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Ivan Prlić | Solutions Architect & AI Consultant
+# title is the site name only. jekyll-seo-tag renders "<page title> | <site title>",
+# so putting the role in here as well would duplicate it on every page.
+title: Ivan Prlić
+tagline: Solutions Architect & AI Consultant
 nav_title: Prlić Consulting d.o.o.
 email: ivan@prlic.io
 description: >-
@@ -24,9 +27,11 @@ url: "https://prlic.io" # the base hostname & protocol for your site, e.g. http:
 #twitter_username: ivan_prlic
 #github_username:  iprlic
 author: Ivan Prlić
-image: /assets/img/og-image.png
-recaptcha_key: 6LdR7T0dAAAAAETUVUtZu4vx1j8Vg3GSpN-kBc_c
-form_post_url: https://europe-central2-prc-web-354213.cloudfunctions.net/send-email
+
+# jekyll-seo-tag reads `page.image`, not `site.image`, so the site-wide default
+# has to be set through `defaults` below or no og:image is emitted at all.
+twitter:
+  card: summary_large_image
 
 social:
   name: Ivan Prlić
@@ -45,7 +50,13 @@ plugins:
   - jekyll-seo-tag
   - jekyll-remote-theme
 
-google_analytics: G-415VTD6ZM1
+# Social preview image. Pages may override `image` in their own front matter;
+# each page that does gets its own card. Without this block seo-tag emits none.
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/img/og-image.png
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

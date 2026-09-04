@@ -1,4 +1,9 @@
-<section id="{{ section.section_id }}" class="contact-section">
+{% comment %}
+  The oversized background word is decorative; `watermark` overrides it.
+  Quoted with &quot; so apostrophes in the value do not terminate the CSS string.
+{% endcomment %}
+{% assign watermark = section.watermark | default: "GET IN TOUCH" | replace: '"', '' %}
+<section id="{{ section.section_id }}" class="contact-section" style="--contact-watermark: &quot;{{ watermark }}&quot;;">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-7 text-center">
@@ -6,10 +11,14 @@
         <hr class="divider light mt-3 mb-4" style="margin-left:auto;margin-right:auto;">
         <p class="contact-text">{{ section.text }}</p>
         <div class="contact-actions">
+          {% comment %}
+            `icon_type` (fas/fab) is no longer needed now that icons come from
+            the inline sprite, but it is left in the page data so the front
+            matter did not have to change.
+          {% endcomment %}
           {% for action in section.actions %}
-          {% assign fa = action.icon_type | default: "fas" %}
           <a href="{{ action.url }}" class="contact-btn">
-            <i class="{{ fa }} {{ action.icon }}"></i>
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="#{{ action.icon }}"/></svg>
             {{ action.title }}
           </a>
           {% endfor %}

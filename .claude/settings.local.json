@@ -16,7 +16,29 @@
       "Bash(convert --version)",
       "Bash(rsvg-convert -w 1200 -h 630 /tmp/og-image.svg -o /Users/ip/Projects/Personal/iprlic.github.io/assets/img/og-image.png)",
       "Bash(rsvg-convert -w 32 -h 32 /Users/ip/Projects/Personal/iprlic.github.io/assets/img/favicon.svg -o /Users/ip/Projects/Personal/iprlic.github.io/assets/img/favicon.png)",
-      "Bash(/Users/ip/Projects/Personal/iprlic.github.io/404.html:*)"
+      "Bash(/Users/ip/Projects/Personal/iprlic.github.io/404.html:*)",
+      "WebFetch(domain:www.toptal.com)",
+      "Bash(open:*)",
+      "Bash(python3 *)",
+      "Bash(grep -oE '<meta \\(property|name\\)=\"\\(og|twitter\\)[^\"]*\" content=\"[^\"]{0,70}' _site/ai-advisory/index.html)",
+      "Bash(fc-list)",
+      "Bash(awk '{print \"  \"$5\"\\\\t\"$9}')",
+      "Bash(command -v pdftotext)",
+      "Bash(awk '/section_id: readiness/,/- type: faq/' ai-advisory.md)",
+      "Bash(awk '/section_id: readiness/,/- type: faq/' hr/ai-savjetovanje.md)",
+      "WebFetch(domain:fondovieu.gov.hr)",
+      "Bash(awk '/section_id: fit/,/section_id: packages/' hr/ai-savjetovanje.md)",
+      "Bash(awk '/eyebrow: Počnite ovdje/,/eyebrow: Prije nego/' hr/ai-savjetovanje.md)",
+      "Bash(awk '/eyebrow: Dugoročno/,/eyebrow: Osposobljavanje/' hr/ai-savjetovanje.md)",
+      "WebFetch(domain:www.hup.hr)",
+      "WebFetch(domain:www.hgk.hr)",
+      "WebFetch(domain:gaming-edih.hr)",
+      "WebFetch(domain:www.netokracija.com)",
+      "WebFetch(domain:mingo.gov.hr)",
+      "WebFetch(domain:ai-solutions.hr)",
+      "WebFetch(domain:www.pwc.hr)",
+      "WebFetch(domain:www.best-advisory.eu)",
+      "WebFetch(domain:hgk.hr)"
     ]
   }
 }

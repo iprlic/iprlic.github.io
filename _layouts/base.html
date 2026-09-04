@@ -1,18 +1,39 @@
 <!DOCTYPE html>
-<html>
+{% assign lang = page.lang | default: "en" %}
+<html lang="{{ lang }}">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>{% assign title_is_not_empty = page.title | is_not_empty %}{% if title_is_not_empty %}{{ page.title }} - {% endif %}{{ site.title }}</title>
-  <!-- Favicon-->
-  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
-  <link rel="icon" type="image/png" href="assets/img/favicon.png">
-  <!-- Font Awesome icons (free version)-->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" crossorigin="anonymous">
+  {% comment %}
+    hreflang alternates. Pages sharing a `ref` are translations of each other;
+    x-default points at the English version, which is the one served at "/".
+  {% endcomment %}
+  {% if page.ref %}
+    {% assign translations = site.pages | where: "ref", page.ref %}
+    {% for t in translations %}
+    <link rel="alternate" hreflang="{{ t.lang }}" href="{{ t.url | absolute_url }}">
+    {% endfor %}
+    {% assign default_page = translations | where: "lang", "en" | first %}
+    {% if default_page %}
+    <link rel="alternate" hreflang="x-default" href="{{ default_page.url | absolute_url }}">
+    {% endif %}
+  {% endif %}
 
-  
+  {% comment %}
+    No hand-rolled <title> here: jekyll-seo-tag emits one further down, and two
+    title tags is worse than either alone. Titles come from each page's `title`
+    front matter, combined with site.title by the seo tag.
+  {% endcomment %}
+  <!-- Favicon-->
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/img/favicon.svg' | relative_url }}">
+  <link rel="icon" type="image/png" href="{{ '/assets/img/favicon.png' | relative_url }}">
+  {% comment %}
+    Icons come from the inline sprite injected at the top of <body>, not from
+    the Font Awesome CDN stylesheet. See tools/build-icon-sprite.py.
+  {% endcomment %}
+
   <!-- Google fonts-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,19 +42,11 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" />
   </noscript>
   
-  <!-- Third party plugin CSS-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw==" crossorigin="anonymous" />
   <!-- Core theme CSS (includes Bootstrap)-->
-  <link href="assets/css/creative.css" rel="stylesheet">
+  <link href="{{ '/assets/css/creative.css' | relative_url }}" rel="stylesheet">
   <!-- Custom CSS -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="{{ '/assets/css/main.css' | relative_url }}" rel="stylesheet">
 
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-  <![endif]-->
 {% seo %}
 
   <!-- Schema.org structured data -->
@@ -101,38 +114,20 @@
 </head>
 
 <body id="page-top" class="{% if page.layout == site.landing_template %}landing {% endif %}">
+  {% include icon-sprite.html %}
+  <a class="skip-link" href="#main">{{ site.data.i18n[lang].skip_to_content }}</a>
   {% include nav.html    section=section site=site page=page %}
-  {{ content }}
+  <main id="main">
+    {{ content }}
+  </main>
   {% include footer.html section=section site=site page=page %}
+  {% include sticky-cta.html section=section site=site page=page %}
 
-  <!-- Bootstrap core JS-->
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.bundle.min.js" integrity="sha512-iceXjjbmB2rwoX93Ka6HAHP+B76IY1z0o3h+N1PeDtRSsyeetU3/0QKJqGyPJcX63zysNehggFwMC/bi7dvMig==" crossorigin="anonymous"></script>
-  <!-- Third party plugin JS-->
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" integrity="sha512-0QbL0ph8Tc8g5bLhfVzSqxe9GERORsKhIn1IrpxDAgUsbBGz/V7iSav2zzW325XGd1OMLdL4UiqRJj702IeqnQ==" crossorigin="anonymous"></script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js" integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w==" crossorigin="anonymous"></script>
-  <!-- Core theme JS-->
-  <script defer src="assets/js/creative.min.js"></script>
-  <!-- Active nav highlighting -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var sections = document.querySelectorAll('section[id]');
-      var navLinks = document.querySelectorAll('#mainNav .navbar-nav a[href^="#"]');
-      var observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            navLinks.forEach(function (link) {
-              link.classList.remove('active');
-              if (link.getAttribute('href') === '#' + entry.target.id) {
-                link.classList.add('active');
-              }
-            });
-          }
-        });
-      }, { threshold: 0.4 });
-      sections.forEach(function (s) { observer.observe(s); });
-    });
-  </script>
+  {% comment %}
+    One local script, no jQuery. It replaces the theme's creative.js plus the
+    Bootstrap JS bundle, jquery-easing and magnific-popup it depended on.
+  {% endcomment %}
+  <script defer src="{{ '/assets/js/site.js' | relative_url }}"></script>
 </body>
 
 </html>

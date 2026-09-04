@@ -1,11 +1,13 @@
+{% assign lang = page.lang | default: "en" %}
+{% assign f = site.data.footer[lang] %}
 <footer class="site-footer">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
-        <span class="footer-copy">{{ site.data.footer.copyright }}</span>
+        <span class="footer-copy">{{ f.copyright }}</span>
       </div>
       <div class="col-md-6 text-center text-md-right">
-        {% for link in site.data.footer.links %}
+        {% for link in f.links %}
         <a href="{{ link.url }}" class="footer-link" {% if link.new_window %}target="_blank" rel="noopener"{% endif %}>{{ link.text }}</a>
         {% endfor %}
         <a href="mailto:ivan@prlic.io" class="footer-link">ivan@prlic.io</a>

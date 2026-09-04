@@ -1,0 +1,44 @@
+{% comment %}
+  Renders nothing unless real quotes are supplied, so the section can stay
+  wired into a page while the quotes are still being collected.
+
+  Accepts: title, text, quotes[] where each quote has:
+    text    the quote itself, verbatim
+    name    person's name
+    role    job title and company
+    source  optional, e.g. "LinkedIn recommendation"
+    url     optional link to the original recommendation
+{% endcomment %}
+
+{% if section.quotes and section.quotes.size > 0 %}
+<section id="{{ section.section_id }}" class="page-section {{ section.background_style }}">
+  <div class="container">
+    <h2 class="text-center mt-0">{{ section.title }}</h2>
+    <hr class="divider my-4">
+    {% if section.text %}
+    <p class="section-lede text-center">{{ section.text }}</p>
+    {% endif %}
+
+    <div class="row justify-content-center mt-4">
+      {% for quote in section.quotes %}
+      <div class="col-lg-4 col-md-6 mb-4 d-flex">
+        <figure class="testimonial-card p-4 w-100">
+          <blockquote class="testimonial-quote">{{ quote.text }}</blockquote>
+          <figcaption class="testimonial-attrib">
+            <span class="testimonial-name">{{ quote.name }}</span>
+            <span class="testimonial-role">{{ quote.role }}</span>
+            {% if quote.source %}
+              {% if quote.url %}
+              <a class="testimonial-source" href="{{ quote.url }}" target="_blank" rel="noopener">{{ quote.source }} &nearr;</a>
+              {% else %}
+              <span class="testimonial-source">{{ quote.source }}</span>
+              {% endif %}
+            {% endif %}
+          </figcaption>
+        </figure>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}

@@ -3,7 +3,7 @@
     <div class="row align-items-center">
 
       <div class="col-12 col-lg-4 text-center mb-5 mb-lg-0">
-        <img src="{{ section.photo }}" alt="{{ section.photo_alt | default: 'Ivan Prlić' }}"
+        <img src="{{ section.photo | relative_url }}" alt="{{ section.photo_alt | default: 'Ivan Prlić' }}"
              class="about-photo mb-4">
         <div class="about-badges">
           {% if section.availability %}

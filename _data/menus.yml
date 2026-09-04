@@ -1,9 +1,56 @@
+# Nav menus, keyed by menu name then by language code.
+#
+# A page picks its menu with `nav_menu: <key>` and its language with `lang: <code>`
+# in front matter. Both default to `header` / `en`. See _includes/nav.html.
+#
+# The last item in each list renders as the primary CTA button. The "Book a Call"
+# button is appended separately in nav.html. Set `highlight: true` to accent a link.
+#
+# Anchor-only URLs (#work) stay bare and get smooth scroll. Everything else is
+# passed through relative_url.
+#
+# KEEP THESE TO FOUR ITEMS. With two buttons and the language switch alongside,
+# five links leave only ~16px of clearance from the brand between 992px and
+# 1200px. Sections dropped from the nav are still reachable by scrolling.
+
 header:
-  - title: Services
-    url: "#services"
-  - title: Work
-    url: "#work"
-  - title: Certifications
-    url: "#certifications"
-  - title: Contact
-    url: "#contacts"
+  en:
+    - title: Services
+      url: "#services"
+    - title: Work
+      url: "#work"
+    - title: AI Advisory
+      url: "/ai-advisory/"
+      highlight: true
+    - title: Contact
+      url: "#contacts"
+  hr:
+    - title: Usluge
+      url: "#services"
+    - title: Projekti
+      url: "#work"
+    - title: AI savjetovanje
+      url: "/hr/ai-savjetovanje/"
+      highlight: true
+    - title: Kontakt
+      url: "#contacts"
+
+advisory:
+  en:
+    - title: What You Get
+      url: "#packages"
+    - title: Work
+      url: "#proof"
+    - title: Questions
+      url: "#faq"
+    - title: Start
+      url: "#contacts"
+  hr:
+    - title: Što dobivate
+      url: "#packages"
+    - title: Projekti
+      url: "#proof"
+    - title: Pitanja
+      url: "#faq"
+    - title: Krenimo
+      url: "#contacts"

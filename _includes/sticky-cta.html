@@ -1,0 +1,30 @@
+{% comment %}
+  Persistent CTA bar, mobile only. These pages run 13-19 screens on a phone, so
+  once the visitor is past the hero there is otherwise no call to action until
+  they happen to land on one.
+
+  site.js hides it while the contact section is on screen, so it never competes
+  with the real CTA.
+
+  Set per page with:
+    sticky_cta:
+      label: Book an intro call
+      url: https://calendly.com/prlic/15min
+  Omit to suppress the bar entirely.
+{% endcomment %}
+
+{% comment %}
+  Visible by default and hidden by script, not the other way round: the UA
+  stylesheet's `[hidden] { display: none }` beats a class-level display rule,
+  which killed the slide transition, and this way the bar still works with
+  JavaScript disabled.
+{% endcomment %}
+{% if page.sticky_cta %}
+<div class="sticky-cta" id="stickyCta">
+  <a class="sticky-cta-btn" href="{{ page.sticky_cta.url }}"
+     {% if page.sticky_cta.url contains "http" %}target="_blank" rel="noopener"{% endif %}>
+    <svg class="icon" aria-hidden="true" focusable="false"><use href="#fa-calendar-alt"/></svg>
+    {{ page.sticky_cta.label }}
+  </a>
+</div>
+{% endif %}

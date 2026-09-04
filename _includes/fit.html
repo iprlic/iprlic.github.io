@@ -1,0 +1,41 @@
+{% comment %}
+  Qualification section: who the offer is for, and who it isn't for.
+  Stating the second half plainly filters bad-fit enquiries and reads as
+  confidence rather than salesmanship.
+
+  Accepts: title, text, fit_title, fit[], not_fit_title, not_fit[]
+{% endcomment %}
+
+<section id="{{ section.section_id }}" class="page-section {{ section.background_style }}">
+  <div class="container">
+    <h2 class="text-center mt-0">{{ section.title }}</h2>
+    <hr class="divider my-4">
+    {% if section.text %}
+    <p class="section-lede text-center">{{ section.text }}</p>
+    {% endif %}
+
+    {% assign t = site.data.i18n[page.lang | default: "en"] %}
+    <div class="row justify-content-center mt-4">
+      <div class="col-lg-6 mb-4 d-flex">
+        <div class="fit-card fit-card-yes p-4 w-100">
+          <h3 class="fit-heading">{{ section.fit_title | default: t.fit_yes }}</h3>
+          <ul class="fit-list">
+            {% for item in section.fit %}
+            <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-6 mb-4 d-flex">
+        <div class="fit-card fit-card-no p-4 w-100">
+          <h3 class="fit-heading">{{ section.not_fit_title | default: t.fit_no }}</h3>
+          <ul class="fit-list">
+            {% for item in section.not_fit %}
+            <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

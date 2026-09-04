@@ -1,5 +1,12 @@
 ---
 layout: home
+permalink: /
+lang: en
+ref: home
+sticky_cta:
+  label: Book a call
+  url: https://calendly.com/prlic/15min
+title: Solutions Architect & AI Consultant
 header:
   title: Ivan Prlić
   subtitle: Solutions Architect · AI & DevOps Consultant · Fractional CTO
@@ -7,8 +14,8 @@ header:
     I help engineering teams design, build, and modernize cloud systems —
     and integrate AI that ships to production.
   action:
-    label: See My Work
-    url: '#work'
+    label: See How I Can Help
+    url: '#services'
 
 
 sections:
@@ -38,6 +45,19 @@ sections:
         url: '#services'
         class: btn-light
 
+  - type: clients.html
+    section_id: clients
+    background_style: bg-subtle
+    title: Selected Clients
+    clients:
+      - name: European Commission
+      - name: Volvo USA
+      - name: TUI Group
+      - name: Ricoh
+      - name: Talkdesk
+      - name: Metro (Hospitality Digital)
+      - name: Q.ai (Forbes)
+
   - type: services.html
     section_id: services
     title: How I Can Help
@@ -48,6 +68,9 @@ sections:
           computer vision pipelines on SageMaker, and ML workflows on Vertex AI. Recent projects include
           an LLM-powered legal document search system and a computer vision platform migration to AWS.
           AWS Certified Machine Learning Specialty, GCP Professional ML Engineer and Data Engineer certified.
+
+
+          **[Fixed-scope AI advisory packages →](/ai-advisory/)**
         icon: fa-brain
       - title: Cloud Architecture
         text: >-
@@ -96,6 +119,18 @@ sections:
           evaluate build vs. buy trade-offs, and structure engineering teams for growth. Available for
           ongoing retainers and critical project phases.
         icon: fa-user-tie
+
+  - type: crosslink.html
+    section_id: advisory-crosslink
+    eyebrow: AI Advisory
+    title: Not sure what to build yet?
+    text: >-
+      If the question is which AI use cases are worth funding rather than who
+      can build them, there is a separate track for that: fixed-scope assessment,
+      proof of value, and fractional AI leadership, with prices published.
+    action:
+      label: See AI advisory packages
+      url: /ai-advisory/
 
   - type: case-studies.html
     section_id: work

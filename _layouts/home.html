@@ -11,9 +11,18 @@ layout: base
         <hr class="divider my-4">
       </div>
       <div class="col-lg-8 align-self-baseline">
-        <p class="text-white-75 font-weight-light mb-5">{{ page.header.text }}</p>
+        <p class="text-white-75 font-weight-light mb-4">{{ page.header.text }}</p>
         {% if page.header.action %}
         <a class="btn btn-primary btn-xl js-scroll-trigger" href="{{ page.header.action.url }}">{{ page.header.action.label }}</a>
+        {% endif %}
+        {% comment %}
+          Anchor facts at the fold. The published price is this page's whole
+          differentiator and it otherwise sits ~3 screens down.
+        {% endcomment %}
+        {% if page.header.proof %}
+        <ul class="hero-proof">
+          {% for item in page.header.proof %}<li>{{ item }}</li>{% endfor %}
+        </ul>
         {% endif %}
       </div>
     </div>

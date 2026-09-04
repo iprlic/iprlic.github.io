@@ -1,0 +1,94 @@
+{% comment %}
+  Packaged, fixed-scope offers with duration and a "from" price anchor.
+
+  Each package accepts:
+    eyebrow      short tier label, e.g. "Start here"
+    name         package title
+    duration     e.g. "2–3 weeks"
+    price        e.g. "from €10,000"
+    summary      one or two sentences
+    deliverables list of strings, rendered as ticked bullets
+    note         optional italic footnote (e.g. the fee-credit offer)
+    featured     true renders the card full width with an accent border
+    action       optional { label, url } override for the card CTA
+{% endcomment %}
+
+<section id="{{ section.section_id }}" class="page-section {{ section.background_style }}">
+  <div class="container">
+    <h2 class="text-center mt-0">{{ section.title }}</h2>
+    <hr class="divider my-4">
+    {% if section.text %}
+    <p class="section-lede text-center">{{ section.text }}</p>
+    {% endif %}
+
+    <div class="row mt-4">
+      {% for pkg in section.packages %}
+      <div class="{% if pkg.featured %}col-12{% else %}col-lg-6{% endif %} mb-4 d-flex">
+        <div class="package-card p-4 w-100{% if pkg.featured %} package-card-featured{% endif %}">
+
+          <div class="package-head">
+            <div>
+              {% if pkg.eyebrow %}<div class="package-eyebrow">{{ pkg.eyebrow }}</div>{% endif %}
+              <h3 class="package-name">{{ pkg.name }}</h3>
+            </div>
+            <div class="package-meta">
+              <span class="package-price">{{ pkg.price }}</span>
+              <span class="package-duration">{{ pkg.duration }}</span>
+            </div>
+          </div>
+
+          <p class="package-summary">{{ pkg.summary }}</p>
+
+          {% if pkg.deliverables %}
+          <ul class="package-deliverables{% if pkg.featured %} package-deliverables-split{% endif %}">
+            {% for item in pkg.deliverables %}
+            <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+
+          <div class="package-foot">
+            {% if pkg.note %}<p class="package-note">{{ pkg.note }}</p>{% endif %}
+            {% if pkg.action %}
+            <a class="package-cta" href="{{ pkg.action.url }}"{% if pkg.action.url contains "http" %} target="_blank" rel="noopener"{% endif %}>
+              {{ pkg.action.label }} <span aria-hidden="true">&rarr;</span>
+            </a>
+            {% endif %}
+          </div>
+
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    {% if section.footnote %}
+    <p class="section-footnote text-center">{{ section.footnote }}</p>
+    {% endif %}
+  </div>
+</section>
+
+{% comment %}Structured data so the offers are machine-readable.{% endcomment %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "OfferCatalog",
+  "name": "{{ section.title }}",
+  "provider": { "@type": "ProfessionalService", "@id": "https://prlic.io/#business" },
+  "itemListElement": [
+    {% for pkg in section.packages %}
+    {
+      "@type": "Offer",
+      "name": {{ pkg.name | jsonify }},
+      "description": {{ pkg.summary | jsonify }},
+      "priceCurrency": "EUR",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "minPrice": {{ pkg.price_min | default: 0 }},
+        "priceCurrency": "EUR",
+        "valueAddedTaxIncluded": false
+      }
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>

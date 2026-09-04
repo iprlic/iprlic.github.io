@@ -1,24 +1,79 @@
+{% comment %}
+  Language and menu selection.
+
+  A page sets `lang` (en|hr) and optionally `nav_menu` (header|advisory).
+  `ref` is the translation key: pages sharing a `ref` across languages are
+  translations of each other, which is how the language switcher finds its
+  target. Without a matching sibling the switcher falls back to that
+  language's home page rather than disappearing.
+{% endcomment %}
+{% assign lang = page.lang | default: "en" %}
+{% assign t = site.data.i18n[lang] %}
+{% assign menu_key = page.nav_menu | default: "header" %}
+{% assign nav_items = site.data.menus[menu_key][lang] %}
+
+{% assign alt_lang = "hr" %}
+{% if lang == "hr" %}{% assign alt_lang = "en" %}{% endif %}
+
+{% assign alt_page = site.pages | where: "ref", page.ref | where_exp: "p", "p.lang == alt_lang" | first %}
+{% if alt_page %}
+  {% assign alt_url = alt_page.url | relative_url %}
+{% elsif alt_lang == "hr" %}
+  {% assign alt_url = "/hr/" | relative_url %}
+{% else %}
+  {% assign alt_url = "/" | relative_url %}
+{% endif %}
+
+{% assign home_url = "/" | relative_url %}
+{% if lang == "hr" %}{% assign home_url = "/hr/" | relative_url %}{% endif %}
+
+{% assign cta_url = page.nav_cta_url | default: "https://calendly.com/prlic/15min" %}
+{% assign cta_label = page.nav_cta_label | default: t.book_a_call %}
+
 <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
   <div class="container">
+    {% if page.url == home_url %}
     <a class="navbar-brand js-scroll-trigger" href="#page-top">{{ site.nav_title | default: site.title }}</a>
+    {% else %}
+    <a class="navbar-brand" href="{{ home_url }}">{{ site.nav_title | default: site.title }}</a>
+    {% endif %}
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto my-2 my-lg-0">
-        {% for item in site.data.menus.header %}
+        {% for item in nav_items %}
+          {% comment %}
+            Same-page anchors must stay bare: piping "#foo" through relative_url
+            yields "/#foo", which jumps to the homepage from any subpage.
+            Anchors also get the theme's smooth scroll; real page links do not.
+          {% endcomment %}
+          {% assign first_char = item.url | slice: 0, 1 %}
+          {% if first_char == "#" %}
+            {% assign item_href = item.url %}
+            {% assign scroll_class = " js-scroll-trigger" %}
+          {% else %}
+            {% assign item_href = item.url | relative_url %}
+            {% assign scroll_class = "" %}
+          {% endif %}
           {% if forloop.last %}
           <li class="nav-item ml-lg-2">
-            <a class="btn btn-primary btn-sm nav-cta js-scroll-trigger" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+            <a class="btn btn-primary btn-sm nav-cta{{ scroll_class }}" href="{{ item_href }}">{{ item.title }}</a>
           </li>
           {% else %}
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+            <a class="nav-link{{ scroll_class }}{% if item.highlight %} nav-link-accent{% endif %}" href="{{ item_href }}">{{ item.title }}</a>
           </li>
           {% endif %}
         {% endfor %}
         <li class="nav-item ml-lg-2">
-          <a class="btn btn-outline-primary btn-sm nav-cta" href="https://calendly.com/prlic/15min" target="_blank" rel="noopener">Book a Call</a>
+          <a class="btn btn-outline-primary btn-sm nav-cta" href="{{ cta_url }}" target="_blank" rel="noopener">{{ cta_label }}</a>
+        </li>
+        <li class="nav-item ml-lg-2">
+          <a class="lang-switch" href="{{ alt_url }}" hreflang="{{ alt_lang }}" lang="{{ alt_lang }}"
+             title="{{ t.switch_title }}" aria-label="{{ t.switch_title }}">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="#fa-globe"/></svg><span>{{ t.switch_label }}</span>
+          </a>
         </li>
       </ul>
     </div>

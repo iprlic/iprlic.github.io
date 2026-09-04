@@ -1,7 +1,47 @@
 ---
 ---
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+/* Inter is loaded by base.html with a non-blocking <link>. A CSS @import here
+   would fetch it a second time and block rendering while it does. */
+
+/* ── Anchor scrolling ──────────────────────────────────── */
+/* Handled in CSS rather than JS. scroll-margin-top keeps section headings clear
+   of the fixed navbar for *every* route to an anchor, including a cold page
+   load on /#work, which script-driven scrolling never covered. */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+[id] {
+  scroll-margin-top: 72px;
+}
+
+/* ── Skip link ─────────────────────────────────────────── */
+/* Off-screen until focused, so keyboard and screen-reader users can jump the
+   navigation instead of tabbing through it on every page. */
+.skip-link {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2000;
+  transform: translateY(-120%);
+  background: #2563eb;
+  color: #fff !important;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0 0 8px 0;
+  text-decoration: none !important;
+  transition: transform 0.15s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
 
 /* ── Base typography ───────────────────────────────────── */
 body {
@@ -85,6 +125,71 @@ a:hover        { color: #1d4ed8; }
   #mainNav .navbar-nav .nav-item:last-child {
     margin-top: 0.5rem;
   }
+}
+
+/* The nav carries 4 links, 2 buttons and the language switch. Between the lg
+   breakpoint and ~1200px that leaves only ~16px of clearance from the brand,
+   so tighten the link padding over that range only. */
+@media (min-width: 992px) and (max-width: 1199px) {
+  #mainNav .nav-link {
+    padding-left: 0.55rem !important;
+    padding-right: 0.55rem !important;
+    font-size: 0.8rem;
+  }
+
+  #mainNav .navbar-brand {
+    font-size: 0.925rem;
+  }
+
+  .nav-cta {
+    padding: 0.4rem 0.75rem !important;
+  }
+}
+
+/* Touch targets: WCAG 2.5.8 asks for 24px minimum, and 44px is the practical
+   floor on a phone. Nav, footer and chip links were all below it. */
+@media (max-width: 991px) {
+  #mainNav .nav-link,
+  .nav-cta,
+  .lang-switch {
+    min-height: 44px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact-btn {
+    min-height: 44px;
+  }
+
+  .footer-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+  }
+
+  .faq-q {
+    min-height: 44px;
+  }
+
+  .client-name {
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  #mainNav .navbar-brand,
+  .package-cta,
+  .about-badges a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .about-badges a { width: 100%; }
+  .about-badges a .badge-blue { width: 100%; min-height: 44px; }
 }
 
 /* ── Hero ──────────────────────────────────────────────── */
@@ -178,6 +283,30 @@ header.masthead .btn-xl:hover {
   border-color: #1d4ed8;
 }
 
+/* Fact strip under the hero CTA: puts price and duration at the fold. */
+.hero-proof {
+  position: relative;
+  z-index: 1;
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 0.65rem;
+}
+
+.hero-proof li {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 20px;
+  padding: 0.4rem 0.9rem;
+}
+
 /* ── Section headings ──────────────────────────────────── */
 .page-section h2 {
   font-weight: 700;
@@ -205,11 +334,10 @@ hr.divider.light {
 
 /* ── About section (two-column) ────────────────────────── */
 .about-section {
+  /* Was min-height:80vh + flex centring, which stretched ~450px of content
+     into a 720px box. Padding gives the same breathing room without the gap. */
   background-color: #0f172a !important;
-  min-height: 80vh;
-  display: flex;
-  align-items: center;
-  padding: 5rem 0;
+  padding: 6rem 0;
 }
 
 .about-section .container {
@@ -283,49 +411,52 @@ a:hover .badge-blue {
   border-color: rgba(37, 99, 235, 0.5);
 }
 
+/* Scoped to .about-section rather than #about so the include can be reused
+   on other pages under a different section_id without losing its colours. */
 @media (max-width: 991px) {
-  #about hr.divider {
+  .about-section hr.divider {
     margin-left: auto;
     margin-right: auto;
   }
-  #about .col-12.col-lg-8 {
+  .about-section .col-12.col-lg-8 {
     text-align: center;
   }
 }
 
 /* Specificity bump needed to beat .page-section h2 { color: #0f172a } */
-#about .about-title {
+.about-section .about-title {
   color: #fff !important;
   font-size: 1.75rem;
   font-weight: 700;
   text-align: center;
 }
 
-#about .about-text,
-#about .about-text p {
+.about-section .about-text,
+.about-section .about-text p {
   color: rgba(255, 255, 255, 0.8) !important;
   font-size: 0.95rem;
   line-height: 1.75;
 }
 
-#about .about-text p { margin-bottom: 0.75rem; }
-#about .about-text p:last-child { margin-bottom: 0; }
+.about-section .about-text p { margin-bottom: 0.75rem; }
+.about-section .about-text p:last-child { margin-bottom: 0; }
 
-#about .about-tech {
-  color: rgba(255, 255, 255, 0.4) !important;
+.about-section .about-tech {
+  color: rgba(255, 255, 255, 0.6) !important;
   font-size: 0.8rem;
   margin-top: 1.25rem;
   margin-bottom: 0.25rem;
   letter-spacing: 0.02em;
 }
 
-#about .about-languages {
-  color: rgba(255, 255, 255, 0.3) !important;
+.about-section .about-languages {
+  color: rgba(255, 255, 255, 0.5) !important;
   font-size: 0.75rem;
   margin-bottom: 0;
 }
 
-.bg-dark .btn-light {
+.bg-dark .btn-light,
+.about-section .btn-light {
   background-color: #fff;
   color: #2563eb;
   border-color: #fff;
@@ -335,7 +466,8 @@ a:hover .badge-blue {
   letter-spacing: 0.01em;
 }
 
-.bg-dark .btn-light:hover {
+.bg-dark .btn-light:hover,
+.about-section .btn-light:hover {
   background-color: #f1f5f9;
   color: #1d4ed8;
 }
@@ -364,8 +496,9 @@ a:hover .badge-blue {
   justify-content: center;
 }
 
-.service-icon-wrap i {
-  font-size: 1.35rem;
+.service-icon-wrap .icon {
+  width: 1.35rem;
+  height: 1.35rem;
 }
 
 .service-card .text-muted p {
@@ -419,7 +552,7 @@ a:hover .badge-blue {
 .case-study-outcome {
   font-size: 0.75rem;
   font-weight: 600;
-  color: #16a34a;
+  color: #15803d;
   background: #f0fdf4;
   border: 1px solid #bbf7d0;
   border-radius: 4px;
@@ -427,33 +560,106 @@ a:hover .badge-blue {
 }
 
 /* ── Clients section ───────────────────────────────────── */
-#clients hr.divider {
-  border-top-color: #e2e8f0;
+.clients-section .client-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem 0.75rem;
 }
 
-#clients .client-name {
-  color: #94a3b8;
-  font-size: 0.9rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  transition: color 0.15s;
-}
-
-#clients .client-name:hover {
+.clients-section .client-name {
   color: #475569;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.clients-section.bg-subtle .client-name {
+  background: #fff;
+}
+
+/* ── FAQ ───────────────────────────────────────────────── */
+.faq-item {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #fff;
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+}
+
+.faq-item[open] {
+  border-color: #cbd5e1;
+}
+
+.faq-q {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.1rem 1.35rem;
+  cursor: pointer;
+  font-size: 0.975rem;
+  font-weight: 600;
+  color: #0f172a;
+  letter-spacing: -0.01em;
+  list-style: none;
+  transition: background 0.15s;
+}
+
+.faq-q::-webkit-details-marker { display: none; }
+.faq-q:hover { background: #f8fafc; }
+
+.faq-q:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: -2px;
+}
+
+/* Chevron, rotated when the item is open */
+.faq-marker {
+  flex-shrink: 0;
+  width: 0.6rem;
+  height: 0.6rem;
+  margin-top: 0.3rem;
+  border-right: 2px solid #5b6b81;
+  border-bottom: 2px solid #5b6b81;
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+}
+
+.faq-item[open] .faq-marker {
+  transform: rotate(-135deg);
+}
+
+.faq-a {
+  padding: 0 1.35rem 1.25rem;
+  border-top: 1px solid #f1f5f9;
+  margin-top: -1px;
+}
+
+.faq-a p {
+  font-size: 0.9rem;
+  color: #475569;
+  line-height: 1.75;
+  margin: 1rem 0 0;
+}
+
+.faq-a p:first-child { margin-top: 1rem; }
+.faq-a strong { color: #0f172a; }
+
+@media (prefers-reduced-motion: reduce) {
+  .faq-marker { transition: none; }
 }
 
 /* ── Certifications section ────────────────────────────── */
-#certifications {
-  min-height: 80vh;
-  display: flex;
-  align-items: center;
-  padding: 5rem 0;
-}
-
-#certifications .container {
-  width: 100%;
+.certs-section {
+  padding: 6rem 0;
 }
 
 .cert-card {
@@ -496,9 +702,6 @@ a:hover .badge-blue {
 .contact-section {
   background-color: #0f172a;
   padding: 0;
-  min-height: 80vh;
-  display: flex;
-  align-items: center;
   position: relative;
   overflow: hidden;
 }
@@ -515,7 +718,7 @@ a:hover .badge-blue {
 }
 
 .contact-section::after {
-  content: 'GET IN TOUCH';
+  content: var(--contact-watermark, 'GET IN TOUCH');
   position: absolute;
   bottom: -0.15em;
   left: 50%;
@@ -533,8 +736,8 @@ a:hover .badge-blue {
 .contact-section .container {
   position: relative;
   z-index: 1;
-  padding-top: 7rem;
-  padding-bottom: 7rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }
 
 .contact-title {
@@ -582,8 +785,9 @@ a:hover .badge-blue {
   text-decoration: none !important;
 }
 
-.contact-btn i {
-  font-size: 1rem;
+.contact-btn .icon {
+  width: 1rem;
+  height: 1rem;
 }
 
 /* ── Footer ────────────────────────────────────────────── */
@@ -595,12 +799,12 @@ a:hover .badge-blue {
 
 .footer-copy {
   font-size: 0.8rem;
-  color: #94a3b8;
+  color: #5b6b81;
 }
 
 .footer-link {
   font-size: 0.8rem;
-  color: #94a3b8;
+  color: #5b6b81;
   margin-left: 1.25rem;
   text-decoration: none;
   transition: color 0.15s;
@@ -611,9 +815,725 @@ a:hover .badge-blue {
   text-decoration: none;
 }
 
+/* ── Shared section furniture ──────────────────────────── */
+.section-lede {
+  max-width: 640px;
+  margin: 0 auto;
+  color: #64748b;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.section-footnote {
+  max-width: 640px;
+  margin: 1rem auto 0;
+  color: #5b6b81;
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+/* Accented nav link, used for the AI Advisory entry */
+#mainNav .nav-link-accent {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+#mainNav .nav-link-accent:hover,
+#mainNav .nav-link-accent.active {
+  color: #1d4ed8;
+}
+
+/* ── Icons ─────────────────────────────────────────────── */
+/* Inline SVG sprite replaces the Font Awesome webfont. `currentColor` means
+   the existing text-colour utilities (.text-primary and friends) still work. */
+.icon-sprite {
+  display: none;
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  vertical-align: -0.125em;
+  flex-shrink: 0;
+}
+
+/* ── Language switcher ─────────────────────────────────── */
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #64748b;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 0.35rem 0.6rem;
+  text-decoration: none !important;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+
+.lang-switch:hover {
+  color: #0f172a;
+  border-color: #cbd5e1;
+  background: #f8fafc;
+}
+
+.lang-switch .icon {
+  width: 0.8rem;
+  height: 0.8rem;
+  opacity: 0.7;
+}
+
+@media (max-width: 991px) {
+  .lang-switch {
+    margin-top: 0.5rem;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+/* ── Cross-link band ───────────────────────────────────── */
+.crosslink-band {
+  background: #f1f5f9;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 2.75rem 0;
+}
+
+.crosslink-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.crosslink-copy { flex: 1 1 460px; }
+
+.crosslink-eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #2563eb;
+  margin-bottom: 0.4rem;
+}
+
+.crosslink-title {
+  font-size: 1.3rem !important;
+  font-weight: 700;
+  color: #0f172a !important;
+  letter-spacing: -0.025em;
+  margin: 0 0 0.4rem;
+}
+
+.crosslink-text {
+  font-size: 0.925rem;
+  color: #5b6b81;
+  line-height: 1.65;
+  margin: 0;
+  max-width: 620px;
+}
+
+.crosslink-action { flex-shrink: 0; }
+
+.crosslink-action .btn-primary {
+  padding: 0.7rem 1.5rem;
+  white-space: nowrap;
+}
+
+.crosslink-action .btn-primary span {
+  display: inline-block;
+  transition: transform 0.15s ease;
+}
+
+.crosslink-action .btn-primary:hover span { transform: translateX(3px); }
+
+/* Dark variant, for use against the light sections of the advisory page */
+.crosslink-band-dark {
+  background: #0f172a;
+  border-color: #0f172a;
+}
+
+.crosslink-band-dark .crosslink-title { color: #fff !important; }
+.crosslink-band-dark .crosslink-text  { color: rgba(255, 255, 255, 0.6); }
+.crosslink-band-dark .crosslink-eyebrow { color: #93c5fd; }
+
+@media (max-width: 767px) {
+  .crosslink-inner { flex-direction: column; align-items: flex-start; }
+  .crosslink-action { width: 100%; }
+  .crosslink-action .btn-primary { width: 100%; }
+}
+
+/* ── Package cards ─────────────────────────────────────── */
+.package-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.package-card:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
+}
+
+.package-card-featured {
+  border: 2px solid #2563eb;
+  box-shadow: 0 8px 32px rgba(37, 99, 235, 0.1);
+}
+
+.package-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.package-eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #2563eb;
+  margin-bottom: 0.35rem;
+}
+
+.package-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.package-meta {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.package-price {
+  display: block;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+.package-duration {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: #5b6b81;
+  white-space: nowrap;
+}
+
+.package-summary {
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.7;
+  margin-bottom: 1.15rem;
+}
+
+.package-deliverables {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.25rem;
+  flex: 1;
+}
+
+.package-deliverables li {
+  position: relative;
+  padding-left: 1.6rem;
+  margin-bottom: 0.6rem;
+  font-size: 0.875rem;
+  color: #334155;
+  line-height: 1.6;
+}
+
+.package-deliverables li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.42em;
+  width: 0.55rem;
+  height: 0.3rem;
+  border-left: 2px solid #2563eb;
+  border-bottom: 2px solid #2563eb;
+  transform: rotate(-45deg);
+}
+
+@media (min-width: 992px) {
+  .package-deliverables-split {
+    column-count: 2;
+    column-gap: 2.5rem;
+  }
+  .package-deliverables-split li {
+    break-inside: avoid;
+  }
+}
+
+.package-foot {
+  margin-top: auto;
+  padding-top: 0.25rem;
+}
+
+.package-note {
+  font-size: 0.8rem;
+  color: #15803d;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 0.9rem;
+  line-height: 1.5;
+}
+
+.package-cta {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.package-cta:hover {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+
+.package-cta span {
+  transition: transform 0.15s ease;
+  display: inline-block;
+}
+
+.package-cta:hover span {
+  transform: translateX(3px);
+}
+
+/* ── Fit / not-fit cards ───────────────────────────────── */
+.fit-card {
+  border-radius: 12px;
+  height: 100%;
+}
+
+.fit-card-yes {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+}
+
+.fit-card-no {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.fit-heading {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1.15rem;
+}
+
+.fit-card-yes .fit-heading { color: #15803d; }
+.fit-card-no  .fit-heading { color: #5b6b81; }
+
+.fit-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.fit-list li {
+  position: relative;
+  padding-left: 1.6rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+.fit-list li:last-child { margin-bottom: 0; }
+
+.fit-card-yes .fit-list li { color: #14532d; }
+.fit-card-no  .fit-list li { color: #64748b; }
+
+.fit-card-yes .fit-list li::before {
+  content: '';
+  position: absolute;
+  left: 0.15rem;
+  top: 0.42em;
+  width: 0.55rem;
+  height: 0.3rem;
+  border-left: 2px solid #15803d;
+  border-bottom: 2px solid #15803d;
+  transform: rotate(-45deg);
+}
+
+.fit-card-no .fit-list li::before {
+  content: '';
+  position: absolute;
+  left: 0.1rem;
+  top: 0.72em;
+  width: 0.7rem;
+  height: 2px;
+  background: #cbd5e1;
+}
+
+/* ── Process timeline ──────────────────────────────────── */
+.process-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.process-step {
+  position: relative;
+  display: flex;
+  gap: 1.25rem;
+  padding-bottom: 2rem;
+}
+
+.process-step:last-child { padding-bottom: 0; }
+
+/* Connector line between the numbered markers */
+.process-step:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  left: 1.1rem;
+  top: 2.4rem;
+  bottom: 0.4rem;
+  width: 2px;
+  background: #e2e8f0;
+}
+
+.process-marker {
+  flex-shrink: 0;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  background: rgba(37, 99, 235, 0.08);
+  color: #2563eb;
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+}
+
+.process-body { padding-top: 0.15rem; }
+
+.process-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.015em;
+  margin-bottom: 0.4rem;
+}
+
+.process-duration {
+  display: inline-block;
+  margin-left: 0.6rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #5b6b81;
+  vertical-align: middle;
+}
+
+.process-text {
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ── Readiness check ───────────────────────────────────── */
+.readiness-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+.readiness-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.readiness-item { margin-bottom: 0.35rem; }
+
+.readiness-item label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0.5rem 0.6rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.readiness-item label:hover { background: #f8fafc; }
+
+/* Visually hidden but still reachable by keyboard and screen readers */
+.readiness-input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.readiness-box {
+  flex-shrink: 0;
+  width: 1.15rem;
+  height: 1.15rem;
+  margin-top: 0.15rem;
+  border: 2px solid #cbd5e1;
+  border-radius: 5px;
+  background: #fff;
+  position: relative;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.readiness-input:checked + .readiness-box {
+  background: #2563eb;
+  border-color: #2563eb;
+}
+
+.readiness-input:checked + .readiness-box::after {
+  content: '';
+  position: absolute;
+  left: 0.28rem;
+  top: 0.1rem;
+  width: 0.3rem;
+  height: 0.58rem;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(45deg);
+}
+
+.readiness-input:focus-visible + .readiness-box {
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3);
+}
+
+.readiness-text {
+  font-size: 0.9rem;
+  color: #334155;
+  line-height: 1.6;
+}
+
+.readiness-input:checked ~ .readiness-text { color: #0f172a; }
+
+.readiness-result {
+  margin-top: 1.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #f1f5f9;
+  text-align: center;
+}
+
+.readiness-score {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #2563eb;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.readiness-total {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #5b6b81;
+}
+
+.readiness-verdict {
+  max-width: 460px;
+  margin: 0.85rem auto 0;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #64748b;
+}
+
+.readiness-verdict[data-band="high"] { color: #15803d; font-weight: 500; }
+
+.readiness-privacy {
+  font-size: 0.75rem;
+  color: #5b6b81;
+  margin-top: 0.9rem;
+}
+
+/* ── Testimonials ──────────────────────────────────────── */
+.testimonial-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.testimonial-quote {
+  font-size: 0.925rem;
+  color: #334155;
+  line-height: 1.75;
+  flex: 1;
+  margin: 0 0 1.25rem;
+}
+
+.testimonial-quote::before { content: '\201C'; }
+.testimonial-quote::after  { content: '\201D'; }
+
+.testimonial-attrib {
+  padding-top: 1.15rem;
+  border-top: 1px solid #f1f5f9;
+}
+
+.testimonial-name {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.testimonial-role {
+  display: block;
+  font-size: 0.8rem;
+  color: #5b6b81;
+}
+
+.testimonial-source {
+  display: inline-block;
+  margin-top: 0.4rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #2563eb;
+  text-decoration: none;
+}
+
+/* ── Readiness actions ─────────────────────────────────── */
+.readiness-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+}
+
+.readiness-actions .btn {
+  padding: 0.7rem 1.4rem;
+}
+
+.readiness-actions .btn-outline {
+  background: transparent;
+  border: 1px solid #cbd5e1;
+  color: #475569;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.readiness-actions .btn-outline:hover {
+  border-color: #94a3b8;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+/* ── Sticky mobile CTA ─────────────────────────────────── */
+/* These pages run 13-19 screens on a phone; without this the visitor has no
+   call to action between sections. Hidden on desktop, where the navbar CTA is
+   always visible, and hidden by site.js while the contact section is on screen. */
+.sticky-cta {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .sticky-cta {
+    display: block;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1030;
+    padding: 0.6rem 0.9rem calc(0.6rem + env(safe-area-inset-bottom));
+    background: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid #e2e8f0;
+    transform: translateY(0);
+    transition: transform 0.25s ease;
+  }
+
+  /* Class, not the `hidden` attribute: the UA stylesheet's [hidden] rule
+     forces display:none and cancels the transition. */
+  .sticky-cta.is-hidden {
+    transform: translateY(110%);
+    pointer-events: none;
+  }
+
+  .sticky-cta-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 48px;
+    background: #2563eb;
+    color: #fff !important;
+    border-radius: 8px;
+    font-size: 0.925rem;
+    font-weight: 600;
+    text-decoration: none !important;
+  }
+
+  .sticky-cta-btn:hover,
+  .sticky-cta-btn:focus {
+    background: #1d4ed8;
+  }
+
+  /* Keep the bar from covering the last of the footer. */
+  body {
+    padding-bottom: 4.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sticky-cta { transition: none; }
+}
+
 /* ── Mobile ────────────────────────────────────────────── */
 @media (max-width: 767px) {
   .service-card {
     margin-bottom: 0;
+  }
+
+  .package-head {
+    flex-direction: column;
+  }
+
+  .package-meta {
+    text-align: left;
+  }
+
+  .package-price {
+    display: inline;
+  }
+
+  .package-duration {
+    display: inline;
+    margin-left: 0.5rem;
   }
 }
