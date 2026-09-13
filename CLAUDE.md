@@ -17,33 +17,33 @@ Note: `_config.yml` changes require a server restart — livereload does not pic
 
 This is a Jekyll static site deployed to GitHub Pages at `prlic.io` (CNAME). It uses a remote theme (`iprlic/creative-theme-jekyll-new` via `jekyll-remote-theme` plugin), so layout and styling files are not present locally — they are downloaded at build time to a temp directory (`/var/folders/.../jekyll-remote-theme-*/`).
 
-**There are two pages in two languages — four files, and they must stay in sync:**
+**One page per language, plus two redirect stubs:**
 
-| File | URL | Lang | `ref` | Audience |
-|------|-----|------|-------|----------|
-| `index.md` | `/` | en | `home` | CTOs, VPs Eng, Toptal referrals. Sells capability. |
-| `ai-advisory.md` | `/ai-advisory/` | en | `advisory` | Executives at regulated EU mid-market firms. Sells priced packages. |
-| `hr/index.md` | `/hr/` | hr | `home` | as above, Croatian |
-| `hr/ai-savjetovanje.md` | `/hr/ai-savjetovanje/` | hr | `advisory` | as above, Croatian |
+| File | URL | Lang | `ref` | Purpose |
+|------|-----|------|-------|---------|
+| `index.md` | `/` | en | `home` | The whole offer, one page |
+| `hr/index.md` | `/hr/` | hr | `home` | Croatian equivalent |
+| `ai-advisory.md` | `/ai-advisory/` | — | — | Redirect to `/#packages` |
+| `hr/ai-savjetovanje.md` | `/hr/ai-savjetovanje/` | — | — | Redirect to `/hr/#packages` |
 
-Keep the two *pages* distinct: do not merge advisory framing back into the homepage, the split exists so neither audience gets a diluted message.
+The site used to be split into an engineering homepage and a separate `/ai-advisory/` landing page. They were merged in Sept 2026: the split duplicated four sections (clients, contact, who, crosslink) across two pages and doubled the translation burden for a solo consultancy. The two old URLs are kept as redirect stubs because they were given out in outreach — **do not delete them.** They use a meta-refresh plus `window.location.replace`, not `jekyll-redirect-from`, so no extra plugin is needed on GitHub Pages' classic build. Both carry `sitemap: false` and `noindex`, and have no `ref`, so they stay out of the sitemap and the hreflang graph.
 
-**Section-level parity between languages is required** — any section added to one language must be added to the other, or the language switcher drops the visitor onto a page missing content they were just reading. **Item-level divergence inside a section is intentional** and should not be "fixed": the two advisory pages target different markets (see below). As of the Croatian repositioning the HR advisory page has 6 fit items vs 5, 5 not-fit vs 4, and 9 FAQ questions vs 7.
+Editing the site means editing `index.md` and `hr/index.md`. Both are single-page layouts defined entirely via YAML frontmatter `sections`, where each section's `type` maps to a local `_includes/` override.
 
-### The HR advisory page targets Croatia specifically
+**Section-level parity between languages is required** — any section added to one language must be added to the other, or the language switcher drops the visitor onto a page missing content they were just reading. **Item-level divergence inside a section is intentional** and should not be "fixed": the Croatian page targets a different market (see below). It currently carries 9 FAQ questions to the English page's 7.
 
-`/ai-advisory/` sells to regulated EU/US mid-market on a data-residency wedge. `/hr/ai-savjetovanje/` sells to **Croatian** companies and public sector, where that wedge is much weaker: only ~15% of Croatian firms with 10+ employees use any AI technology, so the buyer's question is "where do we start and does it pay off", not "can you keep our data in the EU".
+### The Croatian page targets Croatia specifically
 
-Consequences baked into the HR page, all deliberate:
+The English page sells to regulated EU/US mid-market on a data-residency wedge. The Croatian page sells to **Croatian** companies and public sector, where that wedge is much weaker: only ~15% of Croatian firms with 10+ employees use any AI technology, so the buyer's question is "where do we start and does it pay off", not "can you keep our data in the EU".
 
-- Sectors follow the draft national AI plan to 2032 (public administration, healthcare, energy, transport, tourism, financial services), not the EN page's regulated-industry list.
+Consequences baked into the Croatian page, all deliberate:
+
+- Sectors follow the draft national AI plan to 2032 (public administration, healthcare, energy, transport, tourism, financial services), not the English page's regulated-industry list.
 - The Assessment lists a deliverable framed as technical groundwork an EU-funds consultant can use. **Never claim a call will fund the assessment itself.** On the SME digitalisation calls, advisory *is* an eligible cost but capped very low — €2,000 in the last such call, against grants of €30,000–€120,000. The money is in implementation (tools, software, equipment). The FAQ says this plainly with the figure; keep it that way, and update the figure when a new call publishes its terms.
 - Croatian copy uses the vocabulary the market already uses, harvested from PwC Croatia, the EDIH network, HGK and the grant call documents: `digitalna zrelost`, `slučajevi primjene`, `prihvatljivi troškovi`, `savjetodavne usluge`, `projektni prijedlog`, `MSP`, `računalni vid`, `strojno učenje`, `uvođenje AI-ja u poslovanje`, `smanjite rizik od neuspjeha`. Do not "improve" these into more literal translations of the English — they are the terms buyers and funds consultants search for and recognise.
 - Two extra FAQ entries: EU co-financing, and working in Croatian / on-site in Croatia.
 - "Fractional AI vodstvo" was renamed "AI vodstvo bez stalnog zaposlenja" — "fractional" does not parse for a Croatian mid-market buyer.
-- Prices are identical to the EN page and stay that way. The Croatian budget problem is solved through co-financing and EDIH routes, not discounting.
-
-All four are single-page layouts defined entirely via YAML frontmatter `sections`. Each section has a `type` field that maps to a local `_includes/` override. Editing the site means editing these four files.
+- Prices are identical to the English page and stay that way. The Croatian budget problem is solved through co-financing and EDIH routes, not discounting.
 
 ## Internationalisation
 
@@ -78,23 +78,24 @@ There is no jQuery, no Bootstrap JS, no Font Awesome, and no CDN dependency exce
 
 ## Page flow
 
-The advisory page order is deliberate and follows the order buyers ask questions:
-`clients → fit → packages → proof → who → process → readiness → faq → crosslink → contacts`.
-Proof sits immediately after the prices it justifies, and `who` right after it because for a
-solo consultancy the person is the product. Both were four screens further down before.
+Order follows the order buyers ask questions:
+`hero → clients → packages → services → work → who → faq → contacts`.
 
-Backgrounds must keep alternating (subtle / white / subtle / white / dark …) — check the
-neighbours before adding `background_style: bg-subtle` to a new section.
+Prices land at ~1.9 screens because `header.proof` puts a price chip at the fold; without it the
+first price is three screens down. `services` sits *after* `packages` on purpose: the priced
+advisory ladder is the lead offer, and bespoke engineering is the "also available" tail.
 
-`header.proof` renders a chip strip under the hero CTA. It exists so the published price is
-visible at the fold; without it the first price is ~3 screens down.
+Backgrounds must keep alternating (subtle / white / subtle / white / dark / subtle / dark) —
+check the neighbours before adding `background_style: bg-subtle` to a new section.
 
 Sections are sized with padding, not `min-height: 80vh`. The old min-heights stretched ~450px
 of content into 720px boxes, costing ~500px of dead space per page.
 
-Keep the Calendly CTA count low. It is on the featured package only, plus the nav button, the
-readiness result and the contact section. Five identical "Book an intro call" links inside one
-section gave the reader no signal about which to click.
+Keep the Calendly CTA count low: the featured package, the nav button, the sticky mobile bar and
+the contact section. Five identical "Book an intro call" links inside one section gave the reader
+no signal about which to click.
+
+The whole page is ~8.8 screens at 1440x900. The two pages it replaced were 7.1 + 11.2.
 
 ## Accessibility
 
@@ -106,7 +107,7 @@ All body text meets WCAG AA (4.5:1). The greys are chosen for it: `#5b6b81` is t
 
 **`_config.yml`** holds global settings: site title, nav title, URL, OG image, social links, plugin config.
 
-**`_data/menus.yml`** controls nav links, keyed by menu name then language. `header` is the homepage menu; `advisory` is the advisory-page menu. A page selects one with `nav_menu: <key>` (defaults to `header`) and its language with `lang`. The last item in a list renders as a primary CTA button; "Book a Call" is appended separately in `_includes/nav.html` and its label/URL can be overridden per page with `nav_cta_label` / `nav_cta_url`. Set `highlight: true` on an item to accent it.
+**`_data/menus.yml`** controls nav links, keyed by language. There is a single `header` menu now; a page selects its language with `lang`. The last item in a list renders as a primary CTA button; "Book a Call" is appended separately in `_includes/nav.html` and its label/URL can be overridden per page with `nav_cta_label` / `nav_cta_url`. Set `highlight: true` on an item to accent it.
 
 Anchor-only URLs (`#work`) are emitted bare and get the theme's smooth scroll; everything else goes through `relative_url`. Do not pipe `#foo` through `relative_url` — it becomes `/#foo` and jumps to the homepage from any subpage.
 
@@ -122,19 +123,14 @@ All layout/include overrides live locally and take precedence over the remote th
 |------|---------|
 | `_layouts/base.html` | Font (Inter), JSON-LD schema, deferred JS, active nav JS |
 | `_layouts/home.html` | Removes text-uppercase from hero h1, adds hero subtitle |
-| `_includes/nav.html` | Per-page menu selection, two CTA buttons, anchor-safe hrefs |
-| `_includes/about.html` | Two-column layout with photo, badges, tech stack |
+| `_includes/nav.html` | Language-keyed menu, two CTA buttons, language switch, anchor-safe hrefs |
+| `_includes/about.html` | Two-column layout with photo, badges, tech stack, and the compact `certs` chip row (certifications no longer have their own section) |
 | `_includes/services.html` | Service cards with icon circles (`text` is markdownified, so links work) |
 | `_includes/case-studies.html` | Case study cards with outcome chips |
-| `_includes/certifications.html` | Cert chips, supports optional `url` for links |
 | `_includes/contact.html` | Dark section with contact buttons; `watermark` sets the giant background word |
 | `_includes/footer.html` | Two-column: copyright left, links right |
 | `_includes/packages.html` | Priced offer cards + OfferCatalog JSON-LD. `featured: true` = full width, accent border, two-column deliverables |
-| `_includes/fit.html` | Two-column "good fit / not a fit" qualification lists |
-| `_includes/process.html` | Numbered engagement timeline with connector line |
-| `_includes/readiness-check.html` | Self-scoring checklist, client-side only, banded verdict at <40% / <75% / ≥75% |
 | `_includes/testimonials.html` | Quote cards. **Renders nothing until real `quotes` are supplied** — never invent them |
-| `_includes/crosslink.html` | Full-width band linking the engineering and advisory tracks. `variant: dark` available, but place a light band between a light and a dark section so it reads as its own block |
 | `_includes/clients.html` | Client name chips. Takes `clients[]` of `{ name }` |
 | `_includes/faq.html` | Native `<details>` accordion + FAQPage JSON-LD. No JS; answers stay crawlable while collapsed |
 
@@ -151,7 +147,7 @@ All layout/include overrides live locally and take precedence over the remote th
 
 ## Certifications YAML format
 
-Certs use `name` + optional `url` object pairs (not plain strings):
+Certs live under the `about.html` section as a flat `certs` list of `name` + optional `url` pairs (not plain strings). They render as a compact chip row; there is no separate certifications section any more.
 
 ```yaml
 certs:
@@ -170,7 +166,7 @@ certs:
 - Favicon: `assets/img/favicon.svg` + `favicon.png` (IP initials, dark navy)
 - No blog posts under `_posts/`
 
-## Pricing on the advisory page
+## Pricing
 
 Prices are "from €X" anchors, deliberately. They filter unqualified enquiries and signal a productized practice rather than hourly work. Keep them; do not soften to "price on enquiry". Current ladder: Workshop €1,500 · Assessment €10,000 · Proof of Value €30,000 · Fractional €5,000/mo · Training €4,000.
 
@@ -178,12 +174,11 @@ The assessment's fee-credit offer (credited in full against a build booked withi
 
 ## To Do
 
-- **Croatian proofread** — the Croatian copy was written by Claude, not by a native speaker, and has not been reviewed by Ivan. Proofread before promoting `/hr/` anywhere.
-- **Testimonials** — highest impact remaining content gap. The `testimonials.html` include and a commented-out section block are already in `ai-advisory.md` and `hr/ai-savjetovanje.md`; uncomment and fill in 2-3 verbatim quotes from LinkedIn recommendations. Never invent quotes.
+- **Croatian proofread** — the Croatian copy was written by Claude, not by a native speaker, and has not been reviewed by Ivan. It was rewritten once to remove translationese, but still needs a native read before `/hr/` is promoted anywhere.
+- **Testimonials** — highest impact remaining content gap. The `testimonials.html` include and a commented-out section block sit in both `index.md` and `hr/index.md`; uncomment and fill in 2-3 verbatim quotes from LinkedIn recommendations. Never invent quotes.
 - **Case study numbers** — outcome chips are qualitative. Any that Ivan can back with a real figure (hours saved, cost reduced, time to market) should be restated in money, especially on the advisory page.
 - **Blog / thought leadership** — write for buyers, not engineers. Suggested topics: what a production RAG system costs to run for a year; why the first AI use case should be boring; keeping AI inside the perimeter under EU data residency.
-- **Homepage services** — still 8 cards organized by technology. Fine for the engineering audience, but worth collapsing to 4-5 organized by problem if the homepage ever needs to work harder.
-- **Five unanswered FAQ questions** — the FAQ on both advisory pages ships with seven answered questions and five stubbed out in comments at the bottom of the `faq.html` section block: NDA/DPA, professional indemnity insurance, IP ownership, payment terms, and third-party AI tooling on client material. These are the ones enterprise procurement asks last and that most often stall a deal. Only Ivan can answer them — **do not invent answers**. When filling them in, translate into `hr/ai-savjetovanje.md` at the same time.
+- **Five unanswered FAQ questions** — the FAQ on both pages ships with seven answered questions and five stubbed out in comments at the bottom of the `faq.html` section block: NDA/DPA, professional indemnity insurance, IP ownership, payment terms, and third-party AI tooling on client material. These are the ones enterprise procurement asks last and that most often stall a deal. Only Ivan can answer them — **do not invent answers**. When filling them in, translate into `hr/index.md` at the same time.
 
 ## Sourcing facts about Ivan
 

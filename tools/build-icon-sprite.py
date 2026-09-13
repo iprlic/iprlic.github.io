@@ -29,17 +29,13 @@ BASE = f"https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@{VERSION}/sv
 # name -> style. Keep in sync with the `icon:` values used in page front matter
 # and with the hardcoded icons in nav.html.
 ICONS = {
-    "brain": "solid",
     "calendar-alt": "solid",
-    "chalkboard-teacher": "solid",
     "cloud": "solid",
     "cloud-upload-alt": "solid",
     "code": "solid",
     "cogs": "solid",
     "envelope": "solid",
     "globe": "solid",
-    "lightbulb": "solid",
-    "user-tie": "solid",
     "github": "brands",
     "linkedin": "brands",
 }

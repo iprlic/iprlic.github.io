@@ -1,56 +1,28 @@
-# Nav menus, keyed by menu name then by language code.
+# Nav menu, keyed by language code. One page per language now, so there is a
+# single `header` menu; a page selects its language with `lang` in front matter.
 #
-# A page picks its menu with `nav_menu: <key>` and its language with `lang: <code>`
-# in front matter. Both default to `header` / `en`. See _includes/nav.html.
+# The last item renders as the primary CTA button. "Book a Call" is appended
+# separately in nav.html. Anchor-only URLs stay bare and get smooth scroll.
 #
-# The last item in each list renders as the primary CTA button. The "Book a Call"
-# button is appended separately in nav.html. Set `highlight: true` to accent a link.
-#
-# Anchor-only URLs (#work) stay bare and get smooth scroll. Everything else is
-# passed through relative_url.
-#
-# KEEP THESE TO FOUR ITEMS. With two buttons and the language switch alongside,
-# five links leave only ~16px of clearance from the brand between 992px and
-# 1200px. Sections dropped from the nav are still reachable by scrolling.
+# KEEP THIS TO FOUR ITEMS. With two buttons and the language switch alongside,
+# five links leave only ~16px of clearance from the brand between 992-1200px.
 
 header:
   en:
+    - title: What You Get
+      url: "#packages"
     - title: Services
       url: "#services"
     - title: Work
       url: "#work"
-    - title: AI Advisory
-      url: "/ai-advisory/"
-      highlight: true
     - title: Contact
-      url: "#contacts"
-  hr:
-    - title: Usluge
-      url: "#services"
-    - title: Projekti
-      url: "#work"
-    - title: AI savjetovanje
-      url: "/hr/ai-savjetovanje/"
-      highlight: true
-    - title: Kontakt
-      url: "#contacts"
-
-advisory:
-  en:
-    - title: What You Get
-      url: "#packages"
-    - title: Work
-      url: "#proof"
-    - title: Questions
-      url: "#faq"
-    - title: Start
       url: "#contacts"
   hr:
     - title: Što dobivate
       url: "#packages"
+    - title: Usluge
+      url: "#services"
     - title: Projekti
-      url: "#proof"
-    - title: Pitanja
-      url: "#faq"
-    - title: Krenimo
+      url: "#work"
+    - title: Kontakt
       url: "#contacts"

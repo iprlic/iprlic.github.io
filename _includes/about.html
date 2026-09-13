@@ -33,6 +33,22 @@
         {% if section.languages %}
         <p class="about-languages">{{ section.languages }}</p>
         {% endif %}
+        {% comment %}
+          Certifications used to be their own 720px section. Folded in here as a
+          compact chip row: same credibility, a fraction of the vertical space.
+        {% endcomment %}
+        {% if section.certs %}
+        <div class="about-certs">
+          {% if section.certs_title %}<span class="about-certs-label">{{ section.certs_title }}</span>{% endif %}
+          {% for cert in section.certs %}
+            {% if cert.url %}
+            <a class="about-cert" href="{{ cert.url }}" target="_blank" rel="noopener">{{ cert.name }}</a>
+            {% else %}
+            <span class="about-cert">{{ cert.name }}</span>
+            {% endif %}
+          {% endfor %}
+        </div>
+        {% endif %}
         {% if section.actions %}
         <div class="mt-4">
           {% for action in section.actions %}

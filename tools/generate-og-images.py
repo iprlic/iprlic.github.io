@@ -84,25 +84,13 @@ def svg(eyebrow, title_lines, chip, chip_dot=False, footer="prlic.io"):
 
 CARDS = {
     "og-image.png": dict(
-        eyebrow="IVAN PRLIĆ",
-        title_lines=["Solutions Architect", "AI & DevOps Consultant"],
-        chip="Available for projects",
-        chip_dot=True,
-    ),
-    "og-image-hr.png": dict(
-        eyebrow="IVAN PRLIĆ",
-        title_lines=["Solutions Architect", "AI i DevOps konzultant"],
-        chip="Dostupan za projekte",
-        chip_dot=True,
-    ),
-    "og-advisory.png": dict(
-        eyebrow="AI ADVISORY · REGULATED EU COMPANIES",
-        title_lines=["AI that reaches production", "inside your perimeter"],
+        eyebrow="AI ADVISORY · CLOUD ARCHITECTURE",
+        title_lines=["AI and cloud systems", "that reach production"],
         chip="Fixed scope · Published prices",
     ),
-    "og-advisory-hr.png": dict(
-        eyebrow="AI SAVJETOVANJE ZA HRVATSKE TVRTKE",
-        title_lines=["AI koji se isplati", "i koji dođe do produkcije"],
+    "og-image-hr.png": dict(
+        eyebrow="AI SAVJETOVANJE · CLOUD ARHITEKTURA",
+        title_lines=["AI i cloud sustavi", "koji dođu do produkcije"],
         chip="Fiksan opseg · Objavljene cijene",
     ),
 }

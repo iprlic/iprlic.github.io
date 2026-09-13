@@ -50,8 +50,19 @@
           {% endcomment %}
           {% assign first_char = item.url | slice: 0, 1 %}
           {% if first_char == "#" %}
-            {% assign item_href = item.url %}
-            {% assign scroll_class = " js-scroll-trigger" %}
+            {% comment %}
+              Bare anchor only when this page actually holds those sections, i.e.
+              the language home. On 404 (and anything else using this layout) the
+              sections do not exist, so the anchor has to be qualified with the
+              home URL or every nav item becomes a dead link.
+            {% endcomment %}
+            {% if page.url == home_url %}
+              {% assign item_href = item.url %}
+              {% assign scroll_class = " js-scroll-trigger" %}
+            {% else %}
+              {% assign item_href = home_url | append: item.url %}
+              {% assign scroll_class = "" %}
+            {% endif %}
           {% else %}
             {% assign item_href = item.url | relative_url %}
             {% assign scroll_class = "" %}
