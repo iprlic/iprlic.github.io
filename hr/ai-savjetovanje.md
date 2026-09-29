@@ -8,7 +8,7 @@ sitemap: false
 <head>
   <meta charset="utf-8">
   <title>Paketi AI savjetovanja</title>
-  <link rel="canonical" href="/hr/#packages">
+  <link rel="canonical" href="https://prlic.io/hr/">
   <meta name="robots" content="noindex">
   <meta http-equiv="refresh" content="0; url=/hr/#packages">
   <script>window.location.replace("/hr/#packages");</script>

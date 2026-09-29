@@ -8,7 +8,7 @@ sitemap: false
 <head>
   <meta charset="utf-8">
   <title>AI advisory packages</title>
-  <link rel="canonical" href="/#packages">
+  <link rel="canonical" href="https://prlic.io/">
   <meta name="robots" content="noindex">
   <meta http-equiv="refresh" content="0; url=/#packages">
   <script>window.location.replace("/#packages");</script>

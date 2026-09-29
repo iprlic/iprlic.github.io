@@ -6,13 +6,16 @@ ref: home
 sticky_cta:
   label: Book a call
   url: https://calendly.com/prlic/15min
-image: /assets/img/og-image.png
+# Object form so jekyll-seo-tag also emits og:image:width / og:image:height,
+# which stops LinkedIn and Slack reflowing the card while the image loads.
+image:
+  path: /assets/img/og-image.png
+  width: 1200
+  height: 630
+locale: en_US
 title: AI Advisory & Cloud Architecture
 description: >-
-  Ivan Prlić — AI advisory and cloud architecture for regulated EU and US
-  companies. Fixed-scope assessment, proof of value, and fractional AI
-  leadership, plus bespoke cloud and DevOps engineering. AWS Authorized
-  Instructor, 14 professional certifications.
+  AI advisory and cloud architecture for regulated EU and US companies. Fixed-scope assessment, proof of value and fractional AI leadership.
 
 header:
   title: AI and cloud systems that reach production

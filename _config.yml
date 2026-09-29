@@ -30,22 +30,30 @@ author: Ivan Prlić
 
 # jekyll-seo-tag reads `page.image`, not `site.image`, so the site-wide default
 # has to be set through `defaults` below or no og:image is emitted at all.
-twitter:
-  card: summary_large_image
-
+#
+# No `twitter:` block and no `social.name`: with those present but no real
+# handle, seo-tag emitted `twitter:site = "@"` and `twitter:creator = "@Ivan
+# Prlić"`, neither of which is a valid handle. seo-tag picks summary_large_image
+# on its own whenever an image is set. Only add a `twitter:` block back if there
+# is a live account to point at.
+#
+# social.links drives the sameAs in seo-tag's JSON-LD, so it must only list
+# profiles that actually exist.
 social:
-  name: Ivan Prlić
   links:
-    - https://twitter.com/ivan_prlic
     - https://www.linkedin.com/in/iprlic
     - https://github.com/iprlic
+    - https://www.toptal.com/resume/ivan-prlic
 
 # Build settings
 markdown: kramdown
 theme: minima
 remote_theme: iprlic/creative-theme-jekyll-new
 plugins:
-  - jekyll-feed
+  # jekyll-feed is intentionally disabled: there are no posts, so it generated an
+  # empty feed.xml and advertised it via <link rel="alternate"> on every page.
+  # Re-enable it the moment _posts/ has content.
+  # - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-remote-theme

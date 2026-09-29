@@ -26,6 +26,7 @@
     title tags is worse than either alone. Titles come from each page's `title`
     front matter, combined with site.title by the seo tag.
   {% endcomment %}
+  <meta name="theme-color" content="#0f172a">
   <!-- Favicon-->
   <link rel="icon" type="image/svg+xml" href="{{ '/assets/img/favicon.svg' | relative_url }}">
   <link rel="icon" type="image/png" href="{{ '/assets/img/favicon.png' | relative_url }}">
@@ -49,7 +50,14 @@
 
 {% seo %}
 
-  <!-- Schema.org structured data -->
+  {% comment %}
+    Person + ProfessionalService as one @graph, cross-linked by @id. Keep the
+    jobTitle / knowsAbout / description in step with the page copy — these went
+    stale once before, still describing a DevOps-led practice after the site had
+    moved to AI advisory. hasOfferCatalog is only emitted on pages that actually
+    render a packages section, otherwise it points at nothing.
+  {% endcomment %}
+  {% assign pkg_sections = page.sections | where: "type", "packages.html" %}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -58,10 +66,12 @@
         "@type": "Person",
         "@id": "https://prlic.io/#ivan",
         "name": "Ivan Prlić",
-        "jobTitle": "Solutions Architect & AI and DevOps Consultant",
+        "jobTitle": "AI Advisor & Solutions Architect",
         "url": "https://prlic.io",
         "email": "ivan@prlic.io",
         "image": "https://prlic.io/assets/img/members/headshot_zoomed.webp",
+        "worksFor": { "@id": "https://prlic.io/#business" },
+        "knowsLanguage": ["en", "hr"],
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Zagreb",
@@ -73,17 +83,21 @@
           "https://www.toptal.com/resume/ivan-prlic"
         ],
         "knowsAbout": [
+          "Artificial Intelligence Strategy", "Generative AI", "Retrieval-Augmented Generation",
+          "Amazon Bedrock", "Machine Learning", "EU AI Act Compliance",
           "Cloud Architecture", "Amazon Web Services", "Google Cloud Platform",
-          "Microsoft Azure", "Generative AI", "Machine Learning", "Kubernetes",
-          "Terraform", "DevOps", "CI/CD", "Serverless Architecture"
+          "Microsoft Azure", "Kubernetes", "Terraform", "DevOps", "Serverless Architecture"
         ],
         "hasCredential": [
           { "@type": "EducationalOccupationalCredential", "name": "AWS Authorized Instructor" },
           { "@type": "EducationalOccupationalCredential", "name": "AWS Certified Machine Learning Specialty" },
           { "@type": "EducationalOccupationalCredential", "name": "AWS Solutions Architect Professional" },
+          { "@type": "EducationalOccupationalCredential", "name": "AWS DevOps Engineer Professional" },
           { "@type": "EducationalOccupationalCredential", "name": "Google Cloud Professional Cloud Architect" },
           { "@type": "EducationalOccupationalCredential", "name": "Google Cloud Professional Machine Learning Engineer" },
+          { "@type": "EducationalOccupationalCredential", "name": "Google Cloud Professional Data Engineer" },
           { "@type": "EducationalOccupationalCredential", "name": "Microsoft Azure Solutions Architect Expert" },
+          { "@type": "EducationalOccupationalCredential", "name": "Microsoft Azure AI Engineer Associate" },
           { "@type": "EducationalOccupationalCredential", "name": "Certified Kubernetes Administrator" },
           { "@type": "EducationalOccupationalCredential", "name": "PMP Project Management Professional" }
         ]
@@ -92,21 +106,37 @@
         "@type": "ProfessionalService",
         "@id": "https://prlic.io/#business",
         "name": "Prlić Consulting",
+        "legalName": "Prlić Consulting d.o.o.",
         "url": "https://prlic.io",
         "email": "ivan@prlic.io",
+        "image": "https://prlic.io/assets/img/og-image.png",
         "founder": { "@id": "https://prlic.io/#ivan" },
+        "employee": { "@id": "https://prlic.io/#ivan" },
+        "foundingDate": "2017-11",
+        "taxID": "84570551730",
+        "priceRange": "€€€",
+        "currenciesAccepted": "EUR",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Zagreb",
           "addressCountry": "HR"
         },
-        "areaServed": ["EU", "US"],
-        "description": "AI, cloud architecture, and DevOps consulting for enterprises. Specialising in AWS, GCP, Azure, generative AI, Kubernetes, and cloud migrations.",
+        "areaServed": [
+          { "@type": "Country", "name": "Croatia" },
+          { "@type": "Place", "name": "European Union" },
+          { "@type": "Country", "name": "United States" }
+        ],
+        "sameAs": [
+          "https://www.linkedin.com/in/iprlic/",
+          "https://github.com/iprlic"
+        ],
+        "description": "AI advisory and cloud architecture for regulated organisations. Fixed-scope AI readiness assessments, proof-of-value builds, fractional AI leadership, and cloud, Kubernetes and DevOps engineering.",
         "knowsAbout": [
-          "Generative AI Integration", "Cloud Architecture", "Cloud Migration",
-          "DevOps as a Service", "Serverless Architecture", "CI/CD Automation",
-          "Cloud Training", "Technical Advisory"
-        ]
+          "AI Readiness Assessment", "AI Use Case Prioritisation", "EU AI Act Compliance",
+          "Retrieval-Augmented Generation", "Amazon Bedrock", "Fractional CTO",
+          "Cloud Architecture", "Cloud Migration", "Kubernetes", "DevOps", "Serverless Architecture"
+        ]{% if pkg_sections.size > 0 %},
+        "hasOfferCatalog": { "@id": "{{ page.url | absolute_url }}#offers" }{% endif %}
       }
     ]
   }

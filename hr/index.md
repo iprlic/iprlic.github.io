@@ -6,13 +6,14 @@ ref: home
 sticky_cta:
   label: Dogovorite poziv
   url: https://calendly.com/prlic/15min
-image: /assets/img/og-image-hr.png
+image:
+  path: /assets/img/og-image-hr.png
+  width: 1200
+  height: 630
+locale: hr_HR
 title: AI savjetovanje i cloud arhitektura
 description: >-
-  Ivan Prlić — AI savjetovanje i cloud arhitektura za javnu upravu, zdravstvo,
-  energetiku, promet, turizam i financije. Procjena spremnosti, dokaz vrijednosti
-  i AI vodstvo, uz cloud i DevOps inženjering. AWS ovlašteni instruktor,
-  14 profesionalnih certifikata.
+  AI savjetovanje i cloud arhitektura za javnu upravu, zdravstvo, energetiku i financije. Procjena, dokaz vrijednosti i AI vodstvo.
 
 header:
   title: AI i cloud sustavi koji dođu do produkcije

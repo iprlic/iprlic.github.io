@@ -72,19 +72,29 @@
 {
   "@context": "https://schema.org",
   "@type": "OfferCatalog",
-  "name": "{{ section.title }}",
+  "@id": "{{ page.url | absolute_url }}#offers",
+  "name": {{ section.title | jsonify }},
   "provider": { "@type": "ProfessionalService", "@id": "https://prlic.io/#business" },
+  "inLanguage": "{{ page.lang | default: 'en' }}",
   "itemListElement": [
     {% for pkg in section.packages %}
     {
       "@type": "Offer",
       "name": {{ pkg.name | jsonify }},
       "description": {{ pkg.summary | jsonify }},
-      "priceCurrency": "EUR",
+      "url": "{{ page.url | absolute_url }}#{{ section.section_id }}",
+      "availability": "https://schema.org/InStock",
+      "seller": { "@id": "https://prlic.io/#business" },
+      "itemOffered": {
+        "@type": "Service",
+        "name": {{ pkg.name | jsonify }},
+        "serviceType": {{ pkg.name | jsonify }},
+        "provider": { "@id": "https://prlic.io/#business" }
+      },
       "priceSpecification": {
         "@type": "PriceSpecification",
-        "minPrice": {{ pkg.price_min | default: 0 }},
         "priceCurrency": "EUR",
+        "minPrice": {{ pkg.price_min | default: 0 }},
         "valueAddedTaxIncluded": false
       }
     }{% unless forloop.last %},{% endunless %}
