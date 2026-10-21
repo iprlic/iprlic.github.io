@@ -275,8 +275,14 @@ sections:
     certs:
       - name: AWS Authorized Instructor
         url: https://www.credly.com/badges/aa16c1eb-174e-4ba7-ad30-484fe1819135
+      - name: AWS Generative AI Developer – Pro
+        url: https://www.credly.com/badges/55a1a049-29af-45d6-b32b-828eda6df32e
+      - name: Claude Certified Architect – Pro
+        url: https://www.credly.com/badges/9bce828a-a63e-4656-bc80-3883ec84e85d
       - name: AWS ML – Specialty
         url: https://www.credly.com/badges/cfc09e60-e068-4529-be07-641bfc1c7465
+      - name: AWS Security – Specialty
+        url: https://www.credly.com/badges/a6a30fce-eb82-42b7-9b99-9cb2953a21f8
       - name: AWS Solutions Architect – Pro
         url: https://www.credly.com/badges/df4f87b6-f80b-4df1-bc5f-321432d3749e
       - name: AWS DevOps Engineer – Pro
@@ -284,7 +290,7 @@ sections:
       - name: GCP Cloud Architect
         url: https://www.credly.com/badges/53d187e0-8e95-4faf-8a90-2c27e722358f
       - name: GCP ML Engineer
-        url: https://www.credly.com/badges/4c131b3c-4813-4bfb-8f18-009ed66af68d
+        url: https://www.credly.com/badges/1eb8dfb3-6f99-4b88-bc1a-f8c6e2bbd713
       - name: GCP Data Engineer
         url: https://www.credly.com/badges/857eeecc-62b7-4fdf-ba26-cb4a1290e1af
       - name: GCP DevOps Engineer

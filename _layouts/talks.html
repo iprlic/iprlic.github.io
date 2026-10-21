@@ -1,0 +1,53 @@
+---
+layout: base
+---
+{% comment %}
+  Talks list. Entries live in _data/talks.yml; the page supplies only the
+  header and the per-language labels in `labels`, so /talks/ and
+  /hr/predavanja/ always list the same talks.
+{% endcomment %}
+{% assign lang = page.lang | default: "en" %}
+{% assign l = page.labels %}
+
+<header class="masthead masthead-compact">
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-10">
+        <h1 class="text-white font-weight-bold">{{ page.header.title }}</h1>
+        <hr class="divider my-4">
+        <p class="text-white-75 font-weight-light mb-0">{{ page.header.text }}</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="page-section talks-section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        {% for talk in site.data.talks %}
+        <article id="{{ talk.id }}" class="talk-card p-4 mb-4">
+          <div class="case-study-tag mb-2">
+            {{ talk.event.name }} · {{ talk.date | date: l.date_format }}{% if talk.talk_lang != lang %} · {{ l.in_lang[talk.talk_lang] }}{% endif %}
+          </div>
+          <h2 class="case-study-title talk-title">{{ talk.title }}</h2>
+          <p class="talk-meta">{{ talk.track[lang] }} · {{ talk.place[lang] }}</p>
+          <p class="case-study-body">{{ talk.summary[lang] }}</p>
+          <div class="talk-links">
+            {% if talk.slides %}
+            <a class="btn btn-primary btn-sm" href="{{ talk.slides | relative_url }}">{{ l.slides }}</a>
+            {% else %}
+            <span class="talk-pending">{{ l.slides_pending }}</span>
+            {% endif %}
+            {% if talk.video %}
+            <a class="btn btn-outline-primary btn-sm" href="{{ talk.video }}" target="_blank" rel="noopener">{{ l.video }}</a>
+            {% endif %}
+            <a class="talk-event-link" href="{{ talk.event.url }}" target="_blank" rel="noopener">{{ l.event }}</a>
+          </div>
+        </article>
+        {% endfor %}
+        <p class="talk-contact">{{ l.contact }} <a href="mailto:ivan@prlic.io">ivan@prlic.io</a></p>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,34 @@
+# Talks, newest first. Rendered by _layouts/talks.html on /talks/ (en) and
+# /hr/predavanja/ (hr); fields with en/hr keys are per language, the rest shared.
+#
+# `id` is the anchor (/talks/#<id>) and must never change once a QR code or
+# link points at it. Leave `slides` empty until the cleaned PDF is uploaded to
+# /assets/talks/<id>/; the page then shows `slides_pending` instead of a link.
+#
+# Public only: the client is never named and never called a bank, and nothing
+# goes here that is not already on the slides.
+
+- id: ai2future-2026
+  date: 2026-10-29
+  title: Shadow AI Is Already in Your Company. Here Is What We Built Instead.
+  talk_lang: en
+  event:
+    name: AI2Future 2026
+    url: https://ai2future.com/
+  place:
+    en: Kraš Auditorium, Zagreb
+    hr: Kraš Auditorium, Zagreb
+  track:
+    en: Business & Implementation track
+    hr: Business & Implementation
+  summary:
+    en: >-
+      How a customer in a regulated industry replaced shadow AI with a private,
+      EU-hosted AI assistant for a hundred non-technical users, and what it took
+      to get the auditors to sign off.
+    hr: >-
+      Kako je naručitelj iz reguliranog sektora shadow AI zamijenio privatnim AI
+      asistentom u EU za stotinjak netehničkih korisnika, i što je trebalo da ga
+      revizori odobre.
+  slides:
+  video:

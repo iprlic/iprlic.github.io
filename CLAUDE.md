@@ -25,8 +25,12 @@ This is a Jekyll static site deployed to GitHub Pages at `prlic.io` (CNAME). It 
 | `hr/index.md` | `/hr/` | hr | `home` | Croatian equivalent |
 | `ai-advisory.md` | `/ai-advisory/` | — | — | Redirect to `/#packages` |
 | `hr/ai-savjetovanje.md` | `/hr/ai-savjetovanje/` | — | — | Redirect to `/hr/#packages` |
+| `talks.md` | `/talks/` | en | `talks` | Conference talks, from `_data/talks.yml` via `_layouts/talks.html` |
+| `hr/predavanja.md` | `/hr/predavanja/` | hr | `talks` | Croatian equivalent |
 
 The site used to be split into an engineering homepage and a separate `/ai-advisory/` landing page. They were merged in Sept 2026: the split duplicated four sections (clients, contact, who, crosslink) across two pages and doubled the translation burden for a solo consultancy. The two old URLs are kept as redirect stubs because they were given out in outreach — **do not delete them.** They use a meta-refresh plus `window.location.replace`, not `jekyll-redirect-from`, so no extra plugin is needed on GitHub Pages' classic build. Both carry `sitemap: false` and `noindex`, and have no `ref`, so they stay out of the sitemap and the hreflang graph.
+
+**`/talks/` is printed as a QR code on conference slides** (AI2Future 2026, slide 19): never move or rename it, and never change a talk's `id` in `_data/talks.yml`, since it is the anchor. A new talk is one entry in that file; post its slides PDF under `assets/talks/<id>/` (cleaned public export, no speaker notes, client never named) and set `slides`. The page labels live in each page's `labels` front matter.
 
 Editing the site means editing `index.md` and `hr/index.md`. Both are single-page layouts defined entirely via YAML frontmatter `sections`, where each section's `type` maps to a local `_includes/` override.
 
@@ -204,6 +208,6 @@ The assessment's fee-credit offer (credited in full against a build booked withi
 
 ## Sourcing facts about Ivan
 
-`/Users/ip/Projects/cv/ip` holds the CV repo. `README.md` there is the most current consolidated summary; `resume/*.tex` has per-engagement detail, and `prlic-consulting-company-presentation.html` has the company boilerplate including OIB 84570551730. Use those rather than inferring. Facts already mined into the site: SOC 2 / financial-grade work at Q.ai, the Metro / Ricoh / TUI team-collaboration examples, company registration details, and the client list.
+`../cv` (`~/Projects/ip-profile/cv`) holds the CV repo. `README.md` there is the most current consolidated summary; `resume/*.tex` has per-engagement detail, and `prlic-consulting-company-presentation.html` has the company boilerplate including OIB 84570551730. Use those rather than inferring. Facts already mined into the site: SOC 2 / financial-grade work at Q.ai, the Metro / Ricoh / TUI team-collaboration examples, company registration details, and the client list.
 
 Note the CV contains **no quantified outcomes** — no percentages, cost reductions, or timings — which is why the case-study chips remain qualitative.

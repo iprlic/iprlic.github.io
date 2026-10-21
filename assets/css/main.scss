@@ -623,6 +623,64 @@ a.about-cert:hover {
   line-height: 1.65;
 }
 
+/* ── Talks page ────────────────────────────────────────── */
+/* Short hero for subpages; the home hero's 10rem padding is sized for a pitch. */
+/* The theme gives every masthead height: 100vh from 992px up. */
+header.masthead.masthead-compact {
+  height: auto;
+  min-height: 0;
+  padding-top: 7rem;
+  padding-bottom: 3.5rem;
+}
+
+.page-section.talks-section {
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+}
+
+.talk-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+.talk-card .talk-title {
+  font-size: 1.3rem;
+}
+
+.talk-meta {
+  font-size: 0.85rem;
+  color: #5b6b81;
+  margin-bottom: 0.75rem;
+}
+
+.talk-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.25rem;
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #f1f5f9;
+}
+
+.talk-pending {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: #5b6b81;
+}
+
+.talk-event-link,
+.talk-contact {
+  font-size: 0.9rem;
+}
+
+.talk-contact {
+  color: #5b6b81;
+  text-align: center;
+  margin-top: 2rem;
+}
+
 /* ── Case studies ──────────────────────────────────────── */
 .case-study-card {
   background: #fff;
