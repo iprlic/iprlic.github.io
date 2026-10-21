@@ -182,6 +182,23 @@ sections:
     section_id: work
     title: Selected Work
     studies:
+      - tag: Regulated Organisation · Amazon Bedrock · Claude
+        featured: true
+        title: Private, Auditable GenAI That Replaced Shadow AI
+        body: >-
+          Staff at a regulated organisation were already using AI on personal
+          accounts, where nobody could see what left the building. The brief was an
+          assistant good enough to replace that, under controls supervisors and
+          auditors would accept. Designed and delivered a private Claude assistant
+          on Amazon Bedrock inside the customer's own AWS account, for about a
+          hundred non-technical users working with documents. Classified content and
+          personal data are stopped or masked before they reach the model, and
+          every request is on record for the auditors, not the operators.
+        outcomes:
+          - Data stays in the customer's own account, in the EU
+          - Guardrails on classified content and personal data
+          - Separate audit trail that operators cannot read
+          - Cost tracked per user from day one
       - tag: Legal Tech · AWS Bedrock · Private RAG
         title: LLM Document Search Without the Data Leaving
         body: >-
@@ -252,7 +269,7 @@ sections:
     availability: Taking new engagements
     badges:
       - text: AWS Authorized Instructor
-      - text: 14 Professional Certifications
+      - text: AWS, Google Cloud, Azure & Claude Certified
       - text: Toptal Expert Network
         url: https://www.toptal.com/resume/ivan-prlic
       - text: EU Entity, EU Invoicing
@@ -269,7 +286,7 @@ sections:
 
       Prlić Consulting d.o.o. is registered in Zagreb, Croatia. I work remotely
       across EU and US timezones and travel for on-site work in the EU.
-    tech: "Amazon Bedrock · SageMaker · Vertex AI · Azure OpenAI · AWS · GCP · Azure · Kubernetes · Terraform"
+    tech: "Anthropic Claude · Amazon Bedrock · SageMaker · Vertex AI · Azure OpenAI · AWS · GCP · Azure · Kubernetes · Terraform"
     languages: "English (C2, Cambridge Certified) · Croatian (Native)"
     certs_title: Certified
     certs:

@@ -152,7 +152,7 @@ All layout/include overrides live locally and take precedence over the remote th
 | `_includes/nav.html` | Language-keyed menu, two CTA buttons, language switch, anchor-safe hrefs |
 | `_includes/about.html` | Two-column layout with photo, badges, tech stack, and the compact `certs` chip row (certifications no longer have their own section) |
 | `_includes/services.html` | Service cards with icon circles (`text` is markdownified, so links work) |
-| `_includes/case-studies.html` | Case study cards with outcome chips |
+| `_includes/case-studies.html` | Case study cards with outcome chips. `featured: true` spans the full row (the regulated GenAI study uses it, which keeps a 5-study grid balanced) |
 | `_includes/contact.html` | Dark section with contact buttons; `watermark` sets the giant background word |
 | `_includes/footer.html` | Two-column: copyright left, links right |
 | `_includes/packages.html` | Priced offer cards + OfferCatalog JSON-LD. `featured: true` = full width, accent border, two-column deliverables |

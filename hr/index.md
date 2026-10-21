@@ -180,6 +180,23 @@ sections:
     section_id: work
     title: Iz prakse
     studies:
+      - tag: Regulirana organizacija · Amazon Bedrock · Claude
+        featured: true
+        title: Privatni AI asistent koji je zamijenio shadow AI
+        body: >-
+          Zaposlenici regulirane organizacije već su koristili AI na privatnim
+          računima, gdje nitko nije vidio što izlazi iz kuće. Zadatak je bio
+          asistent dovoljno dobar da to zamijeni, uz kontrole koje prihvaćaju
+          nadzornici i revizori. Projektirao sam i isporučio privatnog Claude
+          asistenta na Amazon Bedrocku, u klijentovom vlastitom AWS računu, za
+          stotinjak netehničkih korisnika koji rade s dokumentima. Klasificirani
+          sadržaj i osobni podaci zaustavljaju se ili maskiraju prije nego što stignu
+          do modela, a svaki je upit zabilježen za revizore, ne za operatere.
+        outcomes:
+          - Podaci ostaju u klijentovom računu, u EU
+          - Zaštita klasificiranog sadržaja i osobnih podataka
+          - Revizijski trag koji operateri ne mogu čitati
+          - Trošak po korisniku praćen od prvog dana
       - tag: Pravna tehnologija · AWS Bedrock · Privatni RAG
         title: Pretraživanje dokumenata uz LLM, bez iznošenja podataka
         body: >-
@@ -249,7 +266,7 @@ sections:
     availability: Primam nove angažmane
     badges:
       - text: AWS ovlašteni instruktor
-      - text: 14 profesionalnih certifikata
+      - text: AWS, Google Cloud, Azure i Claude certifikati
       - text: Toptal Expert Network
         url: https://www.toptal.com/resume/ivan-prlic
       - text: Domaća tvrtka, računi u eurima
@@ -266,7 +283,7 @@ sections:
 
       Tvrtka je registrirana u Zagrebu. Radim na daljinu u europskim i američkim
       vremenskim zonama, a na sastanke uživo dolazim u cijeloj Hrvatskoj i EU.
-    tech: "Amazon Bedrock · SageMaker · Vertex AI · Azure OpenAI · AWS · GCP · Azure · Kubernetes · Terraform"
+    tech: "Anthropic Claude · Amazon Bedrock · SageMaker · Vertex AI · Azure OpenAI · AWS · GCP · Azure · Kubernetes · Terraform"
     languages: "Engleski (C2, Cambridge certifikat) · Hrvatski (materinji)"
     certs_title: Certifikati
     certs:
