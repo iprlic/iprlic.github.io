@@ -22,7 +22,7 @@ header:
   subtitle: AI Advisory · Solutions Architect · Fractional CTO
   text: >-
     I help leadership teams work out which AI use cases are actually worth
-    funding, then build the first one — on infrastructure that holds up under
+    funding, then build the first one, on infrastructure that holds up under
     audit. Twenty years of cloud architecture, with the same person writing the
     roadmap and the code.
   action:
@@ -151,7 +151,7 @@ sections:
     services:
       - title: Cloud Architecture
         text: >-
-          Architecture design across AWS, GCP, and Azure — serverless, microservices,
+          Architecture design across AWS, GCP, and Azure: serverless, microservices,
           Kubernetes (EKS, GKE), event-driven systems with Kafka and SQS/SNS, and API
           management with Apigee and WSO2. I apply Domain-Driven Design to decompose
           legacy monoliths into maintainable, independently deployable services.
@@ -211,6 +211,21 @@ sections:
           - Research that took hours now takes seconds
           - Every document stayed inside the client's own AWS account
           - Answers cite their sources, which is what made legal sign off
+      - tag: Consulting · Claude Code · MCP
+        title: Agentic Tooling an Architecture Team Uses Every Day
+        body: >-
+          A team of solutions architects at an AWS partner spent days on the same
+          deliverables for every customer: solution documents, proof-of-concept
+          plans, statements of work and cost estimates. Designed and built a private
+          Claude Code plugin marketplace for them, with skills that draft each
+          document from the company's own templates, subagents that estimate cost
+          and review the result, and MCP integrations with tools such as the AWS
+          Pricing Calculator. Architects install it once and get the company's
+          standards built into every engagement.
+        outcomes:
+          - Used daily by the architecture team, not a demo
+          - Company templates and standards built into every document
+          - Cost estimates come from the real AWS calculator, not guesses
       - tag: Healthcare · AWS · Serverless
         title: Clinical-Grade Platform, No Servers to Manage
         body: >-

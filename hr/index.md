@@ -209,6 +209,21 @@ sections:
           - Istraživanje koje je trajalo satima sada traje sekundama
           - Nijedan dokument nije izašao iz klijentova AWS računa
           - Odgovori navode izvore, što je pravnoj službi bilo presudno za odobrenje
+      - tag: Savjetovanje · Claude Code · MCP
+        title: Agentski alati koje arhitektonski tim koristi svaki dan
+        body: >-
+          Tim arhitekata rješenja kod AWS partnera danima je za svakog klijenta
+          izrađivao iste dokumente: opise rješenja, planove dokaza koncepta, ugovore
+          o opsegu posla i procjene troškova. Dizajnirao sam i izgradio privatni
+          Claude Code plugin marketplace za njih, s vještinama koje izrađuju svaki
+          dokument iz vlastitih predložaka tvrtke, podagentima koji procjenjuju
+          trošak i pregledavaju rezultat te MCP integracijama s alatima poput AWS
+          Pricing Calculatora. Arhitekti ga instaliraju jednom i standardi tvrtke
+          ugrađeni su u svaki projekt.
+        outcomes:
+          - Tim ga koristi svakodnevno, nije demo
+          - Predlošci i standardi tvrtke ugrađeni u svaki dokument
+          - Procjene troškova dolaze iz stvarnog AWS kalkulatora, ne napamet
       - tag: Zdravstvo · AWS · Serverless
         title: Platforma za kliničke uvjete, bez servera za održavanje
         body: >-
