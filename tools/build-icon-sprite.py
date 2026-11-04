@@ -30,6 +30,13 @@ BASE = f"https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@{VERSION}/sv
 # and with the hardcoded icons in nav.html.
 ICONS = {
     "calendar-alt": "solid",
+    "chalkboard-teacher": "solid",
+    "graduation-cap": "solid",
+    "project-diagram": "solid",
+    "robot": "solid",
+    "sitemap": "solid",
+    "terminal": "solid",
+    "user-tie": "solid",
     "cloud": "solid",
     "cloud-upload-alt": "solid",
     "code": "solid",

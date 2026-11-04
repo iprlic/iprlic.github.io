@@ -140,6 +140,9 @@ sections:
           - Leadership track covering what to fund, what to refuse, and what to ask for
           - Engineering track covering RAG, evaluation, cost control, and failure modes
           - Exercises and material your team keeps afterwards
+        action:
+          label: See the Claude and AWS courses
+          url: /training/
 
   - type: services.html
     section_id: services

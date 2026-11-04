@@ -138,6 +138,9 @@ sections:
           - "Program za upravu: što financirati, što odbiti i što tražiti"
           - "Program za inženjere: RAG, evaluacija, kontrola troška i načini na koje sustavi zakažu"
           - Vježbe i materijali koji ostaju vašem timu
+        action:
+          label: Pogledajte tečajeve za Claude i AWS
+          url: /hr/edukacija/
 
   - type: services.html
     section_id: services

@@ -11,8 +11,8 @@ header:
   en:
     - title: What You Get
       url: "#packages"
-    - title: Services
-      url: "#services"
+    - title: Training
+      url: /training/
     - title: Work
       url: "#work"
     - title: Contact
@@ -20,8 +20,8 @@ header:
   hr:
     - title: Što dobivate
       url: "#packages"
-    - title: Usluge
-      url: "#services"
+    - title: Edukacija
+      url: /hr/edukacija/
     - title: Projekti
       url: "#work"
     - title: Kontakt

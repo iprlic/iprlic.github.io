@@ -27,6 +27,8 @@ This is a Jekyll static site deployed to GitHub Pages at `prlic.io` (CNAME). It 
 | `hr/ai-savjetovanje.md` | `/hr/ai-savjetovanje/` | — | — | Redirect to `/hr/#packages` |
 | `talks.md` | `/talks/` | en | `talks` | Conference talks, from `_data/talks.yml` via `_layouts/talks.html` |
 | `hr/predavanja.md` | `/hr/predavanja/` | hr | `talks` | Croatian equivalent |
+| `training.md` | `/training/` | en | `training` | Claude and AWS training courses (home layout, services + faq + contact); linked from the Team Training package and the footer |
+| `hr/edukacija.md` | `/hr/edukacija/` | hr | `training` | Croatian equivalent |
 
 The site used to be split into an engineering homepage and a separate `/ai-advisory/` landing page. They were merged in Sept 2026: the split duplicated four sections (clients, contact, who, crosslink) across two pages and doubled the translation burden for a solo consultancy. The two old URLs are kept as redirect stubs because they were given out in outreach — **do not delete them.** They use a meta-refresh plus `window.location.replace`, not `jekyll-redirect-from`, so no extra plugin is needed on GitHub Pages' classic build. Both carry `sitemap: false` and `noindex`, and have no `ref`, so they stay out of the sitemap and the hreflang graph.
 

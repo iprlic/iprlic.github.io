@@ -2,12 +2,16 @@
 en:
   copyright: '&copy; 2026 Prlić Consulting d.o.o.'
   links:
+    - text: Training
+      url: /training/
     - text: LinkedIn
       url: https://www.linkedin.com/in/iprlic/
       new_window: true
 hr:
   copyright: '&copy; 2026 Prlić Consulting d.o.o.'
   links:
+    - text: Edukacija
+      url: /hr/edukacija/
     - text: LinkedIn
       url: https://www.linkedin.com/in/iprlic/
       new_window: true
