@@ -44,6 +44,7 @@ sections:
           uputa (promptova), rad s dokumentima, odabir pravog alata i sigurno
           korištenje AI-ja s podacima tvrtke. Priprema za ispit Claude Certified
           Associate – Foundations.
+          [Pogledajte program tečaja](/hr/edukacija/claude-associate/).
       - title: Razvoj s Claudeom
         icon: fa-terminal
         text: >-
@@ -51,6 +52,7 @@ sections:
           Claude Code sa skillovima i subagentima te MCP integracije. Praktične
           vježbe kroz cijeli tečaj. Priprema za ispit Claude Certified
           Developer – Foundations.
+          [Pogledajte program tečaja](/hr/edukacija/claude-developer/).
       - title: Arhitektura s Claudeom
         icon: fa-project-diagram
         text: >-
@@ -58,12 +60,14 @@ sections:
           sigurnost, upravljanje, troškovi i evaluacija. Vježbe projektiranja na
           stvarnim slučajevima primjene. Priprema za ispit Claude Certified
           Architect – Foundations.
+          [Pogledajte program tečaja](/hr/edukacija/claude-architect/).
       - title: Napredna arhitektura s Claudeom
         icon: fa-graduation-cap
         text: >-
           **3 dana.** Sustavi s više agenata, projektiranje MCP servera, zaštitne
           mjere za velike organizacije, audit i evaluacija, rad u produkciji.
           Uključuje probni ispit za Claude Certified Architect – Professional.
+          [Pogledajte program tečaja](/hr/edukacija/claude-architect-professional/).
 
   - type: services.html
     section_id: aws

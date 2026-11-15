@@ -2,7 +2,8 @@
 layout: base
 ---
 
-<header class="masthead">
+{% comment %}header.compact: short hero for subpages such as the course pages.{% endcomment %}
+<header class="masthead{% if page.header.compact %} masthead-compact{% endif %}">
   <div class="container h-100">
     <div class="row h-100 align-items-center justify-content-center text-center">
       <div class="col-lg-10 align-self-end">

@@ -1,0 +1,53 @@
+{% comment %}
+  Course facts for a single course page: who it is for, outcomes,
+  prerequisites, exam details. Used twice per course page (overview and exam).
+
+  Accepts:
+    title, text   heading and optional lede (text is markdownified)
+    facts[]       optional { label, value } stat row, rendered as a <dl>
+    columns[]     { title, text, items[] }: a card per column, items as ticked bullets
+    note          optional footnote under the cards (markdownified)
+{% endcomment %}
+
+<section id="{{ section.section_id }}" class="page-section course-overview {{ section.background_style }}">
+  <div class="container">
+    <h2 class="text-center mt-0">{{ section.title }}</h2>
+    <hr class="divider my-4">
+    {% if section.text %}
+    <div class="section-lede text-center">{{ section.text | markdownify }}</div>
+    {% endif %}
+
+    {% if section.facts %}
+    <dl class="course-facts">
+      {% for fact in section.facts %}
+      <div class="course-fact">
+        <dt>{{ fact.label }}</dt>
+        <dd>{{ fact.value }}</dd>
+      </div>
+      {% endfor %}
+    </dl>
+    {% endif %}
+
+    <div class="row justify-content-center mt-4">
+      {% for col in section.columns %}
+      <div class="col-lg-6 mb-4 d-flex">
+        <div class="course-card p-4 w-100">
+          <h3 class="course-card-title">{{ col.title }}</h3>
+          {% if col.text %}<div class="course-card-text">{{ col.text | markdownify }}</div>{% endif %}
+          {% if col.items %}
+          <ul class="course-list">
+            {% for item in col.items %}
+            <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    {% if section.note %}
+    <div class="course-note text-center">{{ section.note | markdownify }}</div>
+    {% endif %}
+  </div>
+</section>

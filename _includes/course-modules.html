@@ -1,0 +1,35 @@
+{% comment %}
+  Module-by-module course outline.
+
+  Accepts: title, text (lede), modules[] of { title, text, lab }.
+  Modules are numbered from 1 in order; `lab` is optional (the summary module
+  has none). The "Module" / "Lab" labels come from _data/i18n.yml.
+
+  role="list" keeps list semantics in Safari/VoiceOver, which drops them when
+  list-style is none.
+{% endcomment %}
+{% assign lang = page.lang | default: "en" %}
+{% assign t = site.data.i18n[lang] %}
+
+<section id="{{ section.section_id }}" class="page-section course-modules-section {{ section.background_style }}">
+  <div class="container">
+    <h2 class="text-center mt-0">{{ section.title }}</h2>
+    <hr class="divider my-4">
+    {% if section.text %}
+    <p class="section-lede text-center">{{ section.text }}</p>
+    {% endif %}
+
+    <ol class="course-modules mt-4" role="list">
+      {% for module in section.modules %}
+      <li class="course-module">
+        <div class="course-module-eyebrow">{{ t.module }} {{ forloop.index }}</div>
+        <h3 class="course-module-title">{{ module.title }}</h3>
+        <p class="course-module-text">{{ module.text }}</p>
+        {% if module.lab %}
+        <p class="course-module-lab"><span class="course-module-lab-label">{{ t.lab }}</span> {{ module.lab }}</p>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>

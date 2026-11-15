@@ -43,24 +43,28 @@ sections:
           **1 day.** Using Claude well at work: prompting, working with documents,
           choosing the right tool for a task, and using AI safely with company data.
           Prepares for the Claude Certified Associate – Foundations exam.
+          [See the course outline](/training/claude-associate/).
       - title: Building with Claude
         icon: fa-terminal
         text: >-
           **2 days.** For developers: the Claude API and SDK, tool use, agents,
           Claude Code with skills and subagents, and MCP integrations. Hands-on labs
           throughout. Prepares for the Claude Certified Developer – Foundations exam.
+          [See the course outline](/training/claude-developer/).
       - title: Architecting with Claude
         icon: fa-project-diagram
         text: >-
           **2 days.** RAG, agents and workflows; Claude API versus Amazon Bedrock;
           security, governance, cost and evaluation. Design exercises on real cases.
           Prepares for the Claude Certified Architect – Foundations exam.
+          [See the course outline](/training/claude-architect/).
       - title: Advanced Claude Architecture
         icon: fa-graduation-cap
         text: >-
           **3 days.** Multi-agent systems, MCP server design, enterprise guardrails,
           audit and evaluation at scale, production operations. Includes a full mock
           exam for Claude Certified Architect – Professional.
+          [See the course outline](/training/claude-architect-professional/).
 
   - type: services.html
     section_id: aws

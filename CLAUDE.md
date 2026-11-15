@@ -29,6 +29,16 @@ This is a Jekyll static site deployed to GitHub Pages at `prlic.io` (CNAME). It 
 | `hr/predavanja.md` | `/hr/predavanja/` | hr | `talks` | Croatian equivalent |
 | `training.md` | `/training/` | en | `training` | Claude and AWS training courses (home layout, services + faq + contact); linked from the Team Training package and the footer |
 | `hr/edukacija.md` | `/hr/edukacija/` | hr | `training` | Croatian equivalent |
+| `training/claude-associate.md` | `/training/claude-associate/` | en | `training-claude-associate` | Course page: Claude for Business Teams (CCAO-F exam prep) |
+| `hr/edukacija/claude-associate.md` | `/hr/edukacija/claude-associate/` | hr | `training-claude-associate` | Croatian equivalent |
+| `training/claude-developer.md` | `/training/claude-developer/` | en | `training-claude-developer` | Course page: Building with Claude (CCDV-F exam prep) |
+| `hr/edukacija/claude-developer.md` | `/hr/edukacija/claude-developer/` | hr | `training-claude-developer` | Croatian equivalent |
+| `training/claude-architect.md` | `/training/claude-architect/` | en | `training-claude-architect` | Course page: Architecting with Claude (CCAR-F exam prep) |
+| `hr/edukacija/claude-architect.md` | `/hr/edukacija/claude-architect/` | hr | `training-claude-architect` | Croatian equivalent |
+| `training/claude-architect-professional.md` | `/training/claude-architect-professional/` | en | `training-claude-architect-professional` | Course page: Advanced Claude Architecture (CCAR-P exam prep) |
+| `hr/edukacija/claude-architect-professional.md` | `/hr/edukacija/claude-architect-professional/` | hr | `training-claude-architect-professional` | Croatian equivalent |
+
+The four course pages use the home layout with `header.compact: true` (short hero) and the sections `course-overview` (who it's for + outcomes) → `course-modules` (outline with labs) → `course-overview` (exam facts + prerequisites) → `faq` → `contact`. Each is linked from its card in the `#claude` services section of the training page. The Croatian slugs keep the certification name (`claude-associate`, ...) because the certification names are not translated on the Croatian pages either. Course facts (modules, labs, exam numbers) come from the course decks in `~/Projects/claude-certification-courses/<CODE>/`; when the exam guides change (CCAO-F, CCDV-F and CCAR-P content changes on 7 December 2026), update the exam facts and remove the dated `note` once the courses are reviewed. The FAQ's affiliation answer must stay: independent trainer, not official Anthropic courses, exams at Pearson VUE via the Anthropic Partner Academy.
 
 The site used to be split into an engineering homepage and a separate `/ai-advisory/` landing page. They were merged in Sept 2026: the split duplicated four sections (clients, contact, who, crosslink) across two pages and doubled the translation burden for a solo consultancy. The two old URLs are kept as redirect stubs because they were given out in outreach — **do not delete them.** They use a meta-refresh plus `window.location.replace`, not `jekyll-redirect-from`, so no extra plugin is needed on GitHub Pages' classic build. Both carry `sitemap: false` and `noindex`, and have no `ref`, so they stay out of the sitemap and the hreflang graph.
 
@@ -150,7 +160,7 @@ All layout/include overrides live locally and take precedence over the remote th
 | File | Purpose |
 |------|---------|
 | `_layouts/base.html` | Font (Inter), JSON-LD schema, deferred JS, active nav JS |
-| `_layouts/home.html` | Removes text-uppercase from hero h1, adds hero subtitle |
+| `_layouts/home.html` | Removes text-uppercase from hero h1, adds hero subtitle; `header.compact: true` adds `masthead-compact` (short hero, used by the course pages) |
 | `_includes/nav.html` | Language-keyed menu, two CTA buttons, language switch, anchor-safe hrefs |
 | `_includes/about.html` | Two-column layout with photo, badges, tech stack, and the compact `certs` chip row (certifications no longer have their own section) |
 | `_includes/services.html` | Service cards with icon circles (`text` is markdownified, so links work) |
@@ -161,6 +171,8 @@ All layout/include overrides live locally and take precedence over the remote th
 | `_includes/testimonials.html` | Quote cards. **Renders nothing until real `quotes` are supplied** — never invent them |
 | `_includes/clients.html` | Client name chips. Takes `clients[]` of `{ name }` |
 | `_includes/faq.html` | Native `<details>` accordion + FAQPage JSON-LD. No JS; answers stay crawlable while collapsed |
+| `_includes/course-overview.html` | Course pages: optional `facts[]` stat row (`label`/`value`, a `<dl>`) and `columns[]` cards (`title`, `text`, ticked `items`), plus an optional `note`. Used twice per course page (overview, exam) |
+| `_includes/course-modules.html` | Course pages: numbered module cards (`modules[]` of `title`, `text`, optional `lab`). "Module"/"Lab" labels come from `_data/i18n.yml` (`module`, `lab`) |
 
 ## Styling
 
