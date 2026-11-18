@@ -115,6 +115,8 @@ sections:
     text: >-
       Every domain of the Claude Certified Associate – Foundations exam guide is
       taught in at least one module.
+      Try [20 free practice questions](/training/claude-mock-exams/#ccao-f) for
+      this exam, with an explanation for every answer.
     facts:
       - label: Exam code
         value: CCAO-F
@@ -150,7 +152,8 @@ sections:
       - q: Who teaches the course?
         a: >-
           I do. I am an AWS Authorized Instructor and Claude Certified Architect –
-          Professional with 20+ years in software. My day job is building
+          Professional, I have passed the Claude Certified Associate – Foundations
+          exam myself, and I have 20+ years in software. My day job is building
           production Claude systems, such as a private, auditable Claude platform
           on Amazon Bedrock for a regulated organisation and an internal Claude
           Code plugin marketplace, and the course examples come from that work.

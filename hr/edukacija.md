@@ -36,6 +36,10 @@ sections:
     section_id: claude
     background_style: bg-subtle
     title: Edukacija za Claude
+    intro: >-
+      Pripremate se za Claude certifikaciju? Isprobajte
+      [20 besplatnih probnih pitanja po ispitu](/training/claude-mock-exams/),
+      s objašnjenjem svakog odgovora (na engleskom).
     services:
       - title: Claude za poslovne timove
         icon: fa-user-tie
@@ -105,8 +109,8 @@ sections:
       - q: Tko predaje?
         a: >-
           Ja. Arhitekt rješenja s više od 20 godina iskustva u razvoju softvera i
-          više od 10 na AWS-u, AWS Authorized Instructor, s više od 25 certifikata,
-          među njima Claude Certified Architect – Professional i AWS Certified
+          više od 10 na AWS-u, AWS Authorized Instructor, s certifikatima
+          za AWS, Google Cloud i Azure, među njima Claude Certified Architect – Professional i AWS Certified
           Generative AI Developer – Professional. Svakodnevno gradim produkcijske AI
           sustave na Claudeu i AWS-u i odatle dolaze primjeri i vježbe na tečaju.
           Više na [naslovnoj stranici](/hr/).

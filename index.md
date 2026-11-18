@@ -57,7 +57,7 @@ sections:
       Fixed scope, fixed price, fixed duration. Start anywhere on the ladder and
       stop after any step.
     footnote: >-
-      Prices are per engagement, excluding VAT and travel, and scale with company
+      Prices are per engagement, excluding VAT, and scale with company
       size and scope. Fixed price means that if the work runs long, that is my
       problem and not your budget's.
     packages:
@@ -96,7 +96,7 @@ sections:
           - Long list of candidate use cases, scored on value and feasibility
           - Written summary of the three worth pursuing, and why the rest are not
           - A clear read on whether a full assessment is warranted
-        note: Remote or on-site anywhere in the EU.
+        note: Remote, by video call.
 
       - eyebrow: The part most firms skip
         name: Proof of Value Build
@@ -264,6 +264,19 @@ sections:
           - Scaling became automatic, with no fixed-capacity servers to size
           - Deployments became fully repeatable across all environments
           - Eliminated a whole class of incidents caused by manual release steps
+      - tag: Fintech · AWS · Serverless AI
+        title: AI Model Serving for an Investment Platform Under SOC 2
+        body: >-
+          Q.ai, the AI-powered investment platform from Forbes, needed its models in
+          front of customers on infrastructure that would pass financial-grade
+          scrutiny. As cloud architect and technical lead I designed serverless model
+          serving on AWS Lambda, API Gateway and DynamoDB under SOC 2, with encryption,
+          audit logging and strict access control built in, and spent about half my
+          time in the code alongside the team.
+        outcomes:
+          - Model serving built to SOC 2 and financial-grade security requirements
+          - Every access and change logged and auditable
+          - Lower running costs and more automation than the starting setup
 
 
   # Testimonials render only once real quotes are added. Nothing is invented
@@ -303,7 +316,7 @@ sections:
 
 
       Prlić Consulting d.o.o. is registered in Zagreb, Croatia. I work remotely
-      across EU and US timezones and travel for on-site work in the EU.
+      across EU and US timezones and travel only to deliver on-site training.
     tech: "Anthropic Claude · Amazon Bedrock · SageMaker · Vertex AI · Azure OpenAI · AWS · GCP · Azure · Kubernetes · Terraform"
     languages: "English (C2, Cambridge Certified) · Croatian (Native)"
     certs_title: Certified
@@ -314,6 +327,7 @@ sections:
         url: https://www.credly.com/badges/55a1a049-29af-45d6-b32b-828eda6df32e
       - name: Claude Certified Architect – Pro
         url: https://www.credly.com/badges/9bce828a-a63e-4656-bc80-3883ec84e85d
+      - name: AWS AI Business Strategist
       - name: AWS ML – Specialty
         url: https://www.credly.com/badges/cfc09e60-e068-4529-be07-641bfc1c7465
       - name: AWS Security – Specialty
@@ -411,7 +425,7 @@ sections:
           Prlić Consulting d.o.o. is a Croatian limited company, registered in
           Zagreb since November 2017, OIB 84570551730. EU entity, EU invoicing, EU
           data residency. I work remotely across EU and US timezones and travel
-          for on-site work anywhere in the EU.
+          only to deliver on-site training.
 
       # ==================================================================
       # STILL TO ANSWER - Ivan only. These are the questions a regulated buyer

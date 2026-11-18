@@ -1,0 +1,27 @@
+Claude certification practice questions (public sample)
+https://prlic.io/training/claude-mock-exams/
+
+This page offers 20 practice questions for each of the four Claude
+certification exams (Associate, Developer, Architect Foundations, Architect
+Professional): 80 questions in total, the same set for every visitor, chosen
+to cover every exam domain in proportion to the full question bank.
+
+Modes: Study (answer and explanation after each question) or Exam (timed at
+2 minutes per question, 40 minutes for 20, with flags and a per-domain
+breakdown at the end). Wrong answers are remembered in your browser until you
+answer them correctly. Nothing is sent to a server.
+
+Full mock exams (80 questions per certification, with timed practice tests)
+are available for teams and course participants: info@prlic.io
+
+Third-party content
+-------------------
+questions.js is a 20-per-exam selection from question-bank.json in
+https://github.com/amey-thakur/CLAUDE-CERTIFICATIONS,
+Copyright (c) 2026 Amey Thakur, MIT License (full text in
+LICENSE-question-bank.txt). Questions, options and explanations are
+reproduced unchanged.
+
+Unofficial practice material, not affiliated with Anthropic.
+
+The page itself (index.html) is (c) Prlić Consulting d.o.o.

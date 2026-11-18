@@ -119,6 +119,8 @@ sections:
     text: >-
       Every domain of the Claude Certified Developer – Foundations exam guide is
       taught in at least one module, weighted by its share of the exam.
+      Try [20 free practice questions](/training/claude-mock-exams/#ccdv-f) for
+      this exam, with an explanation for every answer.
     facts:
       - label: Exam code
         value: CCDV-F

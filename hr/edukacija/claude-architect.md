@@ -117,6 +117,8 @@ sections:
       Tečaj pokriva svih pet domena iz vodiča za ispit Claude Certified
       Architect – Foundations. Ispit se temelji na scenarijima: svako polaganje
       nasumično izvlači četiri od šest scenarija, a na tečaju se vježba svih šest.
+      Isprobajte [20 besplatnih probnih pitanja](/training/claude-mock-exams/#ccar-f)
+      za ovaj ispit, s objašnjenjem svakog odgovora (na engleskom).
     facts:
       - label: Oznaka ispita
         value: CCAR-F

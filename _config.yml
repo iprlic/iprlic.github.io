@@ -20,7 +20,7 @@ tagline: Solutions Architect & AI Consultant
 nav_title: Prlić Consulting d.o.o.
 email: ivan@prlic.io
 description: >-
-  Ivan Prlić — Solutions Architect and AI & DevOps Consultant. 20+ years experience helping enterprises build and modernize cloud systems on AWS, GCP, and Azure. AWS Authorized Instructor. 14 professional certifications.
+  Ivan Prlić, Solutions Architect and AI & DevOps Consultant. 20+ years of experience helping enterprises build and modernise cloud systems on AWS, GCP and Azure. AWS Authorized Instructor and Claude Certified Architect.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://prlic.io" # the base hostname & protocol for your site, e.g. http://example.com
 #linkedin_username: iprlic
@@ -69,6 +69,18 @@ defaults:
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
+exclude:
+  - CLAUDE.md
+  - README.md
+  - tools/
+  - .claude/
+  - .sass-cache/
+  - .jekyll-cache/
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - node_modules/
+# (default list, kept for reference)
 # exclude:
 #   - Gemfile
 #   - Gemfile.lock

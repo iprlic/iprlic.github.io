@@ -121,6 +121,8 @@ sections:
     text: >-
       Svaka domena iz vodiča za ispit Claude Certified Developer – Foundations
       obrađena je u barem jednom modulu, razmjerno svom udjelu u ispitu.
+      Isprobajte [20 besplatnih probnih pitanja](/training/claude-mock-exams/#ccdv-f)
+      za ovaj ispit, s objašnjenjem svakog odgovora (na engleskom).
     facts:
       - label: Oznaka ispita
         value: CCDV-F

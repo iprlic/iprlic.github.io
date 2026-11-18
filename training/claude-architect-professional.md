@@ -120,6 +120,8 @@ sections:
       The course covers all seven domains of the Claude Certified Architect –
       Professional exam guide, with the heaviest domain, integration, split
       across two modules.
+      Try [20 free practice questions](/training/claude-mock-exams/#ccar-p) for
+      this exam, with an explanation for every answer.
     facts:
       - label: Exam code
         value: CCAR-P

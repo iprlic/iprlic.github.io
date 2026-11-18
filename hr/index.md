@@ -13,13 +13,14 @@ image:
 locale: hr_HR
 title: AI savjetovanje i cloud arhitektura
 description: >-
-  AI savjetovanje i cloud arhitektura za javnu upravu, zdravstvo, energetiku i financije. Procjena, dokaz vrijednosti i AI vodstvo.
+  AI savjetovanje i cloud arhitektura za javnu upravu, zdravstvo i financije. Procjena, dokaz vrijednosti i AI vodstvo.
 
 header:
   title: AI i cloud sustavi koji dođu do produkcije
   subtitle: AI savjetovanje · Solutions Architect · Fractional CTO
   text: >-
-    Tek petnaest posto hrvatskih tvrtki koristi ijednu AI tehnologiju. Ostale
+    Prema Eurostatu, tek 15 posto hrvatskih tvrtki koristilo je 2025. ijednu AI
+    tehnologiju, prema 20 posto u prosjeku EU. Ostale
     najčešće ne koči tehnologija, nego to što nitko nije odlučio čime se isplati
     početi. Pomažem upravama da to odluče, a onda i izgradim prvo rješenje, na
     infrastrukturi koja to izdrži.
@@ -54,7 +55,7 @@ sections:
     text: >-
       Fiksan opseg, cijena i rok. Možete ući na bilo kojoj razini i stati kad želite.
     footnote: >-
-      Cijene su po angažmanu, bez PDV-a i putnih troškova, a ovise o veličini tvrtke
+      Cijene su po angažmanu, bez PDV-a, a ovise o veličini tvrtke
       i opsegu posla. Fiksna cijena znači da je moj problem ako posao potraje dulje,
       a ne vaš.
     packages:
@@ -94,7 +95,7 @@ sections:
           - Širi popis mogućih primjena, ocijenjenih po vrijednosti i izvedivosti
           - Pisani sažetak triju koje vrijedi pokrenuti i zašto ostale ne
           - Jasan odgovor isplati li se ići na punu procjenu
-        note: Na daljinu ili uživo, bilo gdje u Hrvatskoj i EU.
+        note: Na daljinu, putem videopoziva.
 
       - eyebrow: Dio koji većina preskoči
         name: Izrada dokaza vrijednosti
@@ -261,6 +262,19 @@ sections:
           - Nema više ovisnosti o serverima fiksnog kapaciteta, skaliranje ide samo
           - Isporuke su postale potpuno ponovljive u svim okolinama
           - Nestala je cijela skupina kvarova koje su uzrokovali ručni koraci
+      - tag: Fintech · AWS · Serverless AI
+        title: Posluživanje AI modela za investicijsku platformu uz SOC 2
+        body: >-
+          Q.ai, Forbesova investicijska platforma s umjetnom inteligencijom, trebala je
+          svoje modele dovesti do korisnika na infrastrukturi koja prolazi stroge
+          financijske zahtjeve. Kao cloud arhitekt i tehnički voditelj osmislio sam
+          serverless posluživanje modela na AWS Lambdi, API Gatewayu i DynamoDB-u uz
+          SOC 2, s enkripcijom, audit zapisima i strogom kontrolom pristupa, a otprilike
+          pola vremena radio sam u kodu zajedno s timom.
+        outcomes:
+          - Posluživanje modela usklađeno sa SOC 2 i financijskim sigurnosnim zahtjevima
+          - Svaki pristup i promjena zabilježeni i provjerljivi
+          - Niži troškovi rada i više automatizacije nego na početku
 
 
   # Preporuke se prikazuju tek kad se dodaju stvarni citati. Ovdje se namjerno
@@ -300,7 +314,7 @@ sections:
 
 
       Tvrtka je registrirana u Zagrebu. Radim na daljinu u europskim i američkim
-      vremenskim zonama, a na sastanke uživo dolazim u cijeloj Hrvatskoj i EU.
+      vremenskim zonama, a putujem samo kad uživo držim edukacije.
     tech: "Anthropic Claude · Amazon Bedrock · SageMaker · Vertex AI · Azure OpenAI · AWS · GCP · Azure · Kubernetes · Terraform"
     languages: "Engleski (C2, Cambridge certifikat) · Hrvatski (materinji)"
     certs_title: Certifikati
@@ -311,6 +325,7 @@ sections:
         url: https://www.credly.com/badges/55a1a049-29af-45d6-b32b-828eda6df32e
       - name: Claude Certified Architect – Pro
         url: https://www.credly.com/badges/9bce828a-a63e-4656-bc80-3883ec84e85d
+      - name: AWS AI Business Strategist
       - name: AWS ML – Specialty
         url: https://www.credly.com/badges/cfc09e60-e068-4529-be07-641bfc1c7465
       - name: AWS Security – Specialty
@@ -412,8 +427,8 @@ sections:
       - q: Radite li na hrvatskom i možete li doći kod nas?
         a: >-
           Da. Radionice, razgovori i isporuka mogu biti na hrvatskom, a dokumentacija na
-          hrvatskom ili engleskom, ovisno o tome tko je čita. Uživo dolazim bilo gdje u
-          Hrvatskoj. Za domaće klijente nema prekogranične nabave ni komplikacija s
+          hrvatskom ili engleskom, ovisno o tome tko je čita. Savjetovanje i isporuka
+          idu na daljinu, a edukacije držim i uživo bilo gdje u Hrvatskoj. Za domaće klijente nema prekogranične nabave ni komplikacija s
           PDV-om: domaća tvrtka, domaći račun u eurima.
 
       - q: Jeste li tvrtka iz EU i kako ide izdavanje računa?
@@ -421,7 +436,7 @@ sections:
           Prlić Consulting d.o.o. hrvatsko je društvo s ograničenom odgovornošću,
           registrirano u Zagrebu od studenoga 2017., OIB 84570551730. Tvrtka iz EU,
           računi unutar EU, podaci ostaju u EU. Radim na daljinu u europskim i
-          američkim vremenskim zonama, a uživo dolazim u cijeloj Hrvatskoj i EU.
+          američkim vremenskim zonama, a putujem samo kad uživo držim edukacije.
 
       # ==================================================================
       # JOŠ TREBA ODGOVORITI - samo Ivan. Odkomentiraj i popuni.

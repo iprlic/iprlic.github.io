@@ -116,6 +116,8 @@ sections:
     text: >-
       Svaka domena iz vodiča za ispit Claude Certified Associate – Foundations
       obrađena je u barem jednom modulu.
+      Isprobajte [20 besplatnih probnih pitanja](/training/claude-mock-exams/#ccao-f)
+      za ovaj ispit, s objašnjenjem svakog odgovora (na engleskom).
     facts:
       - label: Oznaka ispita
         value: CCAO-F
@@ -151,7 +153,8 @@ sections:
       - q: Tko predaje?
         a: >-
           Ja. AWS Authorized Instructor i Claude Certified Architect –
-          Professional, s više od 20 godina iskustva u razvoju softvera.
+          Professional, i sam sam položio ispit Claude Certified Associate –
+          Foundations, a u razvoju softvera radim više od 20 godina.
           Svakodnevno gradim produkcijske Claude sustave, primjerice privatnu
           Claude platformu s punim audit tragom na Amazon Bedrocku za reguliranu
           organizaciju i interni marketplace Claude Code pluginova, i odatle

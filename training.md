@@ -36,6 +36,10 @@ sections:
     section_id: claude
     background_style: bg-subtle
     title: Claude Training
+    intro: >-
+      Preparing for a Claude certification? Try
+      [20 free practice questions per exam](/training/claude-mock-exams/),
+      with an explanation for every answer.
     services:
       - title: Claude for Business Teams
         icon: fa-user-tie
@@ -102,8 +106,8 @@ sections:
       - q: Who teaches the courses?
         a: >-
           I do. I am a solutions architect with 20+ years in software and 10+ on
-          AWS, an AWS Authorized Instructor, and I hold 25+ certifications,
-          including Claude Certified Architect – Professional and AWS Certified
+          AWS, an AWS Authorized Instructor, and I hold certifications
+          across AWS, Google Cloud and Azure, including Claude Certified Architect – Professional and AWS Certified
           Generative AI Developer – Professional. My day job is building production
           AI on Claude and AWS, which is where the course examples and labs come from.
           More on the [home page](/).

@@ -116,6 +116,8 @@ sections:
       The course covers all five domains of the Claude Certified Architect –
       Foundations exam guide. The exam is scenario-based: each sitting draws four
       scenarios at random from a bank of six, and the course practises all six.
+      Try [20 free practice questions](/training/claude-mock-exams/#ccar-f) for
+      this exam, with an explanation for every answer.
     facts:
       - label: Exam code
         value: CCAR-F
