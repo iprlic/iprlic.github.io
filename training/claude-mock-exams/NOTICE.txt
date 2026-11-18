@@ -11,8 +11,8 @@ Modes: Study (answer and explanation after each question) or Exam (timed at
 breakdown at the end). Wrong answers are remembered in your browser until you
 answer them correctly. Nothing is sent to a server.
 
-Full mock exams (80 questions per certification, with timed practice tests)
-are available for teams and course participants: info@prlic.io
+Full-length mock exams (a much larger question bank, with timed practice
+tests) are available for teams and course participants: info@prlic.io
 
 Third-party content
 -------------------

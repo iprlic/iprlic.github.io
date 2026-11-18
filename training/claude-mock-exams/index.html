@@ -158,7 +158,7 @@ const missedIds = exam => { const ids = new Set(qs(exam).map(q => q.id)); return
 function fullNote(e) {
   const course = e ? `<p>Preparing for ${esc(e.code)}? See the course <a href="${e.course}">${esc(e.courseTitle)}</a>.</p>` : '';
   return `<div class="note" role="note"><p><b>These are 20 sample questions per exam</b>, the same set for everyone, with an explanation for every answer.</p>
-    <p>Full mock exams, 80 questions per certification with timed practice tests, are available for teams and course participants. Write to <a href="${CONTACT}">info@prlic.io</a>.</p>${course}</div>`;
+    <p>Full-length mock exams with a much larger question bank and timed practice tests are available for teams and course participants. Write to <a href="${CONTACT}">info@prlic.io</a>.</p>${course}</div>`;
 }
 
 function home() {
