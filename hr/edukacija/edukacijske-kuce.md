@@ -46,12 +46,13 @@ sections:
         icon: fa-graduation-cap
         text: >-
           Četiri tečaja, po jedan za svaki Claude ispit:
-          [Associate](/hr/edukacija/claude-associate/) (1 dan),
-          [Developer](/hr/edukacija/claude-developer/) (2 dana),
-          [Architect](/hr/edukacija/claude-architect/) (2 dana) i
-          [Architect – Professional](/hr/edukacija/claude-architect-professional/)
-          (3 dana). Uključuju prezentacije, demonstracije, vježbe i pitanja u
-          stilu ispita.
+          [Claude za poslovne timove](/hr/edukacija/claude-associate/) (1 dan, Associate),
+          [Razvoj s Claudeom](/hr/edukacija/claude-developer/) (2 dana, Developer),
+          [Arhitektura s Claudeom](/hr/edukacija/claude-architect/) (2 dana, Architect) i
+          [Napredna arhitektura s Claudeom](/hr/edukacija/claude-architect-professional/)
+          (3 dana, Architect – Professional). Uključuju prezentacije,
+          demonstracije, vježbe i pitanja u stilu ispita. Pogledajte i
+          [koja Claude certifikacija vam odgovara](/hr/edukacija/claude-certifikacije/).
       - title: Praktični AI tečajevi
         icon: fa-robot
         text: >-
@@ -65,7 +66,8 @@ sections:
           Kao AWS Authorized Instructor predajem službeni AWS Training and
           Certification program, uključujući tečajeve o generativnom i
           agentskom AI-ju, u suradnji s AWS Training Partnerom i na službenim
-          AWS materijalima.
+          AWS materijalima. Na upit i priprema za AWS certifikacijske ispite, od
+          Cloud Practitionera do Professional i Specialty razine.
       - title: Radionice po mjeri
         icon: fa-sitemap
         text: >-

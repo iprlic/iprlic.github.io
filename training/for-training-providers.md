@@ -46,11 +46,13 @@ sections:
         icon: fa-graduation-cap
         text: >-
           Four courses, one per Claude exam:
-          [Associate](/training/claude-associate/) (1 day),
-          [Developer](/training/claude-developer/) (2 days),
-          [Architect](/training/claude-architect/) (2 days) and
-          [Architect – Professional](/training/claude-architect-professional/)
-          (3 days). Slides, demos, labs and exam-style practice included.
+          [Claude for Business Teams](/training/claude-associate/) (1 day, Associate),
+          [Building with Claude](/training/claude-developer/) (2 days, Developer),
+          [Architecting with Claude](/training/claude-architect/) (2 days, Architect) and
+          [Advanced Claude Architecture](/training/claude-architect-professional/)
+          (3 days, Architect – Professional). Slides, demos, labs and exam-style
+          practice included. See also
+          [which Claude certification fits](/training/claude-certifications/).
       - title: Practical AI courses
         icon: fa-robot
         text: >-
@@ -64,7 +66,8 @@ sections:
           As an AWS Authorized Instructor I teach the official AWS Training and
           Certification curriculum, including generative and agentic AI
           courses, delivered with an AWS Training Partner on official AWS
-          courseware.
+          courseware. Exam preparation for AWS certifications, from Cloud
+          Practitioner to Professional and Specialty, on request.
       - title: Custom workshops
         icon: fa-sitemap
         text: >-
