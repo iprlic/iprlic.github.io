@@ -1,6 +1,7 @@
 # Footer content, keyed by language code.
 en:
   copyright: '&copy; 2026 Prlić Consulting d.o.o.'
+  privacy: 'Visit statistics by Cloudflare Web Analytics: no cookies, no personal data.'
   links:
     - text: Training
       url: /training/
@@ -9,6 +10,7 @@ en:
       new_window: true
 hr:
   copyright: '&copy; 2026 Prlić Consulting d.o.o.'
+  privacy: 'Statistika posjeta: Cloudflare Web Analytics, bez kolačića i osobnih podataka.'
   links:
     - text: Edukacija
       url: /hr/edukacija/

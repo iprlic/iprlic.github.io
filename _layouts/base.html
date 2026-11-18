@@ -164,6 +164,9 @@
     Bootstrap JS bundle, jquery-easing and magnific-popup it depended on.
   {% endcomment %}
   <script defer src="{{ '/assets/js/site.js' | relative_url }}"></script>
+  {% if jekyll.environment == "production" %}
+  <!-- Cloudflare Web Analytics: cookieless page views, no personal data --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "fc53fa446f26406da1497f98d6a11d24"}'></script>
+  {% endif %}
 </body>
 
 </html>

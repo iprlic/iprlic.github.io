@@ -5,6 +5,7 @@
     <div class="row align-items-center">
       <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
         <span class="footer-copy">{{ f.copyright }}</span>
+        {% if f.privacy %}<span class="footer-copy footer-privacy d-block small">{{ f.privacy }}</span>{% endif %}
       </div>
       <div class="col-md-6 text-center text-md-right">
         {% for link in f.links %}
