@@ -167,7 +167,8 @@ sections:
       - q: Who teaches the course?
         a: >-
           I do. I am an AWS Authorized Instructor and Claude Certified Architect –
-          Professional with 20+ years in software. My day job is building
+          Professional, I have passed the Claude Certified Developer – Foundations
+          exam myself, and I have 20+ years in software. My day job is building
           production Claude systems, such as a private, auditable Claude platform
           on Amazon Bedrock for a regulated organisation and an internal Claude
           Code plugin marketplace, and the labs come from that work. More on the
