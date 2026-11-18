@@ -15,6 +15,15 @@ title: Claude Certified Architect Exam Prep Course (CCAR-F)
 description: >-
   Two-day Claude course for architects: agentic loops, multi-agent systems, MCP, Claude Code in CI, structured output, reliability. Prepares for CCAR-F.
 
+last_updated: 2026-11-18
+# Course JSON-LD (_includes/course-schema.html); price_from only where the price is published.
+course:
+  order: 3
+  level: Intermediate
+  exam: Claude Certified Architect – Foundations (CCAR-F)
+  workload: P2D
+  price_from: 4000
+
 header:
   compact: true
   title: Architecting with Claude
@@ -118,6 +127,8 @@ sections:
       scenarios at random from a bank of six, and the course practises all six.
       Try [20 free practice questions](/training/claude-mock-exams/#ccar-f) for
       this exam, with an explanation for every answer.
+      Not sure this is the right exam?
+      [Compare all five Claude certifications](/training/claude-certifications/).
     facts:
       - label: Exam code
         value: CCAR-F

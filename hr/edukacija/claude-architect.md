@@ -15,6 +15,15 @@ title: Tečaj za ispit Claude Certified Architect (CCAR-F)
 description: >-
   Dvodnevni tečaj za arhitekte: agentske petlje, sustavi s više agenata, MCP, Claude Code u CI-ju, strukturirani izlaz i pouzdanost. Priprema za CCAR-F.
 
+last_updated: 2026-11-18
+# Course JSON-LD (_includes/course-schema.html); price_from only where the price is published.
+course:
+  order: 3
+  level: Srednja razina
+  exam: Claude Certified Architect – Foundations (CCAR-F)
+  workload: P2D
+  price_from: 4000
+
 header:
   compact: true
   title: Arhitektura s Claudeom
@@ -119,6 +128,8 @@ sections:
       nasumično izvlači četiri od šest scenarija, a na tečaju se vježba svih šest.
       Isprobajte [20 besplatnih probnih pitanja](/training/claude-mock-exams/#ccar-f)
       za ovaj ispit, s objašnjenjem svakog odgovora (na engleskom).
+      Ne znate koji ispit odabrati? Pogledajte
+      [usporedbu svih pet Claude certifikacija](/hr/edukacija/claude-certifikacije/).
     facts:
       - label: Oznaka ispita
         value: CCAR-F

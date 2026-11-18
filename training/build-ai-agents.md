@@ -15,6 +15,20 @@ title: Build AI Agents with Claude, a No-Code Course
 description: >-
   No-code course for business teams: build a working Claude agent for a process from your own job and learn to check it is reliable. 6 weeks or 3 days.
 
+last_updated: 2026-11-18
+# Course JSON-LD (_includes/course-schema.html); price_from only where the price is published.
+course:
+  order: 5
+  level: Beginner
+  workload: P3D
+  instances:
+    - mode: Online
+      workload: PT16H
+    - mode: Online
+      workload: P3D
+    - mode: Onsite
+      workload: P3D
+
 header:
   compact: true
   title: Build AI Agents with Claude

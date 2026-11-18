@@ -14,6 +14,8 @@ en:
   skip_to_content: Skip to content
   module: Module
   lab: Lab
+  last_updated: "Last updated:"
+  months: [January, February, March, April, May, June, July, August, September, October, November, December]
 
 hr:
   book_a_call: Dogovorite poziv
@@ -25,3 +27,5 @@ hr:
   skip_to_content: Prijeđi na sadržaj
   module: Modul
   lab: Vježba
+  last_updated: "Ažurirano:"
+  months: [siječanj, veljača, ožujak, travanj, svibanj, lipanj, srpanj, kolovoz, rujan, listopad, studeni, prosinac]

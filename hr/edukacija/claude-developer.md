@@ -15,6 +15,15 @@ title: Tečaj za ispit Claude Certified Developer (CCDV-F)
 description: >-
   Dvodnevni praktični tečaj za programere: Claude API, upute, alati i MCP, agenti, Claude Code, sigurnost i evaluacija. Priprema za ispit CCDV-F.
 
+last_updated: 2026-11-18
+# Course JSON-LD (_includes/course-schema.html); price_from only where the price is published.
+course:
+  order: 2
+  level: Srednja razina
+  exam: Claude Certified Developer – Foundations (CCDV-F)
+  workload: P2D
+  price_from: 4000
+
 header:
   compact: true
   title: Razvoj s Claudeom
@@ -123,6 +132,8 @@ sections:
       obrađena je u barem jednom modulu, razmjerno svom udjelu u ispitu.
       Isprobajte [20 besplatnih probnih pitanja](/training/claude-mock-exams/#ccdv-f)
       za ovaj ispit, s objašnjenjem svakog odgovora (na engleskom).
+      Ne znate koji ispit odabrati? Pogledajte
+      [usporedbu svih pet Claude certifikacija](/hr/edukacija/claude-certifikacije/).
     facts:
       - label: Oznaka ispita
         value: CCDV-F

@@ -145,6 +145,8 @@
     ]
   }
   </script>
+  {% if page.course %}{% include course-schema.html %}{% endif %}
+  {% if page.course_catalog %}{% include course-list-schema.html %}{% endif %}
 </head>
 
 <body id="page-top" class="{% if page.layout == site.landing_template %}landing {% endif %}">

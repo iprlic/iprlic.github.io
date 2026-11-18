@@ -15,6 +15,15 @@ title: Claude Certified Developer Exam Prep Course (CCDV-F)
 description: >-
   Two-day hands-on Claude course for developers: Claude API, prompts, tools and MCP, agents, Claude Code, security and evals. Prepares for CCDV-F.
 
+last_updated: 2026-11-18
+# Course JSON-LD (_includes/course-schema.html); price_from only where the price is published.
+course:
+  order: 2
+  level: Intermediate
+  exam: Claude Certified Developer – Foundations (CCDV-F)
+  workload: P2D
+  price_from: 4000
+
 header:
   compact: true
   title: Building with Claude
@@ -121,6 +130,8 @@ sections:
       taught in at least one module, weighted by its share of the exam.
       Try [20 free practice questions](/training/claude-mock-exams/#ccdv-f) for
       this exam, with an explanation for every answer.
+      Not sure this is the right exam?
+      [Compare all five Claude certifications](/training/claude-certifications/).
     facts:
       - label: Exam code
         value: CCDV-F

@@ -1,0 +1,87 @@
+{% comment %}
+  Course JSON-LD for a course page, built from the page's own front matter so
+  it cannot drift from the copy. Included by _layouts/base.html when the page
+  has a `course:` block.
+
+  course:
+    level        educationalLevel (Beginner / Intermediate / Advanced)
+    exam         optional exam the course prepares for; emitted as `about`.
+                 Never emitted as educationalCredentialAwarded: the course is
+                 exam preparation, the certification comes from Anthropic.
+    workload     ISO 8601 duration of the course (P1D, P2D, P3D)
+    price_from   optional; only a price that is published on the page
+                 ("from EUR 4,000" for courses of one to two days). Without it
+                 the Offer says Paid and carries no price.
+    instances    optional list of { mode, workload }; default is the same
+                 course online and on site in Europe.
+
+  Derived from the page: name (header.title), description, the "what you'll
+  be able to do" column of the overview section (teaches), the first column of
+  the exam section (coursePrerequisites), and the modules (syllabusSections).
+  dateModified comes from `last_updated`.
+{% endcomment %}
+{% assign c = page.course %}
+{% assign course_url = page.url | absolute_url %}
+{% assign overview = page.sections | where: "section_id", "overview" | first %}
+{% assign outcomes = overview.columns | last %}
+{% assign exam_section = page.sections | where: "section_id", "exam" | first %}
+{% assign prereq = exam_section.columns | first %}
+{% assign modules = page.sections | where: "section_id", "modules" | first %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "@id": "{{ course_url }}#course",
+  "name": {{ c.name | default: page.header.title | jsonify }},
+  "description": {{ page.description | strip | jsonify }},
+  "url": "{{ course_url }}",
+  "image": "{{ page.image.path | default: page.image | absolute_url }}",
+  {% comment %}Every course runs in English or Croatian; the page's language first.{% endcomment %}
+  "inLanguage": {% if page.lang == "hr" %}["hr", "en"]{% else %}["en", "hr"]{% endif %},
+  "educationalLevel": {{ c.level | jsonify }},
+  {% if c.exam %}"about": { "@type": "Thing", "name": {{ c.exam | jsonify }} },{% endif %}
+  {% if outcomes.items %}"teaches": {{ outcomes.items | jsonify }},{% endif %}
+  {% if prereq.items %}"coursePrerequisites": {{ prereq.items | jsonify }},{% endif %}
+  {% if modules.modules %}"syllabusSections": [
+    {% for m in modules.modules %}{
+      "@type": "Syllabus",
+      "name": {{ m.title | jsonify }},
+      "description": {{ m.text | strip | jsonify }}
+    }{% unless forloop.last %},{% endunless %}{% endfor %}
+  ],{% endif %}
+  {% if page.last_updated %}"dateModified": "{{ page.last_updated | date: '%Y-%m-%d' }}",{% endif %}
+  "provider": {
+    "@type": "ProfessionalService",
+    "@id": "https://prlic.io/#business",
+    "name": "Prlić Consulting",
+    "url": "https://prlic.io"
+  },
+  "offers": [{
+    "@type": "Offer",
+    "category": "Paid",
+    "url": "{{ course_url }}"{% if c.price_from %},
+    "priceCurrency": "EUR",
+    "priceSpecification": {
+      "@type": "PriceSpecification",
+      "minPrice": {{ c.price_from }},
+      "priceCurrency": "EUR",
+      "valueAddedTaxIncluded": false
+    }{% endif %}
+  }],
+  "hasCourseInstance": [
+    {% if c.instances %}{% assign instances = c.instances %}{% else %}{% assign instances = "Online,Onsite" | split: "," %}{% endif %}
+    {% for i in instances %}{% assign mode = i.mode | default: i %}{
+      "@type": "CourseInstance",
+      "courseMode": "{{ mode }}",
+      "courseWorkload": "{{ i.workload | default: c.workload }}",
+      {% if mode == "Onsite" %}"location": { "@type": "Place", "name": "Europe" },{% endif %}
+      "instructor": {
+        "@type": "Person",
+        "@id": "https://prlic.io/#ivan",
+        "name": "Ivan Prlić",
+        "url": "https://prlic.io"
+      }
+    }{% unless forloop.last %},{% endunless %}{% endfor %}
+  ]
+}
+</script>

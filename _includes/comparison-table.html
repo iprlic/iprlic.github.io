@@ -1,0 +1,53 @@
+{% comment %}
+  Comparison table section (used by the Claude certification guide pages).
+  Rows are attributes, columns are the things compared, so the first column
+  can stay sticky while the table scrolls sideways on small screens.
+
+  Accepts:
+    title, text     heading and optional lede (text is markdownified)
+    caption         table caption (visually hidden, for screen readers)
+    corner          optional label for the top-left header cell
+    columns[]       column headings (markdownified inline)
+    rows[]          { label, cells[] }: cells are markdownified inline, so links work
+    scroll_hint     optional hint shown under 992px, where the table scrolls
+    note            optional footnote under the table (markdownified)
+{% endcomment %}
+
+<section id="{{ section.section_id }}" class="page-section compare-section {{ section.background_style }}">
+  <div class="container">
+    <h2 class="text-center mt-0">{{ section.title }}</h2>
+    <hr class="divider my-4">
+    {% if section.text %}
+    <div class="section-lede text-center">{{ section.text | markdownify }}</div>
+    {% endif %}
+
+    {% if section.scroll_hint %}<p class="compare-hint">{{ section.scroll_hint }}</p>{% endif %}
+    <div class="compare-scroll" role="region" aria-label="{{ section.caption | default: section.title | escape }}" tabindex="0">
+      <table class="compare-table">
+        {% if section.caption %}<caption class="sr-only">{{ section.caption }}</caption>{% endif %}
+        <thead>
+          <tr>
+            <th scope="col">{{ section.corner }}</th>
+            {% for col in section.columns %}
+            <th scope="col">{{ col | markdownify | remove: '<p>' | remove: '</p>' | strip }}</th>
+            {% endfor %}
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in section.rows %}
+          <tr>
+            <th scope="row">{{ row.label }}</th>
+            {% for cell in row.cells %}
+            <td>{{ cell | markdownify | remove: '<p>' | remove: '</p>' | strip }}</td>
+            {% endfor %}
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    {% if section.note %}
+    <div class="course-note text-center mt-3">{{ section.note | markdownify }}</div>
+    {% endif %}
+  </div>
+</section>

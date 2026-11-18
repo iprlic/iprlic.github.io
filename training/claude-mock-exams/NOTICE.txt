@@ -1,9 +1,10 @@
 Claude certification practice questions (public sample)
 https://prlic.io/training/claude-mock-exams/
 
-This page offers 20 practice questions for each of the four Claude
-certification exams (Associate, Developer, Architect Foundations, Architect
-Professional): 80 questions in total, the same set for every visitor, chosen
+This page offers 20 practice questions for each of the five Claude
+certification exams (Associate Foundations, Developer Foundations, Developer
+Professional, Architect Foundations, Architect Professional): 100 questions
+in total, the same set for every visitor, chosen
 to cover every exam domain in proportion to the full question bank.
 
 Modes: Study (answer and explanation after each question) or Exam (timed at
@@ -16,13 +17,19 @@ tests) are available for teams and course participants: info@prlic.io
 
 Copyright and licences
 ----------------------
-The questions in questions.js are a 20-per-exam selection from
-question-bank.json in https://github.com/amey-thakur/CLAUDE-CERTIFICATIONS,
+The questions in questions.js come from two sources.
+
+1. CCAO-F, CCDV-F, CCAR-F and CCAR-P (80 questions): a 20-per-exam selection
+from question-bank.json in https://github.com/amey-thakur/CLAUDE-CERTIFICATIONS,
 Copyright (c) 2026 Amey Thakur, MIT License (full text in
 LICENSE-question-bank.txt, which must accompany them). Questions, options and
 explanations are reproduced unchanged.
 
-The page itself (index.html) and any original questions by Prlić Consulting
-are (c) Prlić Consulting d.o.o., all rights reserved.
+2. CCDV-P (Claude Certified Developer - Professional, 20 questions): original
+questions written by Prlić Consulting d.o.o. These are (c) Prlić Consulting
+d.o.o., all rights reserved, and are not covered by the MIT License above.
+
+The page itself (index.html) is (c) Prlić Consulting d.o.o., all rights
+reserved.
 
 Unofficial practice material, not affiliated with or endorsed by Anthropic.

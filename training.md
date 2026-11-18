@@ -11,9 +11,13 @@ image:
   width: 1200
   height: 630
 locale: en_US
-title: Claude & AWS Training
+title: Claude Training and AWS Training in Europe
 description: >-
-  Claude and AWS training for engineering and business teams, online or on site in Europe, from an AWS Authorized Instructor and Claude Certified Architect.
+  Claude training and certification exam prep, plus AWS training, for business and engineering teams. Online or on site in Europe, in English or Croatian.
+
+last_updated: 2026-11-18
+# ItemList of the course pages (_includes/course-list-schema.html)
+course_catalog: true
 
 header:
   title: Claude and AWS training from someone who builds with both
@@ -40,7 +44,9 @@ sections:
     intro: >-
       Preparing for a Claude certification? Try
       [20 free practice questions per exam](/training/claude-mock-exams/),
-      with an explanation for every answer.
+      with an explanation for every answer. Not sure which exam fits?
+      [Compare all five Claude certifications](/training/claude-certifications/)
+      and check [who can take the exams](/training/claude-exam-eligibility/).
     services:
       - title: Claude for Business Teams
         icon: fa-user-tie
@@ -158,12 +164,18 @@ sections:
           experience of the group. You get a detailed outline to approve before the
           course.
 
-      - q: What does it cost?
+      - q: How much does Claude training cost?
         a: >-
           Team training starts from €4,000 for a course of one to two days,
           excluding VAT and travel; the price depends on length, format and group
           size. Official AWS courses are priced by the AWS Training Partner that
           books them.
+
+      - q: Can you train our team in Croatian?
+        a: >-
+          Yes. Every course runs in English or Croatian, online or on site, for
+          up to 20 participants per group. The free practice questions are in
+          English only.
 
       - q: What do participants need for the labs?
         a: >-
@@ -174,15 +186,18 @@ sections:
           Claude API or Amazon Bedrock accounts, ideally your own; I help with the
           setup and estimate the usage cost, which is usually small.
 
-      - q: Do you work with training companies?
+      - q: Do you deliver courses for training companies (white-label)?
         a: >-
           Yes. Training providers and resellers can book me as the trainer for
-          their own clients, online or on site.
+          their own clients, online or on site, including white-label delivery
+          under the provider's name. See
+          [for training providers](/training/for-training-providers/).
 
-      - q: Are you affiliated with Anthropic?
+      - q: Is this an official Anthropic course?
         a: >-
-          No. I am an independent trainer who holds Anthropic's Claude
-          certifications and builds production systems with Claude. The Claude
+          No. I am an independent trainer, not affiliated with Anthropic; I hold
+          Claude Certified Architect – Professional and build production systems
+          with Claude. The Claude
           courses prepare for the four Claude certification exams, but none of my
           courses are official Anthropic courses. The exams themselves are taken at Pearson VUE;
           candidates register through the Anthropic Partner Academy, which requires

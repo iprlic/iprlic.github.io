@@ -11,9 +11,13 @@ image:
   width: 1200
   height: 630
 locale: hr_HR
-title: Edukacija za Claude i AWS
+title: Edukacija i tečajevi za Claude i AWS u Hrvatskoj
 description: >-
-  Edukacija za Claude i AWS za poslovne i razvojne timove, online ili kod vas, od AWS Authorized Instructora i Claude Certified Architecta.
+  Tečajevi za Claude i AWS te priprema za Claude certifikacijske ispite, za poslovne i razvojne timove. Online ili kod vas, u Hrvatskoj i Europi.
+
+last_updated: 2026-11-18
+# ItemList of the course pages (_includes/course-list-schema.html)
+course_catalog: true
 
 header:
   title: Edukacija za Claude i AWS od nekoga tko s njima radi svaki dan
@@ -40,7 +44,9 @@ sections:
     intro: >-
       Pripremate se za Claude certifikaciju? Isprobajte
       [20 besplatnih probnih pitanja po ispitu](/training/claude-mock-exams/),
-      s objašnjenjem svakog odgovora (na engleskom).
+      s objašnjenjem svakog odgovora (na engleskom). Ne znate koji ispit
+      odabrati? [Usporedite svih pet Claude certifikacija](/hr/edukacija/claude-certifikacije/)
+      i provjerite [tko može polagati ispite](/hr/edukacija/claude-ispiti-uvjeti/).
     services:
       - title: Claude za poslovne timove
         icon: fa-user-tie
@@ -164,11 +170,17 @@ sections:
           primjene i iskustvu grupe. Prije tečaja dobivate detaljan program na
           odobrenje.
 
-      - q: Koliko košta?
+      - q: Koliko košta edukacija za Claude?
         a: >-
           Edukacija tima počinje od 4.000 € za tečaj od jednog do dva dana, bez PDV-a
           i putnih troškova; cijena ovisi o trajanju, formatu i veličini grupe.
           Službene AWS tečajeve naplaćuje AWS Training Partner koji ih organizira.
+
+      - q: Možete li tečaj održati na engleskom?
+        a: >-
+          Mogu. Svaki tečaj održavam na hrvatskom ili engleskom, online ili kod
+          vas, za do 20 polaznika po grupi. Besplatna probna pitanja dostupna su
+          samo na engleskom.
 
       - q: Što polaznici trebaju za vježbe?
         a: >-
@@ -180,15 +192,18 @@ sections:
           rade na Claude API ili Amazon Bedrock računima, najbolje vašima; pomažem
           s postavljanjem i procjenom troška korištenja, koji je obično malen.
 
-      - q: Radite li s edukacijskim kućama?
+      - q: Održavate li tečajeve za edukacijske kuće (white-label)?
         a: >-
           Da. Edukacijske kuće i partneri mogu me angažirati kao predavača za svoje
-          klijente, online ili uživo.
+          klijente, online ili uživo, uključujući izvedbu pod imenom edukacijske
+          kuće (white-label). Više na stranici
+          [za edukacijske kuće](/hr/edukacija/edukacijske-kuce/).
 
-      - q: Jeste li povezani s Anthropicom?
+      - q: Je li ovo službeni Anthropicov tečaj?
         a: >-
-          Nisam. Neovisni sam predavač s Anthropicovim Claude certifikatima i
-          gradim produkcijske sustave s Claudeom. Tečajevi za Claude pripremaju za
+          Nije. Neovisni sam predavač, nisam povezan s Anthropicom; imam
+          certifikat Claude Certified Architect – Professional i gradim
+          produkcijske sustave s Claudeom. Tečajevi za Claude pripremaju za
           četiri Claude certifikacijska ispita, ali nijedan moj tečaj nije
           službeni Anthropicov tečaj. Ispiti se
           polažu kod Pearson VUE-a; prijava ide preko Anthropic Partner Academyja,

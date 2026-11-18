@@ -11,9 +11,17 @@ image:
   width: 1200
   height: 630
 locale: en_US
-title: Claude Certified Architect Professional Course (CCAR-P)
+title: Claude Certified Architect Professional Exam Prep Course (CCAR-P)
 description: >-
   Three-day course for senior architects: solution design, RAG, MCP and identity, evals, governance and team enablement on Claude. Prepares for CCAR-P.
+
+last_updated: 2026-11-18
+# Course JSON-LD (_includes/course-schema.html); price_from only where the price is published.
+course:
+  order: 4
+  level: Advanced
+  exam: Claude Certified Architect – Professional (CCAR-P)
+  workload: P3D
 
 header:
   compact: true
@@ -122,6 +130,8 @@ sections:
       across two modules.
       Try [20 free practice questions](/training/claude-mock-exams/#ccar-p) for
       this exam, with an explanation for every answer.
+      Not sure this is the right exam?
+      [Compare all five Claude certifications](/training/claude-certifications/).
     facts:
       - label: Exam code
         value: CCAR-P

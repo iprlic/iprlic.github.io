@@ -15,6 +15,20 @@ title: Izgradite AI agente s Claudeom, tečaj bez programiranja
 description: >-
   Tečaj bez programiranja za poslovne timove: izgradite Claude agenta za proces iz svog posla i naučite provjeriti je li pouzdan. 6 tjedana ili 3 dana.
 
+last_updated: 2026-11-18
+# Course JSON-LD (_includes/course-schema.html); price_from only where the price is published.
+course:
+  order: 5
+  level: Početna razina
+  workload: P3D
+  instances:
+    - mode: Online
+      workload: PT16H
+    - mode: Online
+      workload: P3D
+    - mode: Onsite
+      workload: P3D
+
 header:
   compact: true
   title: Izgradite AI agente s Claudeom

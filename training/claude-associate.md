@@ -15,6 +15,15 @@ title: Claude Certified Associate Exam Prep Course (CCAO-F)
 description: >-
   One-day Claude course for business teams, no coding: prompting, checking output, workflows and safe use. Prepares for the CCAO-F exam.
 
+last_updated: 2026-11-18
+# Course JSON-LD (_includes/course-schema.html); price_from only where the price is published.
+course:
+  order: 1
+  level: Beginner
+  exam: Claude Certified Associate – Foundations (CCAO-F)
+  workload: P1D
+  price_from: 4000
+
 header:
   compact: true
   title: Claude for Business Teams
@@ -117,6 +126,8 @@ sections:
       taught in at least one module.
       Try [20 free practice questions](/training/claude-mock-exams/#ccao-f) for
       this exam, with an explanation for every answer.
+      Not sure this is the right exam?
+      [Compare all five Claude certifications](/training/claude-certifications/).
     facts:
       - label: Exam code
         value: CCAO-F

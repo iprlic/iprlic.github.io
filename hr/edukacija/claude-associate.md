@@ -15,6 +15,15 @@ title: Tečaj za ispit Claude Certified Associate (CCAO-F)
 description: >-
   Jednodnevni tečaj za Claude za poslovne timove, bez programiranja: upute, provjera rezultata, tijekovi rada i sigurna upotreba. Priprema za CCAO-F.
 
+last_updated: 2026-11-18
+# Course JSON-LD (_includes/course-schema.html); price_from only where the price is published.
+course:
+  order: 1
+  level: Početna razina
+  exam: Claude Certified Associate – Foundations (CCAO-F)
+  workload: P1D
+  price_from: 4000
+
 header:
   compact: true
   title: Claude za poslovne timove
@@ -118,6 +127,8 @@ sections:
       obrađena je u barem jednom modulu.
       Isprobajte [20 besplatnih probnih pitanja](/training/claude-mock-exams/#ccao-f)
       za ovaj ispit, s objašnjenjem svakog odgovora (na engleskom).
+      Ne znate koji ispit odabrati? Pogledajte
+      [usporedbu svih pet Claude certifikacija](/hr/edukacija/claude-certifikacije/).
     facts:
       - label: Oznaka ispita
         value: CCAO-F

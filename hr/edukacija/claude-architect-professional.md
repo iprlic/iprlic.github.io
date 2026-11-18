@@ -15,6 +15,14 @@ title: Tečaj za ispit Claude Certified Architect Professional (CCAR-P)
 description: >-
   Trodnevni tečaj za iskusne arhitekte: dizajn rješenja, RAG, MCP i identitet, evaluacija, upravljanje i osposobljavanje tima. Priprema za CCAR-P.
 
+last_updated: 2026-11-18
+# Course JSON-LD (_includes/course-schema.html); price_from only where the price is published.
+course:
+  order: 4
+  level: Napredna razina
+  exam: Claude Certified Architect – Professional (CCAR-P)
+  workload: P3D
+
 header:
   compact: true
   title: Napredna arhitektura s Claudeom
@@ -123,6 +131,8 @@ sections:
       dva modula.
       Isprobajte [20 besplatnih probnih pitanja](/training/claude-mock-exams/#ccar-p)
       za ovaj ispit, s objašnjenjem svakog odgovora (na engleskom).
+      Ne znate koji ispit odabrati? Pogledajte
+      [usporedbu svih pet Claude certifikacija](/hr/edukacija/claude-certifikacije/).
     facts:
       - label: Oznaka ispita
         value: CCAR-P

@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Free Claude Certification Practice Questions | Ivan Prlić</title>
-<meta name="description" content="20 free practice questions for each of the four Claude certification exams (CCAO-F, CCDV-F, CCAR-F, CCAR-P), with an explanation for every answer.">
+<title>Free Claude Certification Practice Questions: all five exams | Ivan Prlić</title>
+<meta name="description" content="Free Claude certification practice questions: 20 per exam for all five Claude exams (CCAO-F, CCDV-F, CCDV-P, CCAR-F, CCAR-P), with an explanation for every answer. Study mode or a timed mock.">
 <meta name="author" content="Ivan Prlić">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#0f172a">
@@ -13,15 +13,63 @@
 <meta property="og:site_name" content="Ivan Prlić">
 <meta property="og:locale" content="en_US">
 <meta property="og:title" content="Free Claude Certification Practice Questions">
-<meta property="og:description" content="20 free practice questions for each of the four Claude certification exams, with an explanation for every answer. Study mode or a timed exam.">
+<meta property="og:description" content="20 free practice questions for each of the five Claude certification exams (including the new Developer - Professional), with an explanation for every answer. Study mode or a timed exam.">
 <meta property="og:url" content="https://prlic.io/training/claude-mock-exams/">
 <meta property="og:image" content="https://prlic.io/assets/img/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Free Claude Certification Practice Questions">
-<meta name="twitter:description" content="20 free practice questions for each of the four Claude certification exams, with an explanation for every answer.">
+<meta name="twitter:description" content="20 free practice questions for each of the five Claude certification exams, with an explanation for every answer.">
 <meta name="twitter:image" content="https://prlic.io/assets/img/og-image.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Are these the real exam questions?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. These are unofficial practice questions written to match the format, scenarios and domains of the Claude certification exams. They are not the real exam items, not leaked questions, and not affiliated with or endorsed by Anthropic. Exams are taken at Pearson VUE via the Anthropic Partner Academy."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How close are they to the real exam?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "They follow the published exam guides: scenario-based multiple choice, the same domains, and the same kind of trade-off decisions. Each exam set of 20 covers every domain in proportion to its weight. The real exams are longer (53 to 70 questions in 120 minutes) and are scored on a scaled basis, so this page has no pass mark. Use it to find weak domains, not to predict your score."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is it free?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. The 20 questions per exam, the explanations and both modes are free, with no sign-up. Your answers and scores are stored in your own browser only and are never sent to a server."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Do you have more questions?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. Full-length mock exams with a much larger question bank and timed practice tests are available for teams and course participants. Write to info@prlic.io."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Which Claude certification should I take?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "It depends on your role: business teams, developers, solution architects, or engineers running Claude in production. The comparison page at https://prlic.io/training/claude-certifications/ explains who each of the five exams is for and how they relate."
+   }
+  }
+ ]
+}
+</script>
 <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
 <link rel="icon" type="image/png" href="/assets/img/favicon.png">
 <style>
@@ -93,6 +141,14 @@
   footer { max-width:900px; margin:10px auto 30px; padding:0 20px; color:var(--muted); font-size:13px; }
   footer p { margin:0 0 6px; }
   kbd { font-size:11px; border:1px solid var(--line); border-radius:4px; padding:0 4px; background:#fff; }
+  .intro h1.page { font-size:28px; }
+  .intro p, .info p { max-width:70ch; }
+  .info { margin-top:28px; }
+  .info h2 { font-size:20px; margin:0 0 8px; }
+  .info ul.exams { list-style:none; padding:0; margin:0 0 24px; display:grid; gap:8px; }
+  .info ul.exams li { background:#fff; border:1px solid var(--line); border-radius:10px; padding:10px 14px; font-size:15px; }
+  .info h3 { font-size:16px; margin:16px 0 4px; }
+  .info .faq p { margin:0; font-size:15px; color:#334155; }
   @media (max-width: 991px) {
     button, .modes label { min-height:44px; }
     .dot { width:44px; height:44px; }
@@ -118,10 +174,34 @@
   <span class="timer" id="timer" role="timer" aria-label="Time left"></span>
   <a class="site" href="/training/">Training</a>
 </header>
-<main id="app" tabindex="-1"><noscript><p>This practice test needs JavaScript. The courses are described at <a href="/training/">prlic.io/training</a>.</p></noscript></main>
+<main>
+<div class="intro" id="intro">
+  <h1 class="page">Free Claude certification practice questions</h1>
+  <p class="lede">Free Claude certification practice questions: 20 per exam for all five Claude certifications (CCAO-F, CCDV-F, CCDV-P, CCAR-F and CCAR-P), with an explanation for every answer. Study with feedback after each question, or take a timed mock exam and see your results by domain. No sign-up; your scores stay in your browser. Unofficial practice material, not the real exam questions. Not sure which exam fits you? <a href="/training/claude-certifications/">Which certification is right for you</a>.</p>
+  <noscript><p class="note">This practice test needs JavaScript to run. The five exams and the answers to common questions are listed below, and the courses are described at <a href="/training/">prlic.io/training</a>.</p></noscript>
+</div>
+<div id="app" tabindex="-1"></div>
+<div class="info" id="info">
+  <section aria-labelledby="exams-h"><h2 id="exams-h">The five Claude certification exams</h2>
+<ul class="exams">
+<li><b>CCAO-F</b> Claude Certified Associate – Foundations: for business teams who use Claude every day: prompting, output checking, responsible use. Real exam: 60 questions, 120 min. <a href="/training/claude-associate/">Course Claude for Business Teams</a>.</li>
+<li><b>CCDV-F</b> Claude Certified Developer – Foundations: for developers building applications and agents with the API, tools and MCP. Real exam: 53 questions, 120 min. <a href="/training/claude-developer/">Course Building with Claude</a>.</li>
+<li><b>CCDV-P</b> Claude Certified Developer – Professional: new: for engineers who run Claude applications and agents in production (observability, evaluation, cost, guardrails, coding-agent fleets). Real exam: 70 questions (60 scored), 120 min, 12 months validity. <a href="/training/claude-certifications/">Which certification is right for you</a>.</li>
+<li><b>CCAR-F</b> Claude Certified Architect – Foundations: for architects designing agentic systems, tool and MCP integration, context management and Claude Code workflows. Real exam: 60 questions, 120 min. <a href="/training/claude-architect/">Course Architecting with Claude</a>.</li>
+<li><b>CCAR-P</b> Claude Certified Architect – Professional: for senior architects handling integration, governance, evaluation and stakeholder alignment at scale. Real exam: 63 questions, 120 min. <a href="/training/claude-architect-professional/">Course Advanced Claude Architecture</a>.</li>
+</ul></section>
+  <section class="faq" aria-labelledby="faq-h"><h2 id="faq-h">Frequently asked questions</h2>
+<h3>Are these the real exam questions?</h3><p>No. These are unofficial practice questions written to match the format, scenarios and domains of the Claude certification exams. They are not the real exam items, not leaked questions, and not affiliated with or endorsed by Anthropic. Exams are taken at Pearson VUE via the Anthropic Partner Academy.</p>
+<h3>How close are they to the real exam?</h3><p>They follow the published exam guides: scenario-based multiple choice, the same domains, and the same kind of trade-off decisions. Each exam set of 20 covers every domain in proportion to its weight. The real exams are longer (53 to 70 questions in 120 minutes) and are scored on a scaled basis, so this page has no pass mark. Use it to find weak domains, not to predict your score.</p>
+<h3>Is it free?</h3><p>Yes. The 20 questions per exam, the explanations and both modes are free, with no sign-up. Your answers and scores are stored in your own browser only and are never sent to a server.</p>
+<h3>Do you have more questions?</h3><p>Yes. Full-length mock exams with a much larger question bank and timed practice tests are available for teams and course participants. Write to <a href="mailto:info@prlic.io?subject=Full%20Claude%20mock%20exams">info@prlic.io</a>.</p>
+<h3>Which Claude certification should I take?</h3><p>It depends on your role: business teams, developers, solution architects, or engineers running Claude in production. The comparison page <a href="/training/claude-certifications/">Which certification is right for you</a> explains who each of the five exams is for and how they relate.</p>
+</section>
+</div>
+</main>
 <footer>
   <p><b>Prlić Consulting d.o.o.</b> · Claude and AWS training for teams · <a href="/">prlic.io</a> · <a href="/training/">Training</a> · <a href="mailto:info@prlic.io?subject=Full%20Claude%20mock%20exams">info@prlic.io</a></p>
-  <p>Questions: a 20-per-exam selection from <a href="https://github.com/amey-thakur/CLAUDE-CERTIFICATIONS" rel="noopener">amey-thakur/CLAUDE-CERTIFICATIONS</a>, Copyright (c) 2026 Amey Thakur, MIT License (<a href="NOTICE.txt">notice</a>, <a href="LICENSE-question-bank.txt">license</a>). This page and any original questions by Prlić Consulting are © Prlić Consulting d.o.o., all rights reserved. Unofficial practice material, not affiliated with or endorsed by Anthropic. Your answers and scores are stored in this browser only.</p>
+  <p>Questions: the four exams CCAO-F, CCDV-F, CCAR-F and CCAR-P use a 20-per-exam selection from <a href="https://github.com/amey-thakur/CLAUDE-CERTIFICATIONS" rel="noopener">amey-thakur/CLAUDE-CERTIFICATIONS</a>, Copyright (c) 2026 Amey Thakur, MIT License (<a href="NOTICE.txt">notice</a>, <a href="LICENSE-question-bank.txt">license</a>). The CCDV-P questions, this page and its text are © Prlić Consulting d.o.o., all rights reserved. Unofficial practice material, not affiliated with or endorsed by Anthropic. Your answers and scores are stored in this browser only.</p>
 </footer>
 
 <script src="questions.js"></script>
@@ -129,6 +209,7 @@
 const EXAMS = [
   { key:'associate-foundations', code:'CCAO-F', real:'60 questions, 120 min', course:'/training/claude-associate/', courseTitle:'Claude for Business Teams' },
   { key:'developer-foundations', code:'CCDV-F', real:'53 questions, 120 min', course:'/training/claude-developer/', courseTitle:'Building with Claude' },
+  { key:'developer-professional', code:'CCDV-P', real:'70 questions, 120 min', course:'/training/claude-certifications/', courseTitle:'Which certification is right for you', courseLabel:'Guide', lead:'Preparing for CCDV-P? See', isNew:true },
   { key:'architect-foundations', code:'CCAR-F', real:'60 questions, 120 min', course:'/training/claude-architect/', courseTitle:'Architecting with Claude' },
   { key:'architect-professional', code:'CCAR-P', real:'63 questions, 120 min', course:'/training/claude-architect-professional/', courseTitle:'Advanced Claude Architecture' },
 ];
@@ -154,6 +235,8 @@ let S = null, tick = null;
 const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 const T = k => QB.exams[k].title.replace(' - ', ' – ');
+const TITLE = 'Free Claude Certification Practice Questions: all five exams | Ivan Prlić';
+const chrome = on => { for (const id of ['intro', 'info']) { const el = document.getElementById(id); if (el) el.hidden = !on; } };
 const qs = (exam, filter) => QB.questions.filter(q => q.exam === exam && (!filter || filter(q)));
 const examOf = k => EXAMS.find(e => e.key === k);
 const anchor = e => e.code.toLowerCase();
@@ -161,31 +244,29 @@ const mode = () => (document.querySelector('input[name=mode]:checked') || {}).va
 const missedIds = exam => { const ids = new Set(qs(exam).map(q => q.id)); return (store.missed[exam] || []).filter(id => ids.has(id)); };
 
 function fullNote(e) {
-  const course = e ? `<p>Preparing for ${esc(e.code)}? See the course <a href="${e.course}">${esc(e.courseTitle)}</a>.</p>` : '';
+  const course = e ? `<p>${e.lead ? esc(e.lead) : `Preparing for ${esc(e.code)}? See the course`} <a href="${e.course}">${esc(e.courseTitle)}</a>.</p>` : '';
   return `<div class="note" role="note"><p><b>These are 20 sample questions per exam</b>, the same set for everyone, with an explanation for every answer.</p>
     <p>Full-length mock exams with a much larger question bank and timed practice tests are available for teams and course participants. Write to <a href="${CONTACT}">info@prlic.io</a>.</p>${course}</div>`;
 }
 
 function home() {
   stopTimer(); S = null;
-  document.title = 'Free Claude Certification Practice Questions | Ivan Prlić';
+  document.title = TITLE; chrome(true);
   const m = ls.get(LS + '-mode') || 'study';
-  let h = `<h1 class="page">Free practice questions for the Claude certifications</h1>
-    <p class="lede">Twenty questions for each of the four Claude certification exams, covering every exam domain. Practise in study mode with explanations, or take a timed exam.</p>
-    ${fullNote(null)}
+  let h = `${fullNote(null)}
     <fieldset class="modes"><legend>Mode:</legend>
     <label><input type="radio" name="mode" value="study" ${m==='study'?'checked':''} onchange="ls.set('${LS}-mode',this.value)"> Study (answer shown after each question)</label>
     <label><input type="radio" name="mode" value="exam" ${m==='exam'?'checked':''} onchange="ls.set('${LS}-mode',this.value)"> Exam (timed, ${qs(EXAMS[0].key).length * SEC_PER_Q / 60} min, results at the end)</label></fieldset><div class="grid">`;
   for (const e of EXAMS) {
     const n = qs(e.key).length, missed = missedIds(e.key).length;
     const hist = store.history.filter(x => x.exam === e.key).slice(-3).reverse();
-    h += `<section class="card" id="${anchor(e)}" aria-labelledby="t-${anchor(e)}"><h2 id="t-${anchor(e)}">${esc(T(e.key))} <span class="tag">${e.code}</span></h2>
+    h += `<section class="card" id="${anchor(e)}" aria-labelledby="t-${anchor(e)}"><h2 id="t-${anchor(e)}">${esc(T(e.key))} <span class="tag">${e.code}</span>${e.isNew ? ' <span class="tag" style="background:#dcfce7;color:#14532d">New exam</span>' : ''}</h2>
       <div class="muted">Real exam: ${e.real} · this sample: ${n} questions</div>
       <div class="btns">
         <button class="primary" onclick="start('${e.key}','sample')">Take the ${n}-question mock</button>
         <button onclick="start('${e.key}','missed')" ${missed?'':'disabled'}>Retry my mistakes (${missed})</button>
       </div>
-      <div class="course-link" style="margin-top:10px">Course: <a href="${e.course}">${esc(e.courseTitle)}</a></div>
+      <div class="course-link" style="margin-top:10px">${e.courseLabel || 'Course'}: <a href="${e.course}">${esc(e.courseTitle)}</a></div>
       ${hist.length?`<div class="muted small" style="margin-top:8px">Recent: ${hist.map(x=>`${esc(x.label)} ${x.right}/${x.n} (${x.pct}%)`).join(' · ')}</div>`:''}
     </section>`;
   }
@@ -202,7 +283,7 @@ function start(exam, set) {
   if (!list.length) return home();
   S = { exam, set, label, list, i: 0, ans: {}, flags: {}, revealed: {}, mode: mode(), started: Date.now() };
   if (S.mode === 'exam') { S.deadline = Date.now() + list.length * SEC_PER_Q * 1000; startTimer(); }
-  document.title = `${examOf(exam).code} practice questions | Ivan Prlić`;
+  document.title = `${examOf(exam).code} practice questions | Ivan Prlić`; chrome(false);
   render(true);
 }
 
@@ -230,7 +311,7 @@ function render(focus) {
     else if (k === chosen) cls += ' sel';
     h += `<button class="${cls}" onclick="pick('${k}')" ${shown ? 'disabled' : ''} aria-pressed="${k === chosen}"><b>${k}</b><span>${esc(v)}</span></button>`;
   }
-  h += `</div><div aria-live="polite">`;
+  h += `</div><div class="muted small" style="margin-top:6px">${q.source === 'prlic' ? 'Question © Prlić Consulting d.o.o.' : 'Question from <a href="https://github.com/amey-thakur/CLAUDE-CERTIFICATIONS" rel="noopener">amey-thakur/CLAUDE-CERTIFICATIONS</a> (MIT License)'}</div><div aria-live="polite">`;
   if (shown) h += `<div class="rationale"><b class="${chosen === q.answer ? 'right' : 'wrong'}">${chosen === q.answer ? 'Correct.' : 'Not quite. Correct answer: ' + q.answer + '.'}</b> ${esc(q.rationale)}</div>`;
   h += `</div>`;
   const last = S.i === n - 1;
@@ -260,7 +341,7 @@ function track(q, ok) {
 
 function finish() {
   if (!S) return;
-  stopTimer();
+  stopTimer(); chrome(false);
   const n = S.list.length, e = examOf(S.exam);
   let right = 0; const dom = {};
   for (const q of S.list) {

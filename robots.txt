@@ -2,3 +2,5 @@ User-agent: *
 Allow: /
 
 Sitemap: https://prlic.io/sitemap.xml
+
+# Summary of the site for AI assistants (llms.txt convention): https://prlic.io/llms.txt

@@ -25,6 +25,13 @@ layout: base
           {% for item in page.header.proof %}<li>{{ item }}</li>{% endfor %}
         </ul>
         {% endif %}
+        {% comment %}Freshness line for course and training pages, from `last_updated`.{% endcomment %}
+        {% if page.last_updated %}
+        {% assign lu_lang = page.lang | default: "en" %}
+        {% assign lu_month = page.last_updated | date: "%-m" | minus: 1 %}
+        <p class="hero-updated">{{ site.data.i18n[lu_lang].last_updated }}
+          <time datetime="{{ page.last_updated | date: '%Y-%m-%d' }}">{{ site.data.i18n[lu_lang].months[lu_month] }} {{ page.last_updated | date: "%Y" }}</time></p>
+        {% endif %}
       </div>
     </div>
   </div>

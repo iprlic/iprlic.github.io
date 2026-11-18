@@ -383,6 +383,15 @@ header.masthead .btn-xl:hover {
   padding: 0.4rem 0.9rem;
 }
 
+/* Freshness line under the hero (course and training pages, `last_updated`). */
+.hero-updated {
+  position: relative;
+  z-index: 1;
+  margin: 1.25rem 0 0;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
 /* ── Section headings ──────────────────────────────────── */
 .page-section h2 {
   font-weight: 700;
@@ -1486,4 +1495,85 @@ header.masthead.masthead-compact {
     display: inline;
     margin-left: 0.5rem;
   }
+}
+
+/* ── Comparison table (comparison-table.html) ─────────────── */
+.compare-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 2rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.compare-scroll:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.compare-table {
+  width: 100%;
+  min-width: 880px;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: #334155;
+}
+
+.compare-table th,
+.compare-table td {
+  padding: 0.75rem 0.9rem;
+  vertical-align: top;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.compare-table tbody tr:last-child th,
+.compare-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.compare-table thead th {
+  background: #0f172a;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.compare-table thead th a {
+  color: #fff;
+}
+
+.compare-table tbody th {
+  font-weight: 700;
+  color: #0f172a;
+  background: #f8fafc;
+  width: 11rem;
+}
+
+/* Keep the row labels in view while the table scrolls sideways. */
+.compare-table th:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  border-right: 1px solid #e2e8f0;
+}
+
+.compare-table td a {
+  font-weight: 600;
+}
+
+.compare-hint {
+  display: none;
+  text-align: center;
+  color: #5b6b81;
+  font-size: 0.8rem;
+  margin: 1rem 0 -1rem;
+}
+
+@media (max-width: 991px) {
+  .compare-hint { display: block; }
+  .compare-table tbody th { width: 8.5rem; min-width: 8.5rem; }
 }
