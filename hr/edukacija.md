@@ -21,8 +21,9 @@ header:
   text: >-
     Tečajevi za poslovne korisnike, programere i arhitekte. Predaje ih osoba koja
     projektira i vodi produkcijske Claude i AWS sustave za regulirane organizacije.
-    Vježbe dolaze iz stvarnih projekata, a svaki tečaj služi i kao priprema za
-    certifikacijski ispit.
+    Vježbe dolaze iz stvarnih projekata. Tečajevi za Claude služe i kao priprema
+    za certifikacijski ispit, a praktični AI tečajevi usmjereni su na stvaran
+    posao.
   action:
     label: Pogledajte tečajeve
     url: '#claude'
@@ -74,7 +75,42 @@ sections:
           [Pogledajte program tečaja](/hr/edukacija/claude-architect-professional/).
 
   - type: services.html
+    section_id: practical-ai
+    title: Praktični AI tečajevi
+    intro: >-
+      Nisu vezani uz certifikacijski ispit. Ovi tečajevi govore o tome kako uz
+      AI obaviti stvaran posao, a namijenjeni su poslovnim timovima, upravi i
+      programerima.
+    services:
+      - title: Izgradite AI agente s Claudeom
+        icon: fa-robot
+        text: >-
+          **6 tjedana online ili 3 dana za vaš tim.** Bez programiranja. Za
+          poslovne korisnike, vlasnike proizvoda (product ownere) te voditelje
+          operative, ljudskih resursa i financija: svaki polaznik odlazi s
+          agentom koji radi za proces iz vlastitog posla i s načinom da provjeri
+          koliko je pouzdan.
+          [Pogledajte program tečaja](/hr/edukacija/ai-agenti/).
+      - title: AI strategija za upravu
+        icon: fa-compass
+        text: >-
+          **Pola dana.** Za upravu i rukovodstvo: gdje se AI u vašoj organizaciji
+          isplati, rizici i upravljanje (podaci, regulativa uključujući EU Akt o
+          umjetnoj inteligenciji, odabir dobavljača), razviti ili kupiti te kako
+          izgleda dobro rješenje u produkciji. Odlazite s prioritiziranim popisom
+          slučajeva primjene i planom za 90 dana. Online ili kod vas. Program na
+          upit.
+      - title: Claude Code za razvojne timove
+        icon: fa-code
+        text: >-
+          **2 dana.** Praktično, za programere: postavljanje i CLAUDE.md, plan
+          mode i rad u kojem se plan pregleda prije izmjena, skillovi, subagenti,
+          hookovi i dozvole, MCP integracije, korištenje u CI-ju i bez sučelja
+          (headless), timska pravila, sigurnost i troškovi. Program na upit.
+
+  - type: services.html
     section_id: aws
+    background_style: bg-subtle
     title: Edukacija za AWS
     services:
       - title: Službeni AWS tečajevi
@@ -103,7 +139,6 @@ sections:
 
   - type: faq.html
     section_id: faq
-    background_style: bg-subtle
     title: Kako to izgleda
     items:
       - q: Tko predaje?
@@ -118,7 +153,8 @@ sections:
       - q: Online ili uživo?
         a: >-
           Oboje. Online tečajevi se održavaju uživo, u blokovima od pola dana, što
-          drži pažnju i ostavlja vremena za redovan posao. Tečajeve uživo održavam u
+          drži pažnju i ostavlja vremena za redovan posao; grupa tečaja o AI
+          agentima radi u terminima od dva sata kroz šest tjedana. Tečajeve uživo održavam u
           cijeloj Hrvatskoj i Europi; putni troškovi naplaćuju se po stvarnom trošku.
 
       - q: Može li se tečaj prilagoditi našem timu?
@@ -136,7 +172,10 @@ sections:
 
       - q: Što polaznici trebaju za vježbe?
         a: >-
-          Laptop s modernim preglednikom. Vježbe za programere i arhitekte koriste i
+          Laptop s modernim preglednikom. Tečaj o AI agentima ne traži
+          programiranje: polaznici rade u claude.ai i u alatu za automatizaciju
+          bez programiranja, poput n8n-a ili Makea. Vježbe za programere i
+          arhitekte koriste i
           Python ili Node.js, VS Code, Git i Claude Code, sve besplatno. Vježbe se
           rade na Claude API ili Amazon Bedrock računima, najbolje vašima; pomažem
           s postavljanjem i procjenom troška korištenja, koji je obično malen.
@@ -149,8 +188,9 @@ sections:
       - q: Jeste li povezani s Anthropicom?
         a: >-
           Nisam. Neovisni sam predavač s Anthropicovim Claude certifikatima i
-          gradim produkcijske sustave s Claudeom. Tečajevi pripremaju za četiri Claude
-          certifikacijska ispita, ali nisu službeni Anthropicovi tečajevi. Ispiti se
+          gradim produkcijske sustave s Claudeom. Tečajevi za Claude pripremaju za
+          četiri Claude certifikacijska ispita, ali nijedan moj tečaj nije
+          službeni Anthropicov tečaj. Ispiti se
           polažu kod Pearson VUE-a; prijava ide preko Anthropic Partner Academyja,
           za što tvrtka polaznika mora biti članica Claude Partner Networka.
 

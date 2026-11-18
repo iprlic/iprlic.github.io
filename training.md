@@ -21,8 +21,9 @@ header:
   text: >-
     Courses for business users, developers and architects, taught by the person
     who designs and runs production Claude and AWS systems for regulated
-    organisations. Labs come from real projects, not slides, and every course
-    can double as certification preparation.
+    organisations. Labs come from real projects, not slides. The Claude
+    courses double as certification preparation, and the practical AI courses
+    focus on getting real work done.
   action:
     label: See the courses
     url: '#claude'
@@ -71,7 +72,39 @@ sections:
           [See the course outline](/training/claude-architect-professional/).
 
   - type: services.html
+    section_id: practical-ai
+    title: Practical AI Courses
+    intro: >-
+      Not tied to any exam. These courses are about getting real work done with
+      AI, for business teams, leadership and engineers.
+    services:
+      - title: Build AI Agents with Claude
+        icon: fa-robot
+        text: >-
+          **6 weeks online or 3 days in-house.** No coding. For business
+          professionals, product owners and operations, HR and finance leads:
+          each participant leaves with a working agent for a process from their
+          own job, and a way to check that it is reliable.
+          [See the course outline](/training/build-ai-agents/).
+      - title: AI Strategy for Leaders
+        icon: fa-compass
+        text: >-
+          **Half a day.** For leadership teams: where AI pays off in your
+          organisation, risk and governance (data, regulation including the EU AI
+          Act, vendor choice), build versus buy, and what good looks like in
+          production. You leave with a prioritised use-case shortlist and a
+          90-day plan. Online or on site. Outline on request.
+      - title: Claude Code for Engineering Teams
+        icon: fa-code
+        text: >-
+          **2 days.** Hands-on, for software engineers: setup and CLAUDE.md, plan
+          mode and review-first workflows, skills, subagents, hooks and
+          permissions, MCP integrations, CI and headless use, team conventions,
+          security and cost. Outline on request.
+
+  - type: services.html
     section_id: aws
+    background_style: bg-subtle
     title: AWS Training
     services:
       - title: Official AWS Courses
@@ -100,7 +133,6 @@ sections:
 
   - type: faq.html
     section_id: faq
-    background_style: bg-subtle
     title: How It Works
     items:
       - q: Who teaches the courses?
@@ -115,7 +147,8 @@ sections:
       - q: Online or on site?
         a: >-
           Both. Online courses run as live sessions in half-day blocks, which keeps
-          attention up and fits around normal work. On-site courses run anywhere in
+          attention up and fits around normal work; the AI agents cohort runs as
+          two-hour sessions over six weeks. On-site courses run anywhere in
           Europe; travel is charged at cost.
 
       - q: Can the course be tailored to our team?
@@ -134,7 +167,9 @@ sections:
 
       - q: What do participants need for the labs?
         a: >-
-          A laptop with a modern browser. Developer and architect labs also use
+          A laptop with a modern browser. The AI agents course needs no coding:
+          participants work in claude.ai and a no-code automation tool such as
+          n8n or Make. Developer and architect labs also use
           Python or Node.js, VS Code, Git and Claude Code, all free. Labs run on
           Claude API or Amazon Bedrock accounts, ideally your own; I help with the
           setup and estimate the usage cost, which is usually small.
@@ -147,9 +182,9 @@ sections:
       - q: Are you affiliated with Anthropic?
         a: >-
           No. I am an independent trainer who holds Anthropic's Claude
-          certifications and builds production systems with Claude. The courses
-          prepare for the four Claude certification exams but are not official
-          Anthropic courses. The exams themselves are taken at Pearson VUE;
+          certifications and builds production systems with Claude. The Claude
+          courses prepare for the four Claude certification exams, but none of my
+          courses are official Anthropic courses. The exams themselves are taken at Pearson VUE;
           candidates register through the Anthropic Partner Academy, which requires
           their company to be a member of the Claude Partner Network.
 

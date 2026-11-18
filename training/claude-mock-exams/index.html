@@ -34,8 +34,10 @@
   .skip-link { position:absolute; left:-9999px; top:0; background:#fff; color:var(--navy); padding:8px 12px; z-index:10; }
   .skip-link:focus { left:8px; top:8px; }
   header { background:var(--navy); color:#fff; padding:12px 20px; display:flex; align-items:center; gap:16px; flex-wrap:wrap; }
-  header .brand { display:flex; align-items:center; gap:10px; flex:1; min-width:220px; color:#fff; text-decoration:none; }
-  header .brand img { width:34px; height:34px; border-radius:7px; border:1px solid #334155; flex:none; }
+  header .home { display:flex; align-items:center; gap:8px; color:#fff; text-decoration:none; font-weight:700; font-size:15px; padding-right:14px; border-right:1px solid #334155; }
+  header .home img { width:34px; height:34px; border-radius:7px; border:1px solid #334155; flex:none; }
+  header .home:hover span, header .home:focus span { text-decoration:underline; }
+  header .brand { display:block; flex:1; min-width:220px; color:#fff; text-decoration:none; }
   header .brand-title { font-size:18px; font-weight:700; margin:0; line-height:1.25; }
   header .by { font-size:12px; color:#bfdbfe; letter-spacing:.3px; }
   header a.site { color:#e2e8f0; font-size:14px; text-decoration:none; }
@@ -97,6 +99,9 @@
     header a.site { padding:10px 0; }
   }
   @media (max-width: 600px) {
+    header .home { border-right:0; padding-right:0; margin-right:auto; }
+    header .timer, header a.site { order:1; }
+    header .brand { order:2; flex-basis:100%; }
     main { padding:14px; }
     h1.page { font-size:22px; }
     .keys { display:none; }
@@ -106,17 +111,17 @@
 <body>
 <a class="skip-link" href="#app">Skip to content</a>
 <header>
+  <a class="home" href="/"><img src="/assets/img/favicon.svg" alt="" width="34" height="34"><span>prlic.io</span></a>
   <a class="brand" href="./" onclick="if(window.home){event.preventDefault();home();}">
-    <img src="/assets/img/favicon.svg" alt="" width="34" height="34">
-    <span><span class="brand-title">Claude certification practice questions</span><br><span class="by">PRLIĆ CONSULTING · CLAUDE AND AWS TRAINING</span></span>
+    <span class="brand-title">Claude certification practice questions</span><br><span class="by">PRLIĆ CONSULTING · CLAUDE AND AWS TRAINING</span>
   </a>
   <span class="timer" id="timer" role="timer" aria-label="Time left"></span>
-  <a class="site" href="/training/">prlic.io/training</a>
+  <a class="site" href="/training/">Training</a>
 </header>
 <main id="app" tabindex="-1"><noscript><p>This practice test needs JavaScript. The courses are described at <a href="/training/">prlic.io/training</a>.</p></noscript></main>
 <footer>
-  <p><b>Prlić Consulting d.o.o.</b> · Claude and AWS training for teams · <a href="/training/">prlic.io/training</a> · <a href="mailto:info@prlic.io?subject=Full%20Claude%20mock%20exams">info@prlic.io</a></p>
-  <p>Questions: a 20-per-exam selection from <a href="https://github.com/amey-thakur/CLAUDE-CERTIFICATIONS" rel="noopener">amey-thakur/CLAUDE-CERTIFICATIONS</a>, MIT License (<a href="NOTICE.txt">notice</a>, <a href="LICENSE-question-bank.txt">license</a>). Unofficial practice material, not affiliated with Anthropic. Your answers and scores are stored in this browser only.</p>
+  <p><b>Prlić Consulting d.o.o.</b> · Claude and AWS training for teams · <a href="/">prlic.io</a> · <a href="/training/">Training</a> · <a href="mailto:info@prlic.io?subject=Full%20Claude%20mock%20exams">info@prlic.io</a></p>
+  <p>Questions: a 20-per-exam selection from <a href="https://github.com/amey-thakur/CLAUDE-CERTIFICATIONS" rel="noopener">amey-thakur/CLAUDE-CERTIFICATIONS</a>, Copyright (c) 2026 Amey Thakur, MIT License (<a href="NOTICE.txt">notice</a>, <a href="LICENSE-question-bank.txt">license</a>). This page and any original questions by Prlić Consulting are © Prlić Consulting d.o.o., all rights reserved. Unofficial practice material, not affiliated with or endorsed by Anthropic. Your answers and scores are stored in this browser only.</p>
 </footer>
 
 <script src="questions.js"></script>

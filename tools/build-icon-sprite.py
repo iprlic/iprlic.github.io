@@ -43,6 +43,7 @@ ICONS = {
     "cogs": "solid",
     "envelope": "solid",
     "globe": "solid",
+    "compass": "solid",
     "github": "brands",
     "linkedin": "brands",
 }

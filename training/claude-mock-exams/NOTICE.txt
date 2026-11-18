@@ -14,14 +14,15 @@ answer them correctly. Nothing is sent to a server.
 Full-length mock exams (a much larger question bank, with timed practice
 tests) are available for teams and course participants: info@prlic.io
 
-Third-party content
--------------------
-questions.js is a 20-per-exam selection from question-bank.json in
-https://github.com/amey-thakur/CLAUDE-CERTIFICATIONS,
+Copyright and licences
+----------------------
+The questions in questions.js are a 20-per-exam selection from
+question-bank.json in https://github.com/amey-thakur/CLAUDE-CERTIFICATIONS,
 Copyright (c) 2026 Amey Thakur, MIT License (full text in
-LICENSE-question-bank.txt). Questions, options and explanations are
-reproduced unchanged.
+LICENSE-question-bank.txt, which must accompany them). Questions, options and
+explanations are reproduced unchanged.
 
-Unofficial practice material, not affiliated with Anthropic.
+The page itself (index.html) and any original questions by Prlić Consulting
+are (c) Prlić Consulting d.o.o., all rights reserved.
 
-The page itself (index.html) is (c) Prlić Consulting d.o.o.
+Unofficial practice material, not affiliated with or endorsed by Anthropic.
