@@ -1,0 +1,26 @@
+# Tells IndexNow (Bing, Yandex and others) about every URL in the sitemap after
+# each GitHub Pages build, so new and changed pages are picked up within hours.
+# The key file 5212ee2706c40323f81de3f6b2274329.txt at the site root proves ownership; keep it.
+name: IndexNow
+
+on:
+  page_build:
+  workflow_dispatch:
+
+jobs:
+  ping:
+    if: github.event_name == 'workflow_dispatch' || github.event.build.status == 'built'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Submit sitemap URLs
+        env:
+          HOST: prlic.io
+          KEY: 5212ee2706c40323f81de3f6b2274329
+        run: |
+          sleep 60  # let the Pages CDN serve the new build first
+          urls=$(curl -fsSL "https://$HOST/sitemap.xml" | grep -o '<loc>[^<]*</loc>' | sed 's/<loc>//;s/<\/loc>//')
+          json=$(printf '%s\n' $urls | python3 -c 'import json,os,sys; print(json.dumps({"host": os.environ["HOST"], "key": os.environ["KEY"], "keyLocation": "https://%s/%s.txt" % (os.environ["HOST"], os.environ["KEY"]), "urlList": [u for u in sys.stdin.read().split() if u]}))')
+          echo "Submitting $(printf '%s\n' $urls | wc -l) URLs"
+          code=$(curl -s -o /dev/stderr -w '%{http_code}' -X POST https://api.indexnow.org/indexnow -H 'Content-Type: application/json; charset=utf-8' -d "$json")
+          echo "IndexNow HTTP $code"
+          [ "$code" = "200" ] || [ "$code" = "202" ]

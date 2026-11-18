@@ -241,3 +241,5 @@ The assessment's fee-credit offer (credited in full against a build booked withi
 `../cv` (`~/Projects/ip-profile/cv`) holds the CV repo. `README.md` there is the most current consolidated summary; `resume/*.tex` has per-engagement detail, and `prlic-consulting-company-presentation.html` has the company boilerplate including OIB 84570551730. Use those rather than inferring. Facts already mined into the site: SOC 2 / financial-grade work at Q.ai, the Metro / Ricoh / TUI team-collaboration examples, company registration details, and the client list.
 
 Note the CV contains **no quantified outcomes** — no percentages, cost reductions, or timings — which is why the case-study chips remain qualitative.
+
+**IndexNow.** `.github/workflows/indexnow.yml` runs after every GitHub Pages build (`page_build` event, also runnable by hand from the Actions tab) and submits every URL in `sitemap.xml` to api.indexnow.org, which feeds Bing (and through it ChatGPT search), Yandex and others. The key file `5212ee2706c40323f81de3f6b2274329.txt` at the site root proves ownership; don't delete or rename it, and keep the key in the workflow in sync if it ever changes.
