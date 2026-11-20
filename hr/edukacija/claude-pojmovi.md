@@ -380,8 +380,8 @@ sections:
           **Provjerava se na:** svih pet ispita (tako se boduju)
     note: >-
       Vježbajte parove na pitanjima kakva su na ispitu:
-      [besplatna probna pitanja](/training/claude-mock-exams/), 20 po ispitu,
-      svako s objašnjenjem (na engleskom). Format ispita se mijenja; pogledajte
+      [besplatna probna pitanja na CertDrillu](https://certdrill.io/exams/)
+      za svaki ispit. Format ispita se mijenja; pogledajte
       [pregled promjena po datumima](/hr/edukacija/claude-certifikacije-promjene/).
       Detalji o funkcionalnostima provjereni su prema Anthropicovoj
       dokumentaciji 20. studenoga 2026.

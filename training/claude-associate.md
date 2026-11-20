@@ -124,8 +124,7 @@ sections:
     text: >-
       Every domain of the Claude Certified Associate – Foundations exam guide is
       taught in at least one module.
-      Try [20 free practice questions](/training/claude-mock-exams/#ccao-f) for
-      this exam, with an explanation for every answer.
+      [Free practice questions for this exam on CertDrill](https://certdrill.io/exams/ccao-f/free/).
       Not sure this is the right exam?
       [Compare all five Claude certifications](/training/claude-certifications/).
     facts:

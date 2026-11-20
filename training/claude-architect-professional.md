@@ -128,8 +128,7 @@ sections:
       The course covers all seven domains of the Claude Certified Architect –
       Professional exam guide, with the heaviest domain, integration, split
       across two modules.
-      Try [20 free practice questions](/training/claude-mock-exams/#ccar-p) for
-      this exam, with an explanation for every answer.
+      [Free practice questions for this exam on CertDrill](https://certdrill.io/exams/ccar-p/free/).
       Not sure this is the right exam?
       [Compare all five Claude certifications](/training/claude-certifications/).
     facts:

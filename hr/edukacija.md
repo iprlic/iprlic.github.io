@@ -43,9 +43,9 @@ sections:
     title: Edukacija za Claude
     intro: >-
       Pripremate se za Claude certifikaciju? Isprobajte
-      [20 besplatnih probnih pitanja po ispitu](/training/claude-mock-exams/),
-      s objašnjenjem svakog odgovora (na engleskom). Ne znate koji ispit
-      odabrati? [Usporedite svih pet Claude certifikacija](/hr/edukacija/claude-certifikacije/)
+      [CertDrill](https://certdrill.io/), moju platformu za vježbu za svih pet
+      Claude ispita: besplatan set pitanja za svaki ispit, a cijela banka
+      pitanja u plaćenom paketu. Ne znate koji ispit odabrati? [Usporedite svih pet Claude certifikacija](/hr/edukacija/claude-certifikacije/)
       i provjerite [tko može polagati ispite](/hr/edukacija/claude-ispiti-uvjeti/).
       Ponavljate gradivo? Pročitajte [Claude pojmove koji se često brkaju](/hr/edukacija/claude-pojmovi/)
       i [pregled promjena u certifikacijama](/hr/edukacija/claude-certifikacije-promjene/).
@@ -173,6 +173,13 @@ sections:
           primjene i iskustvu grupe. Prije tečaja dobivate detaljan program na
           odobrenje.
 
+      - q: Imate li probne ispite?
+        a: >-
+          Imam. [CertDrill](https://certdrill.io/) je moja platforma za vježbu
+          za svih pet Claude ispita, s besplatnim setom pitanja za svaki ispit
+          i cijelom bankom pitanja u plaćenom paketu. Svaka stranica tečaja
+          vodi na besplatni set za svoj ispit.
+
       - q: Koliko košta edukacija za Claude?
         a: >-
           Edukacija tima počinje od 4.000 € za tečaj od jednog do dva dana, bez PDV-a
@@ -182,8 +189,7 @@ sections:
       - q: Možete li tečaj održati na engleskom?
         a: >-
           Mogu. Svaki tečaj održavam na hrvatskom ili engleskom, online ili kod
-          vas, za do 20 polaznika po grupi. Besplatna probna pitanja dostupna su
-          samo na engleskom.
+          vas, za do 20 polaznika po grupi.
 
       - q: Što polaznici trebaju za vježbe?
         a: >-

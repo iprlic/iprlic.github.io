@@ -130,8 +130,7 @@ sections:
     text: >-
       Svaka domena iz vodiča za ispit Claude Certified Developer – Foundations
       obrađena je u barem jednom modulu, razmjerno svom udjelu u ispitu.
-      Isprobajte [20 besplatnih probnih pitanja](/training/claude-mock-exams/#ccdv-f)
-      za ovaj ispit, s objašnjenjem svakog odgovora (na engleskom).
+      [Besplatna probna pitanja za ovaj ispit na CertDrillu](https://certdrill.io/exams/ccdv-f/free/).
       Ne znate koji ispit odabrati? Pogledajte
       [usporedbu svih pet Claude certifikacija](/hr/edukacija/claude-certifikacije/).
     facts:

@@ -65,7 +65,7 @@ sections:
           study from that, not from older notes. If you are sitting CCAO-F,
           CCDV-F or CCAR-P, check whether your date falls before or after
           7 December 2026. Then test yourself with the
-          [free practice questions](/training/claude-mock-exams/) and the
+          [free practice questions on CertDrill](https://certdrill.io/exams/) and the
           [Claude concepts that get mixed up](/training/claude-confusions/).
       - title: Planning certification for a team
         text: >-

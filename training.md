@@ -43,8 +43,9 @@ sections:
     title: Claude Training
     intro: >-
       Preparing for a Claude certification? Try
-      [20 free practice questions per exam](/training/claude-mock-exams/),
-      with an explanation for every answer. Not sure which exam fits?
+      [CertDrill](https://certdrill.io/), my practice platform for all five
+      Claude exams: a free practice set for each exam, and a full practice
+      bank on the paid plan. Not sure which exam fits?
       [Compare all five Claude certifications](/training/claude-certifications/)
       and check [who can take the exams](/training/claude-exam-eligibility/).
       Revising? Read the [Claude concepts that get mixed up](/training/claude-confusions/)
@@ -167,6 +168,13 @@ sections:
           experience of the group. You get a detailed outline to approve before the
           course.
 
+      - q: Do you have practice exams?
+        a: >-
+          Yes. [CertDrill](https://certdrill.io/) is my practice platform for
+          all five Claude exams, with a free practice set for each exam and a
+          full practice bank on the paid plan. Each course page links to the
+          free set for its exam.
+
       - q: How much does Claude training cost?
         a: >-
           Team training starts from €4,000 for a course of one to two days,
@@ -177,8 +185,7 @@ sections:
       - q: Can you train our team in Croatian?
         a: >-
           Yes. Every course runs in English or Croatian, online or on site, for
-          up to 20 participants per group. The free practice questions are in
-          English only.
+          up to 20 participants per group.
 
       - q: What do participants need for the labs?
         a: >-

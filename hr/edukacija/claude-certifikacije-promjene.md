@@ -65,8 +65,7 @@ sections:
           učite prema njemu, a ne prema starim bilješkama. Ako polažete
           CCAO-F, CCDV-F ili CCAR-P, provjerite je li vaš termin prije ili
           poslije 7. prosinca 2026. Zatim se provjerite na
-          [besplatnim probnim pitanjima](/training/claude-mock-exams/) (na
-          engleskom) i pročitajte
+          [besplatnim probnim pitanjima na CertDrillu](https://certdrill.io/exams/) i pročitajte
           [Claude pojmove koji se često brkaju](/hr/edukacija/claude-pojmovi/).
       - title: Planirate certifikaciju za tim
         text: >-

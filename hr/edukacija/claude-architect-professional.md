@@ -129,8 +129,7 @@ sections:
       Tečaj pokriva svih sedam domena iz vodiča za ispit Claude Certified
       Architect – Professional, a najveća domena, integracija, podijeljena je na
       dva modula.
-      Isprobajte [20 besplatnih probnih pitanja](/training/claude-mock-exams/#ccar-p)
-      za ovaj ispit, s objašnjenjem svakog odgovora (na engleskom).
+      [Besplatna probna pitanja za ovaj ispit na CertDrillu](https://certdrill.io/exams/ccar-p/free/).
       Ne znate koji ispit odabrati? Pogledajte
       [usporedbu svih pet Claude certifikacija](/hr/edukacija/claude-certifikacije/).
     facts:

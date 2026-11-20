@@ -87,9 +87,8 @@ sections:
           timove. Mnogim timovima ionako odgovaraju bolje.
       - title: Besplatna probna pitanja
         text: >-
-          [Besplatna probna pitanja](/training/claude-mock-exams/) može
-          koristiti svatko: 20 po ispitu, s objašnjenjem svakog odgovora, bez
-          registracije (na engleskom). Pokazuju što ispiti provjeravaju, bez
+          [Besplatna probna pitanja na CertDrillu](https://certdrill.io/exams/) može
+          koristiti svatko: besplatan set za svaki ispit. Pokazuju što ispiti provjeravaju, bez
           obzira možete li se već prijaviti.
       - title: Učlanjenje u Claude Partner Network
         text: >-

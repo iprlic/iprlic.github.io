@@ -87,8 +87,8 @@ sections:
       - title: Practise for free
         text: >-
           Anyone can use the
-          [free practice questions](/training/claude-mock-exams/): 20 per exam,
-          with an explanation for every answer, no sign-up. They show what the
+          [free practice questions on CertDrill](https://certdrill.io/exams/): a
+          free set for each exam. They show what the
           exams test, whether or not you can register yet.
       - title: Join the Claude Partner Network
         text: >-

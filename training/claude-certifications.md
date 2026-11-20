@@ -126,11 +126,11 @@ sections:
           - "[Advanced Claude Architecture](/training/claude-architect-professional/), 3 days"
       - label: Free practice questions
         cells:
-          - "[20 questions](/training/claude-mock-exams/#ccao-f)"
-          - "[20 questions](/training/claude-mock-exams/#ccdv-f)"
-          - "[20 questions](/training/claude-mock-exams/#ccar-f)"
-          - "[20 questions](/training/claude-mock-exams/#ccdv-p)"
-          - "[20 questions](/training/claude-mock-exams/#ccar-p)"
+          - "[Free set](https://certdrill.io/exams/ccao-f/free/)"
+          - "[Free set](https://certdrill.io/exams/ccdv-f/free/)"
+          - "[Free set](https://certdrill.io/exams/ccar-f/free/)"
+          - "[Free set](https://certdrill.io/exams/ccdv-p/free/)"
+          - "[Free set](https://certdrill.io/exams/ccar-p/free/)"
     note: >-
       Sources: the official Anthropic exam guides for each certification,
       including the guides for CCAO-F, CCDV-F and CCAR-P that take effect on

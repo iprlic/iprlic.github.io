@@ -125,8 +125,7 @@ sections:
     text: >-
       Svaka domena iz vodiča za ispit Claude Certified Associate – Foundations
       obrađena je u barem jednom modulu.
-      Isprobajte [20 besplatnih probnih pitanja](/training/claude-mock-exams/#ccao-f)
-      za ovaj ispit, s objašnjenjem svakog odgovora (na engleskom).
+      [Besplatna probna pitanja za ovaj ispit na CertDrillu](https://certdrill.io/exams/ccao-f/free/).
       Ne znate koji ispit odabrati? Pogledajte
       [usporedbu svih pet Claude certifikacija](/hr/edukacija/claude-certifikacije/).
     facts:

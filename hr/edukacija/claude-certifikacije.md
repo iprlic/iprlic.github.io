@@ -125,11 +125,11 @@ sections:
           - "[Napredna arhitektura s Claudeom](/hr/edukacija/claude-architect-professional/), 3 dana"
       - label: Besplatna probna pitanja
         cells:
-          - "[20 pitanja](/training/claude-mock-exams/#ccao-f)"
-          - "[20 pitanja](/training/claude-mock-exams/#ccdv-f)"
-          - "[20 pitanja](/training/claude-mock-exams/#ccar-f)"
-          - "[20 pitanja](/training/claude-mock-exams/#ccdv-p)"
-          - "[20 pitanja](/training/claude-mock-exams/#ccar-p)"
+          - "[Besplatni set](https://certdrill.io/exams/ccao-f/free/)"
+          - "[Besplatni set](https://certdrill.io/exams/ccdv-f/free/)"
+          - "[Besplatni set](https://certdrill.io/exams/ccar-f/free/)"
+          - "[Besplatni set](https://certdrill.io/exams/ccdv-p/free/)"
+          - "[Besplatni set](https://certdrill.io/exams/ccar-p/free/)"
     note: >-
       Izvori: Anthropicovi službeni vodiči za svaki ispit, uključujući vodiče
       za CCAO-F, CCDV-F i CCAR-P koji vrijede od 7. prosinca 2026., te
