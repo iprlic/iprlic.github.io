@@ -47,6 +47,8 @@ sections:
       with an explanation for every answer. Not sure which exam fits?
       [Compare all five Claude certifications](/training/claude-certifications/)
       and check [who can take the exams](/training/claude-exam-eligibility/).
+      Revising? Read the [Claude concepts that get mixed up](/training/claude-confusions/)
+      and the [dated log of program changes](/training/claude-certification-changes/).
     services:
       - title: Claude for Business Teams
         icon: fa-user-tie
@@ -145,7 +147,8 @@ sections:
         a: >-
           I do. I am a solutions architect with 20+ years in software and 10+ on
           AWS, an AWS Authorized Instructor, and I hold certifications
-          across AWS, Google Cloud and Azure, including Claude Certified Architect – Professional and AWS Certified
+          across AWS, Google Cloud and Azure, including Claude Certified Architect – Professional, Claude Certified
+          Developer – Professional and AWS Certified
           Generative AI Developer – Professional. My day job is building production
           AI on Claude and AWS, which is where the course examples and labs come from.
           More on the [home page](/).
@@ -196,7 +199,7 @@ sections:
       - q: Is this an official Anthropic course?
         a: >-
           No. I am an independent trainer, not affiliated with Anthropic; I hold
-          Claude Certified Architect – Professional and build production systems
+          Claude Certified Architect – Professional and Developer – Professional and build production systems
           with Claude. The Claude
           courses prepare for the four Claude certification exams, but none of my
           courses are official Anthropic courses. The exams themselves are taken at Pearson VUE;

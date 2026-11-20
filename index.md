@@ -327,6 +327,7 @@ sections:
         url: https://www.credly.com/badges/55a1a049-29af-45d6-b32b-828eda6df32e
       - name: Claude Certified Architect – Pro
         url: https://www.credly.com/badges/9bce828a-a63e-4656-bc80-3883ec84e85d
+      - name: Claude Certified Developer – Pro
       - name: AWS AI Business Strategist
       - name: AWS ML – Specialty
         url: https://www.credly.com/badges/cfc09e60-e068-4529-be07-641bfc1c7465

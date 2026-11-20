@@ -1,0 +1,276 @@
+# Dated log of changes to Anthropic's Claude certification program, rendered by
+# _includes/change-log.html on /training/claude-certification-changes/ and
+# /hr/edukacija/claude-certifikacije-promjene/.
+#
+# Add a new entry at the TOP (newest first). Fields:
+#   date        YYYY-MM-DD (the date the change takes or took effect)
+#   precision   optional: "month" renders only month and year
+#   exams       optional list of exam codes the change applies to
+#   sources     list of { url, en, hr } link labels; only link public pages
+#   en / hr     { title, what, who }; `what` and `who` are markdownified
+# State only what the source supports. Bump `last_updated` and the "Last
+# checked" line on both pages whenever you add or re-check an entry.
+
+- date: 2026-12-31
+  exams: [CCAO-F, CCDV-F, CCAR-F, CCDV-P, CCAR-P]
+  sources:
+    - url: https://anthropic-partners.skilljar.com/page/faq-certifications
+      en: Anthropic certification FAQ (Pricing and payment)
+      hr: Anthropicov FAQ o certifikacijama (Pricing and payment)
+  en:
+    title: Global Premier partners' 100% exam discount ends
+    what: >-
+      Through 31 December 2026, employees of Global Premier partners pay
+      nothing for any Claude certification exam. After that date the standard
+      partner discount of 50% applies, the same as for Select and Preferred
+      partners. The discount is fixed when you schedule the exam, and
+      rescheduling keeps it; cancelling and booking again does not.
+    who: >-
+      Candidates at Global Premier partner companies. If you want the free
+      exam, schedule it before 31 December 2026, even if the exam date itself
+      is later.
+  hr:
+    title: Prestaje popust od 100 % za Global Premier partnere
+    what: >-
+      Do 31. prosinca 2026. zaposlenici Global Premier partnera ne plaćaju
+      nijedan Claude certifikacijski ispit. Nakon toga vrijedi standardni
+      partnerski popust od 50 %, kao za Select i Preferred partnere. Popust se
+      fiksira u trenutku zakazivanja ispita i ostaje ako termin pomaknete, ali
+      ne i ako termin otkažete pa ga ponovno rezervirate.
+    who: >-
+      Kandidati iz tvrtki koje su Global Premier partneri. Ako želite
+      besplatan ispit, zakažite ga do 31. prosinca 2026., čak i ako je sam
+      termin ispita kasnije.
+
+- date: 2026-12-07
+  exams: [CCAO-F, CCDV-F, CCAR-P]
+  sources:
+    - url: https://anthropic-partners.skilljar.com/page/partner-certifications
+      en: Exam guides on the Anthropic Partner Academy certification pages
+      hr: Vodiči za ispite na stranicama certifikacija u Anthropic Partner Academyju
+  en:
+    title: New exam content for Associate – Foundations, Developer – Foundations and Architect – Professional
+    what: >-
+      Version 1.1 of three exam guides takes effect. Each of the three exams
+      grows to 70 items, of which 60 are scored and 10 are unscored and not
+      identified; the time stays at 120 minutes. Items are described as
+      scenario-based.
+
+
+      **CCAO-F** (60 items before): the seven domains become six, renamed and
+      with revised objectives. Output evaluation and quality control 20%,
+      workflow design and integration 18%, responsible use, data protection
+      and governance 17%, task definition and prompting 15%, capability,
+      model and context selection 15%, configuration and knowledge management
+      15%. Troubleshooting and optimization is no longer a separate domain.
+      The new guide says items test judgment and do not require recalling
+      published figures such as prices, context window sizes or rate limits.
+
+
+      **CCDV-F** (53 items before): same eight domains, rebalanced.
+      Applications and integration drops from 33.1% to 20%; Claude Code rises
+      from 3.1% to 8%; evals, testing and debugging from 2.6% to 10%; agents
+      and workflows from 14.7% to 17%; prompt and context engineering from
+      11% to 15%; model selection and optimization falls from 16.8% to 12%.
+
+
+      **CCAR-P** (63 items before): same seven domains, reweighted.
+      Integration 19% to 21%, governance, safety and risk 14% to 16%,
+      solution design 17% to 18%, evaluation and optimization 16% to 17%,
+      developer productivity 7% to 8%; stakeholder communication and
+      lifecycle management drops from 14% to 7%.
+
+
+      Architect – Foundations (CCAR-F) is not affected.
+    who: >-
+      Anyone sitting CCAO-F, CCDV-F or CCAR-P on or after 7 December 2026.
+      Study from the version 1.1 guide, and expect a longer exam in the same
+      120 minutes. My prep courses for these three exams are reviewed against
+      the new guides before any delivery after that date.
+  hr:
+    title: Novi sadržaj ispita za Associate – Foundations, Developer – Foundations i Architect – Professional
+    what: >-
+      Na snagu stupa verzija 1.1 triju vodiča za ispite. Svaki od tih ispita
+      ima 70 pitanja, od kojih se 60 boduje, a 10 se ne boduje i nisu
+      označena; vrijeme ostaje 120 minuta. Pitanja su opisana kao pitanja na
+      temelju scenarija.
+
+
+      **CCAO-F** (dosad 60 pitanja): sedam domena postaje šest, s novim
+      nazivima i revidiranim ciljevima. Procjena rezultata i kontrola
+      kvalitete 20 %, dizajn i integracija tijeka rada 18 %, odgovorna
+      upotreba, zaštita podataka i upravljanje 17 %, definiranje zadatka i
+      promptanje 15 %, odabir mogućnosti, modela i konteksta 15 %, konfiguracija
+      i upravljanje znanjem 15 %. Rješavanje problema i optimizacija više nije
+      zasebna domena. Novi vodič navodi da pitanja provjeravaju prosudbu i ne
+      traže pamćenje objavljenih brojki kao što su cijene, veličina
+      kontekstnog prozora ili ograničenja broja zahtjeva.
+
+
+      **CCDV-F** (dosad 53 pitanja): istih osam domena, drukčije ponderirano.
+      Aplikacije i integracija padaju s 33,1 % na 20 %; Claude Code raste s
+      3,1 % na 8 %; evaluacija, testiranje i otklanjanje grešaka s 2,6 % na 10 %;
+      agenti i tijekovi rada s 14,7 % na 17 %; prompt i kontekstni inženjering
+      s 11 % na 15 %; odabir modela i optimizacija pada sa 16,8 % na 12 %.
+
+
+      **CCAR-P** (dosad 63 pitanja): istih sedam domena, novi ponderi.
+      Integracija s 19 % na 21 %, upravljanje, sigurnost i rizik s 14 % na 16 %,
+      dizajn rješenja sa 17 % na 18 %, evaluacija i optimizacija sa 16 % na 17 %,
+      produktivnost razvoja sa 7 % na 8 %; komunikacija s dionicima i
+      upravljanje životnim ciklusom pada s 14 % na 7 %.
+
+
+      Architect – Foundations (CCAR-F) se ne mijenja.
+    who: >-
+      Svi koji polažu CCAO-F, CCDV-F ili CCAR-P 7. prosinca 2026. ili kasnije.
+      Učite prema vodiču verzije 1.1 i računajte na više pitanja u istih 120
+      minuta. Moje pripremne tečajeve za ta tri ispita uskladit ću s novim
+      vodičima prije svake izvedbe nakon tog datuma.
+
+- date: 2026-11-18
+  precision: month
+  exams: [CCDV-P]
+  sources:
+    - url: https://anthropic-partners.skilljar.com/page/faq-certifications
+      en: Anthropic certification FAQ
+      hr: Anthropicov FAQ o certifikacijama
+    - url: https://anthropic-partners.skilljar.com/claude-certified-developer-professional-certification
+      en: Developer – Professional registration page (Partner Academy)
+      hr: Stranica za prijavu na Developer – Professional (Partner Academy)
+  en:
+    title: "New exam: Claude Certified Developer – Professional (CCDV-P)"
+    what: >-
+      A fifth certification, the Professional level of the Developer track.
+      Exam guide version 1.0, effective November 2026: 120 minutes, 70
+      scenario-based multiple-choice and multiple-response items (60 scored),
+      USD 175, valid for 12 months, passing scaled score 720. Developer –
+      Foundations is recommended but not required. Eight domains, led by
+      production integration, reliability and knowledge grounding (20%) and
+      advanced agent architecture and orchestration (17%), with observability,
+      evaluation engineering, runtime guardrails, incident response, agent
+      fleet operations and cost and latency. Anthropic's FAQ lists it among
+      the certifications that count towards Claude Partner Network
+      eligibility, and says the exams and prep content are available in
+      English and Japanese.
+    who: >-
+      Senior and staff engineers, platform and reliability engineers who run
+      Claude applications and agents in production. See how it compares with
+      the other four in the
+      [certification comparison](/training/claude-certifications/).
+  hr:
+    title: "Novi ispit: Claude Certified Developer – Professional (CCDV-P)"
+    what: >-
+      Peta certifikacija, profesionalna razina za programere. Vodič za ispit
+      verzije 1.0, na snazi od studenoga 2026.: 120 minuta, 70 pitanja na
+      temelju scenarija s jednim ili više točnih odgovora (60 se boduje), 175
+      USD, vrijedi 12 mjeseci, prolazni skalirani rezultat 720. Preporučuje se
+      Developer – Foundations, ali nije obvezan. Osam domena, a najveće su
+      produkcijska integracija, pouzdanost i utemeljenje na znanju (20 %) te
+      napredna arhitektura i orkestracija agenata (17 %); tu su još
+      observability, inženjering evaluacije, zaštite u radu, odgovor na
+      incidente, upravljanje flotom agenata i trošak i latencija. Anthropicov
+      FAQ ga navodi među certifikacijama koje se računaju za status u Claude
+      Partner Networku i kaže da su ispiti i pripremni materijali dostupni na
+      engleskom i japanskom.
+    who: >-
+      Seniorni inženjeri te platformski i SRE inženjeri koji vode Claude
+      aplikacije i agente u produkciji. Kako se uspoređuje s ostala četiri
+      ispita, pogledajte u
+      [usporedbi certifikacija](/hr/edukacija/claude-certifikacije/).
+
+- date: 2026-11-12
+  exams: [CCAO-F, CCDV-F, CCAR-F, CCDV-P, CCAR-P]
+  sources:
+    - url: https://cc.sj-cdn.net/instructor/6nizmqk8tpzpfjvt6qmmav7rh/public/1794424056/Claude_certifications-Pearson_SSO_and_checkout.pdf
+      en: "Anthropic guide: Pearson SSO and checkout (PDF)"
+      hr: "Anthropicov vodič: Pearson SSO and checkout (PDF, na engleskom)"
+    - url: https://anthropic-partners.skilljar.com/page/faq-certifications
+      en: Anthropic certification FAQ
+      hr: Anthropicov FAQ o certifikacijama
+  en:
+    title: Sign-in through Partner Academy, payment at Pearson
+    what: >-
+      You now reach Pearson by single sign-on from the Anthropic Partner
+      Academy: open the certification, select Register (or "Go to my Pearson
+      account" if you are already registered) and you arrive at Pearson
+      signed in. Direct sign-in on Pearson's site is gone. Payment moved from
+      the Partner Academy's checkout to Pearson's, which applies the partner
+      discount automatically and locks the price when you schedule. Before
+      continuing to Pearson you confirm your name, which must match your
+      government ID exactly and can be changed by yourself only once a year.
+      Delivery, proctoring and results stay with Pearson, and badges with
+      Credly.
+
+
+      Rules stated in the updated FAQ: test centre exams can be rescheduled
+      or cancelled up to 48 hours before the appointment, online (OnVUE)
+      exams up to one hour before; missing the window or not showing up
+      forfeits the fee. Rescheduling keeps your price, cancelling releases it.
+      Payments made at Pearson are refunded automatically on cancellation
+      within 7 to 10 business days.
+    who: >-
+      Every candidate. Registrations and payments made before 12 November
+      carry over: do not register again, use "Already registered for this
+      exam?" and checkout should show zero. Registrations made before 8am PT
+      on 12 November that were not yet booked stay valid for 5 years.
+  hr:
+    title: Prijava preko Partner Academyja, plaćanje kod Pearsona
+    what: >-
+      Do Pearsona se sada dolazi jedinstvenom prijavom (SSO) iz Anthropic
+      Partner Academyja: otvorite certifikaciju, odaberite Register (ili "Go
+      to my Pearson account" ako ste već prijavljeni) i stižete na Pearson već
+      prijavljeni. Izravna prijava na Pearsonovoj stranici više ne postoji.
+      Plaćanje je s naplate u Partner Academyju prešlo na Pearsonovu, koja
+      automatski uračunava partnerski popust i zaključava cijenu u trenutku
+      zakazivanja. Prije prelaska na Pearson potvrđujete ime, koje se mora
+      točno podudarati s osobnom ispravom, a sami ga možete promijeniti samo
+      jednom godišnje. Provedba ispita, nadzor i rezultati ostaju kod
+      Pearsona, a značke kod Credlyja.
+
+
+      Pravila iz ažuriranog FAQ-a: ispit u ispitnom centru možete pomaknuti
+      ili otkazati najkasnije 48 sati prije termina, online ispit (OnVUE)
+      najkasnije sat vremena prije; ako propustite rok ili ne dođete, gubite
+      uplaćeni iznos. Pomicanje termina zadržava cijenu, otkazivanje je
+      oslobađa. Uplate kod Pearsona vraćaju se automatski nakon otkazivanja,
+      u roku od 7 do 10 radnih dana.
+    who: >-
+      Svi kandidati. Prijave i uplate od prije 12. studenoga se prenose: ne
+      prijavljujte se ponovno, nego odaberite "Already registered for this
+      exam?", a iznos pri naplati treba biti nula. Prijave napravljene prije
+      8 sati po pacifičkom vremenu 12. studenoga za koje termin još nije
+      zakazan vrijede 5 godina.
+
+- date: 2026-06-30
+  exams: [CCAO-F, CCDV-F, CCAR-F, CCAR-P]
+  sources:
+    - url: https://anthropic-partners.skilljar.com/page/faq-certifications
+      en: Anthropic certification FAQ (Moving to Pearson, Pricing and payment)
+      hr: Anthropicov FAQ o certifikacijama (Moving to Pearson, Pricing and payment)
+  en:
+    title: Exams move to Pearson VUE, badges to Credly, validity doubles
+    what: >-
+      Exam delivery moved to Pearson VUE (online with OnVUE or at a test
+      centre) and digital badges to Credly; existing certifications were
+      transferred to Credly. Validity went from 6 to 12 months, and
+      certifications earned earlier were extended automatically to 12 months
+      from their original date. The price of Architect – Foundations rose from
+      USD 99 to USD 125. The practice exam on the previous platform was
+      retired; the exam guides' sample questions replace it.
+    who: >-
+      Everyone certified or registered before 30 June 2026, and anyone
+      budgeting for Architect – Foundations.
+  hr:
+    title: Ispiti prelaze na Pearson VUE, značke na Credly, valjanost se udvostručuje
+    what: >-
+      Provedba ispita prešla je na Pearson VUE (online preko OnVUE-a ili u
+      ispitnom centru), a digitalne značke na Credly; postojeće certifikacije
+      prenesene su na Credly. Valjanost je produljena sa 6 na 12 mjeseci, a
+      ranije stečene certifikacije automatski su produljene na 12 mjeseci od
+      izvornog datuma. Cijena ispita Architect – Foundations porasla je s 99
+      na 125 USD. Probni ispit na prijašnjoj platformi je ukinut; umjesto
+      njega su primjeri pitanja u vodičima za ispite.
+    who: >-
+      Svi koji su se certificirali ili prijavili prije 30. lipnja 2026. i svi
+      koji planiraju trošak ispita Architect – Foundations.

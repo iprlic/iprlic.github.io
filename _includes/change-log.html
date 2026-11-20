@@ -1,0 +1,57 @@
+{% comment %}
+  Dated change log, newest first, from a data file (default
+  `_data/claude_cert_changes.yml`). Each entry carries its text in both
+  languages (`en`, `hr`); the page's `lang` picks one. Add entries to the data
+  file, not to the page.
+
+  Accepts: title, text (markdownified), data (data file key), note
+  (markdownified), labels { who, source, exams }.
+  Entry: date (YYYY-MM-DD), optional precision: month, optional exams[],
+  sources[] of { url, en, hr }, and en/hr { title, what, who }.
+{% endcomment %}
+
+{% assign cl_lang = page.lang | default: "en" %}
+{% assign cl_key = section.data | default: "claude_cert_changes" %}
+{% assign cl_entries = site.data[cl_key] %}
+{% assign cl_i18n = site.data.i18n[cl_lang] %}
+
+<section id="{{ section.section_id }}" class="page-section change-log {{ section.background_style }}">
+  <div class="container">
+    <h2 class="text-center mt-0">{{ section.title }}</h2>
+    <hr class="divider my-4">
+    {% if section.text %}
+    <div class="section-lede text-center">{{ section.text | markdownify }}</div>
+    {% endif %}
+
+    <div class="row justify-content-center mt-4">
+      <div class="col-lg-9">
+        <ol class="change-log-list">
+          {% for entry in cl_entries %}
+          {% assign t = entry[cl_lang] %}
+          {% assign m = entry.date | date: "%-m" | minus: 1 %}
+          <li class="change-log-entry" id="change-{{ entry.date | date: '%Y-%m-%d' }}">
+            <p class="change-log-date">
+              <time datetime="{{ entry.date | date: '%Y-%m-%d' }}">{% if entry.precision == "month" %}{{ cl_i18n.months[m] }} {{ entry.date | date: "%Y" }}{% if cl_lang == "hr" %}.{% endif %}{% elsif cl_lang == "hr" %}{{ entry.date | date: "%-d" }}. {{ cl_i18n.months_genitive[m] }} {{ entry.date | date: "%Y" }}.{% else %}{{ entry.date | date: "%-d" }} {{ cl_i18n.months[m] }} {{ entry.date | date: "%Y" }}{% endif %}</time>
+            </p>
+            <h3 class="change-log-title">{{ t.title }}</h3>
+            {% if entry.exams %}
+            <p class="change-log-exams"><span class="sr-only">{{ section.labels.exams }}: </span>{% for code in entry.exams %}<span class="change-log-exam">{{ code }}</span>{% endfor %}</p>
+            {% endif %}
+            <div class="change-log-what">{{ t.what | markdownify }}</div>
+            <div class="change-log-who"><strong>{{ section.labels.who }}</strong> {{ t.who | markdownify | remove: "<p>" | remove: "</p>" }}</div>
+            {% if entry.sources %}
+            <p class="change-log-source"><strong>{{ section.labels.source }}</strong>
+              {% for s in entry.sources %}<a href="{{ s.url }}" rel="noopener">{{ s[cl_lang] }}</a>{% unless forloop.last %}; {% endunless %}{% endfor %}
+            </p>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ol>
+      </div>
+    </div>
+
+    {% if section.note %}
+    <div class="course-note text-center">{{ section.note | markdownify }}</div>
+    {% endif %}
+  </div>
+</section>

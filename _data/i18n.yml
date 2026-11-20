@@ -29,3 +29,5 @@ hr:
   lab: Vježba
   last_updated: "Ažurirano:"
   months: [siječanj, veljača, ožujak, travanj, svibanj, lipanj, srpanj, kolovoz, rujan, listopad, studeni, prosinac]
+  # Genitive month names for full dates ("7. prosinca 2026."), used by change-log.html.
+  months_genitive: [siječnja, veljače, ožujka, travnja, svibnja, lipnja, srpnja, kolovoza, rujna, listopada, studenoga, prosinca]

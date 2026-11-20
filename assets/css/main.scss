@@ -1290,6 +1290,76 @@ header.masthead.masthead-compact {
   margin: 0;
 }
 
+/* ── Change log (change-log.html) ───────────────────────────── */
+.change-log-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.change-log-entry {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-left: 4px solid #2563eb;
+  border-radius: 12px;
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.change-log-date {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #5b6b81;
+  margin: 0 0 0.35rem;
+}
+
+.change-log .change-log-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.6rem;
+}
+
+.change-log-exams {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0 0 0.85rem;
+}
+
+.change-log-exam {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #1e40af;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 5px;
+  padding: 0.15rem 0.5rem;
+}
+
+.change-log-what p,
+.change-log-who,
+.change-log-source {
+  font-size: 0.9rem;
+  color: #334155;
+  line-height: 1.7;
+}
+
+.change-log-who,
+.change-log-source {
+  margin: 0.25rem 0 0;
+}
+
+.change-log-source {
+  color: #5b6b81;
+  font-size: 0.85rem;
+  margin-top: 0.6rem;
+}
+
 .course-modules {
   list-style: none;
   padding: 0;

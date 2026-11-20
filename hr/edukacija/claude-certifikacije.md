@@ -139,7 +139,8 @@ sections:
       Cijene su službene cijene ispita; pri plaćanju se uračunava eventualni
       partnerski popust. Probna pitanja su na engleskom.
       Podaci o ispitima se mijenjaju, zato prije prijave provjerite aktualni
-      vodič. Zadnja provjera 18. studenoga 2026.
+      vodič; [pregled promjena po datumima](/hr/edukacija/claude-certifikacije-promjene/)
+      navodi što se promijenilo i kada. Zadnja provjera 18. studenoga 2026.
 
   - type: course-overview.html
     section_id: choose
@@ -222,6 +223,8 @@ sections:
           Architect – Professional zadržavaju domene s novim udjelima. Architect
           – Foundations se ne mijenja. Svoje tečajeve usklađujem s novim
           vodičima prije svakog održavanja nakon tog datuma.
+          Detalje po domenama donosi
+          [pregled promjena](/hr/edukacija/claude-certifikacije-promjene/).
 
       - q: Koliko vrijedi Claude certifikat?
         a: >-

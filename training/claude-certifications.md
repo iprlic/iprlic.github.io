@@ -138,8 +138,9 @@ sections:
       [certification eligibility page](https://anthropic-partners.skilljar.com/page/certification-eligibility).
       Where 70 items are listed, 10 are unscored and not identified. Fees are
       list prices; the price at checkout reflects any partner discount.
-      Exam details change, so check the current exam guide before you book.
-      Last checked 18 November 2026.
+      Exam details change, so check the current exam guide before you book;
+      the [dated log of program changes](/training/claude-certification-changes/)
+      lists what changed and when. Last checked 18 November 2026.
 
   - type: course-overview.html
     section_id: choose
@@ -220,7 +221,9 @@ sections:
           domains are regrouped from seven into six; Developer – Foundations
           and Architect – Professional keep their domains with new weights.
           Architect – Foundations is unchanged. My prep courses are reviewed
-          against the new guides before any delivery after that date.
+          against the new guides before any delivery after that date. The
+          [program changes log](/training/claude-certification-changes/) has
+          the domain-by-domain detail.
 
       - q: How long is a Claude certification valid?
         a: >-

@@ -47,6 +47,8 @@ sections:
       s objašnjenjem svakog odgovora (na engleskom). Ne znate koji ispit
       odabrati? [Usporedite svih pet Claude certifikacija](/hr/edukacija/claude-certifikacije/)
       i provjerite [tko može polagati ispite](/hr/edukacija/claude-ispiti-uvjeti/).
+      Ponavljate gradivo? Pročitajte [Claude pojmove koji se često brkaju](/hr/edukacija/claude-pojmovi/)
+      i [pregled promjena u certifikacijama](/hr/edukacija/claude-certifikacije-promjene/).
     services:
       - title: Claude za poslovne timove
         icon: fa-user-tie
@@ -151,7 +153,8 @@ sections:
         a: >-
           Ja. Arhitekt rješenja s više od 20 godina iskustva u razvoju softvera i
           više od 10 na AWS-u, AWS Authorized Instructor, s certifikatima
-          za AWS, Google Cloud i Azure, među njima Claude Certified Architect – Professional i AWS Certified
+          za AWS, Google Cloud i Azure, među njima Claude Certified Architect – Professional, Claude Certified
+          Developer – Professional i AWS Certified
           Generative AI Developer – Professional. Svakodnevno gradim produkcijske AI
           sustave na Claudeu i AWS-u i odatle dolaze primjeri i vježbe na tečaju.
           Više na [naslovnoj stranici](/hr/).
@@ -202,7 +205,7 @@ sections:
       - q: Je li ovo službeni Anthropicov tečaj?
         a: >-
           Nije. Neovisni sam predavač, nisam povezan s Anthropicom; imam
-          certifikat Claude Certified Architect – Professional i gradim
+          certifikate Claude Certified Architect – Professional i Developer – Professional i gradim
           produkcijske sustave s Claudeom. Tečajevi za Claude pripremaju za
           četiri Claude certifikacijska ispita, ali nijedan moj tečaj nije
           službeni Anthropicov tečaj. Ispiti se
