@@ -89,7 +89,9 @@ sections:
           Anyone can use the
           [free practice questions on CertDrill](https://certdrill.io/exams/): a
           free set for each exam. They show what the
-          exams test, whether or not you can register yet.
+          exams test, whether or not you can register yet. CertDrill's
+          [eligibility guide](https://certdrill.io/guides/eligibility/) covers
+          who to ask when your account or email is not accepted.
       - title: Join the Claude Partner Network
         text: >-
           Companies that build or deliver Claude solutions for clients can

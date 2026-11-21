@@ -137,7 +137,9 @@ sections:
       7 December 2026, and Anthropic's
       [certification eligibility page](https://anthropic-partners.skilljar.com/page/certification-eligibility).
       Where 70 items are listed, 10 are unscored and not identified. Fees are
-      list prices; the price at checkout reflects any partner discount.
+      list prices; the price at checkout reflects any partner discount. The
+      same comparison, with practice question counts, is on
+      [CertDrill](https://certdrill.io/exams/#compare).
       Exam details change, so check the current exam guide before you book;
       the [dated log of program changes](/training/claude-certification-changes/)
       lists what changed and when. Last checked 18 November 2026.

@@ -377,7 +377,9 @@ sections:
     note: >-
       Practise the pairs on real exam-style questions: the
       [free practice questions on CertDrill](https://certdrill.io/exams/)
-      cover every exam. Exam formats change; see the
+      cover every exam, and its
+      [common confusions guide](https://certdrill.io/guides/common-confusions/)
+      adds more pairs. Exam formats change; see the
       [dated log of program changes](/training/claude-certification-changes/).
       Feature details checked against Anthropic's documentation on
       20 November 2026.
