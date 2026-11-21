@@ -99,6 +99,16 @@ sections:
           agentom koji radi za proces iz vlastitog posla i s načinom da provjeri
           koliko je pouzdan.
           [Pogledajte program tečaja](/hr/edukacija/ai-agenti/).
+      - title: AI u reguliranim djelatnostima i javnom sektoru
+        icon: fa-shield-alt
+        text: >-
+          **2 dana za vašu organizaciju.** Novo. Za sigurnost, zaštitu podataka,
+          pravne službe i IT u državnoj i javnoj upravi, zdravstvu, energetici i
+          financijama: EU Akt o umjetnoj inteligenciji, GDPR i Zakon o
+          kibernetičkoj sigurnosti u praksi, povjerljivi i klasificirani podaci,
+          sigurnost AI asistenata i agenata, provjera dobavljača i upravljanje.
+          Odlazite s razvrstanim slučajevima primjene i planom uvođenja.
+          [Pogledajte program tečaja](/hr/edukacija/ai-regulirane-djelatnosti/).
       - title: AI strategija za upravu
         icon: fa-compass
         text: >-

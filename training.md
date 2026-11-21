@@ -95,6 +95,15 @@ sections:
           each participant leaves with a working agent for a process from their
           own job, and a way to check that it is reliable.
           [See the course outline](/training/build-ai-agents/).
+      - title: AI in Regulated and Public-Sector Organisations
+        icon: fa-shield-alt
+        text: >-
+          **2 days in-house.** New. For security, data protection, legal and IT
+          leads in regulated industries and government: the EU AI Act, GDPR and
+          NIS2 in practice, keeping confidential and classified information out
+          of the wrong systems, securing AI assistants and agents, vendor due
+          diligence and governance. You leave with classified use cases and a
+          rollout plan. [See the course outline](/training/ai-regulated-public-sector/).
       - title: AI Strategy for Leaders
         icon: fa-compass
         text: >-

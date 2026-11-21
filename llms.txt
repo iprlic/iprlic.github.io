@@ -30,6 +30,7 @@ Anthropic updates the CCAO-F, CCDV-F and CCAR-P exam content on 7 December 2026;
 ## Practical AI courses (not tied to an exam)
 
 - [Build AI Agents with Claude](https://prlic.io/training/build-ai-agents/): no coding, for business professionals. Eight live two-hour sessions as a 6-week online cohort (16 hours), or 3 days in-house for one team, online or on site. Each participant builds a working agent for a process from their own job. Croatian: [Izgradite AI agente s Claudeom](https://prlic.io/hr/edukacija/ai-agenti/).
+- [AI in Regulated and Public-Sector Organisations](https://prlic.io/training/ai-regulated-public-sector/): new, 2 days in-house, for security, data protection, legal and IT leads in regulated industries and government. EU AI Act, GDPR and NIS2 in practice, confidential and classified information, securing AI assistants and agents, vendor due diligence, governance; ends with classified use cases, a reference architecture and a rollout plan. Online or on site, English or Croatian. Croatian: [AI u reguliranim djelatnostima i javnom sektoru](https://prlic.io/hr/edukacija/ai-regulirane-djelatnosti/).
 - AI Strategy for Leaders: half a day, for leadership teams; where AI pays off, risk and governance including the EU AI Act, build versus buy, a prioritised use-case shortlist and a 90-day plan. Online or on site. Outline on request.
 - Claude Code for Engineering Teams: 2 days, hands-on, for software engineers; CLAUDE.md, plan mode, skills, subagents, hooks, MCP, CI and headless use, security and cost. Outline on request.
 

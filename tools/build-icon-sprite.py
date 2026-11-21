@@ -44,6 +44,7 @@ ICONS = {
     "envelope": "solid",
     "globe": "solid",
     "compass": "solid",
+    "shield-alt": "solid",
     "github": "brands",
     "linkedin": "brands",
 }
