@@ -15,7 +15,7 @@ title: Izgradite AI agente s Claudeom, tečaj bez programiranja
 description: >-
   Tečaj bez programiranja za poslovne timove: izgradite Claude agenta za proces iz svog posla i naučite provjeriti je li pouzdan. 6 tjedana ili 3 dana.
 
-last_updated: 2026-11-18
+last_updated: 2026-11-25
 # Course JSON-LD (_includes/course-schema.html); price_from only where the price is published.
 course:
   order: 5
@@ -166,8 +166,7 @@ sections:
     items:
       - q: Tko predaje?
         a: >-
-          Ja. AWS Authorized Instructor i Claude Certified Architect –
-          Professional, s više od 20 godina iskustva u razvoju softvera.
+          Ja. AWS Authorized Instructor sam i imam svih pet Claude certifikata, s više od 20 godina iskustva u razvoju softvera.
           Svakodnevno gradim produkcijske Claude sustave, primjerice privatnu
           Claude platformu s punim audit tragom na Amazon Bedrocku za reguliranu
           organizaciju i interni marketplace Claude Code pluginova, pa na tečaju

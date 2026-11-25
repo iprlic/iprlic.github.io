@@ -15,7 +15,7 @@ title: Claude Certified Developer Exam Prep Course (CCDV-F)
 description: >-
   Two-day hands-on Claude course for developers: Claude API, prompts, tools and MCP, agents, Claude Code, security and evals. Prepares for CCDV-F.
 
-last_updated: 2026-11-18
+last_updated: 2026-11-25
 # Course JSON-LD (_includes/course-schema.html); price_from only where the price is published.
 course:
   order: 2
@@ -165,9 +165,7 @@ sections:
     items:
       - q: Who teaches the course?
         a: >-
-          I do. I am an AWS Authorized Instructor and Claude Certified Architect –
-          Professional, I have passed the Claude Certified Developer – Foundations
-          exam myself, and I have 20+ years in software. My day job is building
+          I do. I am an AWS Authorized Instructor, I hold all five Claude certifications, including Claude Certified Developer – Foundations (the exam this course prepares for) and Developer – Professional, and I have 20+ years in software. My day job is building
           production Claude systems, such as a private, auditable Claude platform
           on Amazon Bedrock for a regulated organisation and an internal Claude
           Code plugin marketplace, and the labs come from that work. More on the

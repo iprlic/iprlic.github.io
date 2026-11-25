@@ -15,7 +15,7 @@ title: Claude Certified Architect Exam Prep Course (CCAR-F)
 description: >-
   Two-day Claude course for architects: agentic loops, multi-agent systems, MCP, Claude Code in CI, structured output, reliability. Prepares for CCAR-F.
 
-last_updated: 2026-11-18
+last_updated: 2026-11-25
 # Course JSON-LD (_includes/course-schema.html); price_from only where the price is published.
 course:
   order: 3
@@ -159,8 +159,7 @@ sections:
     items:
       - q: Who teaches the course?
         a: >-
-          I do. I am an AWS Authorized Instructor and Claude Certified Architect –
-          Professional with 20+ years in software. My day job is designing
+          I do. I am an AWS Authorized Instructor, I hold all five Claude certifications, including Claude Certified Architect – Foundations and Professional, and I have 20+ years in software. My day job is designing
           production Claude systems, such as a private, auditable Claude platform
           on Amazon Bedrock for a regulated organisation and an internal Claude
           Code plugin marketplace, and the design cases come from that work. More

@@ -163,9 +163,7 @@ sections:
         a: >-
           Ja. Arhitekt rješenja s više od 20 godina iskustva u razvoju softvera i
           više od 10 na AWS-u, AWS Authorized Instructor, s certifikatima
-          za AWS, Google Cloud i Azure, među njima Claude Certified Architect – Professional, Claude Certified
-          Developer – Professional i AWS Certified
-          Generative AI Developer – Professional. Svakodnevno gradim produkcijske AI
+          za AWS, Google Cloud i Azure, među njima svih pet Claude certifikata (Architect i Developer do razine Professional) i AWS Certified Generative AI Developer – Professional. Svakodnevno gradim produkcijske AI
           sustave na Claudeu i AWS-u i odatle dolaze primjeri i vježbe na tečaju.
           Više na [naslovnoj stranici](/hr/).
 

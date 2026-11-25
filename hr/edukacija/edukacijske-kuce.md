@@ -121,8 +121,7 @@ sections:
       - q: Tko predaje?
         a: >-
           Ja, osobno. Arhitekt rješenja s više od 20 godina iskustva u razvoju
-          softvera i više od 10 na AWS-u, AWS Authorized Instructor i Claude
-          Certified Architect – Professional. Svakodnevno gradim produkcijske
+          softvera i više od 10 na AWS-u, AWS Authorized Instructor i imam svih pet Claude certifikata. Svakodnevno gradim produkcijske
           AI sustave na Claudeu i AWS-u, poput privatne Claude platforme s punim
           audit tragom na Amazon Bedrocku za reguliranu
           organizaciju. Više na [naslovnoj stranici](/hr/).

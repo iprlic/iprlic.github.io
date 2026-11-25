@@ -15,7 +15,7 @@ title: Claude Certified Associate Exam Prep Course (CCAO-F)
 description: >-
   One-day Claude course for business teams, no coding: prompting, checking output, workflows and safe use. Prepares for the CCAO-F exam.
 
-last_updated: 2026-11-18
+last_updated: 2026-11-25
 # Course JSON-LD (_includes/course-schema.html); price_from only where the price is published.
 course:
   order: 1
@@ -161,9 +161,7 @@ sections:
     items:
       - q: Who teaches the course?
         a: >-
-          I do. I am an AWS Authorized Instructor and Claude Certified Architect –
-          Professional, I have passed the Claude Certified Associate – Foundations
-          exam myself, and I have 20+ years in software. My day job is building
+          I do. I am an AWS Authorized Instructor, I hold all five Claude certifications, from Claude Certified Associate – Foundations (the exam this course prepares for) to Architect and Developer – Professional, and I have 20+ years in software. My day job is building
           production Claude systems, such as a private, auditable Claude platform
           on Amazon Bedrock for a regulated organisation and an internal Claude
           Code plugin marketplace, and the course examples come from that work.

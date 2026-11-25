@@ -15,7 +15,7 @@ title: Tečaj za ispit Claude Certified Architect (CCAR-F)
 description: >-
   Dvodnevni tečaj za arhitekte: agentske petlje, sustavi s više agenata, MCP, Claude Code u CI-ju, strukturirani izlaz i pouzdanost. Priprema za CCAR-F.
 
-last_updated: 2026-11-18
+last_updated: 2026-11-25
 # Course JSON-LD (_includes/course-schema.html); price_from only where the price is published.
 course:
   order: 3
@@ -160,8 +160,7 @@ sections:
     items:
       - q: Tko predaje?
         a: >-
-          Ja. AWS Authorized Instructor i Claude Certified Architect –
-          Professional, s više od 20 godina iskustva u razvoju softvera.
+          Ja. AWS Authorized Instructor sam i imam svih pet Claude certifikata, uključujući Claude Certified Architect – Foundations i Professional, s više od 20 godina iskustva u razvoju softvera.
           Svakodnevno projektiram produkcijske Claude sustave, primjerice
           privatnu Claude platformu s punim audit tragom na Amazon Bedrocku za
           reguliranu organizaciju i interni marketplace Claude Code pluginova, i

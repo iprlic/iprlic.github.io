@@ -15,7 +15,7 @@ title: Tečaj za ispit Claude Certified Architect Professional (CCAR-P)
 description: >-
   Trodnevni tečaj za iskusne arhitekte: dizajn rješenja, RAG, MCP i identitet, evaluacija, upravljanje i osposobljavanje tima. Priprema za CCAR-P.
 
-last_updated: 2026-11-18
+last_updated: 2026-11-25
 # Course JSON-LD (_includes/course-schema.html); price_from only where the price is published.
 course:
   order: 4
@@ -166,8 +166,7 @@ sections:
     items:
       - q: Tko predaje?
         a: >-
-          Ja. AWS Authorized Instructor s certifikatom Claude Certified
-          Architect – Professional, upravo onim za koji ovaj tečaj priprema.
+          Ja. AWS Authorized Instructor sam i imam svih pet Claude certifikata, uključujući Claude Certified Architect – Professional, upravo onaj za koji ovaj tečaj priprema.
           Svakodnevno projektiram produkcijske Claude sustave, primjerice
           privatnu Claude platformu s punim audit tragom na Amazon Bedrocku za
           reguliranu organizaciju i interni marketplace Claude Code pluginova, i

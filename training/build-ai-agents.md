@@ -15,7 +15,7 @@ title: Build AI Agents with Claude, a No-Code Course
 description: >-
   No-code course for business teams: build a working Claude agent for a process from your own job and learn to check it is reliable. 6 weeks or 3 days.
 
-last_updated: 2026-11-18
+last_updated: 2026-11-25
 # Course JSON-LD (_includes/course-schema.html); price_from only where the price is published.
 course:
   order: 5
@@ -166,8 +166,7 @@ sections:
     items:
       - q: Who teaches the course?
         a: >-
-          I do. I am an AWS Authorized Instructor and Claude Certified Architect –
-          Professional, with 20+ years in software. My day job is building
+          I do. I am an AWS Authorized Instructor and hold all five Claude certifications, with 20+ years in software. My day job is building
           production Claude systems, such as a private, auditable Claude platform
           on Amazon Bedrock for a regulated organisation and an internal Claude
           Code plugin marketplace, so the course shows what holds up in real use.

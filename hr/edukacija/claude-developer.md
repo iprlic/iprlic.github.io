@@ -15,7 +15,7 @@ title: Tečaj za ispit Claude Certified Developer (CCDV-F)
 description: >-
   Dvodnevni praktični tečaj za programere: Claude API, upute, alati i MCP, agenti, Claude Code, sigurnost i evaluacija. Priprema za ispit CCDV-F.
 
-last_updated: 2026-11-18
+last_updated: 2026-11-25
 # Course JSON-LD (_includes/course-schema.html); price_from only where the price is published.
 course:
   order: 2
@@ -167,9 +167,7 @@ sections:
     items:
       - q: Tko predaje?
         a: >-
-          Ja. AWS Authorized Instructor i Claude Certified Architect –
-          Professional, i sam sam položio ispit Claude Certified Developer –
-          Foundations, a u razvoju softvera radim više od 20 godina.
+          Ja. AWS Authorized Instructor sam i imam svih pet Claude certifikata, uključujući Claude Certified Developer – Foundations (ispit za koji ovaj tečaj priprema) i Developer – Professional, a u razvoju softvera radim više od 20 godina.
           Svakodnevno gradim produkcijske Claude sustave, primjerice privatnu
           Claude platformu s punim audit tragom na Amazon Bedrocku za reguliranu
           organizaciju i interni marketplace Claude Code pluginova, i odatle

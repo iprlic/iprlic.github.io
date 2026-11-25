@@ -15,7 +15,7 @@ title: Claude Certified Architect Professional Exam Prep Course (CCAR-P)
 description: >-
   Three-day course for senior architects: solution design, RAG, MCP and identity, evals, governance and team enablement on Claude. Prepares for CCAR-P.
 
-last_updated: 2026-11-18
+last_updated: 2026-11-25
 # Course JSON-LD (_includes/course-schema.html); price_from only where the price is published.
 course:
   order: 4
@@ -165,8 +165,7 @@ sections:
     items:
       - q: Who teaches the course?
         a: >-
-          I do. I am an AWS Authorized Instructor and hold Claude Certified
-          Architect – Professional, the certification this course prepares for.
+          I do. I am an AWS Authorized Instructor and hold all five Claude certifications, including Claude Certified Architect – Professional, the certification this course prepares for.
           My day job is designing production Claude systems, such as a private,
           auditable Claude platform on Amazon Bedrock for a regulated
           organisation and an internal Claude Code plugin marketplace, and the

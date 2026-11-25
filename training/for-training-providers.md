@@ -121,8 +121,7 @@ sections:
       - q: Who teaches?
         a: >-
           I do, personally. I am a solutions architect
-          with 20+ years in software and 10+ on AWS, an AWS Authorized
-          Instructor and Claude Certified Architect – Professional. My day job
+          with 20+ years in software and 10+ on AWS, an AWS Authorized Instructor and holder of all five Claude certifications. My day job
           is building production AI on Claude and AWS, such as a private,
           auditable Claude platform on Amazon Bedrock for a regulated
           organisation. More on the [home page](/).
