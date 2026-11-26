@@ -6,10 +6,10 @@ ref: talks
 locale: hr_HR
 title: Predavanja
 description: >-
-  Predavanja Ivana Prlića na konferencijama o privatnoj, auditabilnoj generativnoj umjetnoj inteligenciji i cloud arhitekturi, sa slajdovima.
+  Predavanja Ivana Prlića na konferencijama o privatnoj, auditabilnoj generativnoj umjetnoj inteligenciji i cloud arhitekturi.
 header:
   title: Predavanja
-  text: Slajdovi i bilješke s predavanja o uvođenju AI-ja u produkciju u reguliranim organizacijama.
+  text: Predavanja o uvođenju AI-ja u produkciju u reguliranim organizacijama.
 labels:
   date_format: "%-d. %-m. %Y."
   slides: Slajdovi (PDF)

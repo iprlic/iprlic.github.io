@@ -31,19 +31,27 @@ layout: base
             {{ talk.event.name }} · {{ talk.date | date: l.date_format }}{% if talk.talk_lang != lang %} · {{ l.in_lang[talk.talk_lang] }}{% endif %}
           </div>
           <h2 class="case-study-title talk-title">{{ talk.title }}</h2>
-          <p class="talk-meta">{{ talk.track[lang] }} · {{ talk.place[lang] }}</p>
+          <p class="talk-meta">{% if talk.track %}{{ talk.track[lang] }} · {% endif %}{{ talk.place[lang] }}</p>
           <p class="case-study-body">{{ talk.summary[lang] }}</p>
+          {% assign talk_day = talk.date | date: "%Y%m%d" | plus: 0 %}
+          {% assign build_day = site.time | date: "%Y%m%d" | plus: 0 %}
+          {% assign pending = false %}
+          {% unless talk.slides %}{% if talk_day >= build_day %}{% assign pending = true %}{% endif %}{% endunless %}
+          {% if talk.slides or talk.video or talk.event.url or pending %}
           <div class="talk-links">
             {% if talk.slides %}
             <a class="btn btn-primary btn-sm" href="{{ talk.slides | relative_url }}">{{ l.slides }}</a>
-            {% else %}
+            {% elsif pending %}
             <span class="talk-pending">{{ l.slides_pending }}</span>
             {% endif %}
             {% if talk.video %}
             <a class="btn btn-outline-primary btn-sm" href="{{ talk.video }}" target="_blank" rel="noopener">{{ l.video }}</a>
             {% endif %}
+            {% if talk.event.url %}
             <a class="talk-event-link" href="{{ talk.event.url }}" target="_blank" rel="noopener">{{ l.event }}</a>
+            {% endif %}
           </div>
+          {% endif %}
         </article>
         {% endfor %}
         <p class="talk-contact">{{ l.contact }} <a href="mailto:ivan@prlic.io">ivan@prlic.io</a></p>

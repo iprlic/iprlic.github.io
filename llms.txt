@@ -7,7 +7,7 @@ Facts on this page are taken from prlic.io. Prices are "from" prices in EUR, exc
 ## About Ivan
 
 - [Home: AI advisory and cloud architecture](https://prlic.io/): 20+ years in software and 10+ on AWS; AWS Authorized Instructor; certifications across AWS, Google Cloud, Azure and Claude, including Claude Certified Architect – Professional and AWS Certified Generative AI Developer – Professional. Builds production AI on Claude and Amazon Bedrock for regulated organisations. Works remotely across EU and US time zones and travels only to deliver on-site training. English (C2) and Croatian (native).
-- [Conference talks](https://prlic.io/talks/): talks with slides.
+- [Conference talks](https://prlic.io/talks/): conference talks on private, auditable generative AI.
 - [Croatian version of the site](https://prlic.io/hr/)
 
 ## Claude training (certification exam preparation)

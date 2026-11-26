@@ -6,10 +6,10 @@ ref: talks
 locale: en_US
 title: Talks
 description: >-
-  Conference talks by Ivan Prlić on private, auditable generative AI and cloud architecture, with slides.
+  Conference talks by Ivan Prlić on private, auditable generative AI and cloud architecture.
 header:
   title: Talks
-  text: Slides and notes from conference talks on putting AI into production in regulated organisations.
+  text: Conference talks on putting AI into production in regulated organisations.
 labels:
   date_format: "%-d %b %Y"
   slides: Slides (PDF)

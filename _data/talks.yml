@@ -2,33 +2,30 @@
 # /hr/predavanja/ (hr); fields with en/hr keys are per language, the rest shared.
 #
 # `id` is the anchor (/talks/#<id>) and must never change once a QR code or
-# link points at it. Leave `slides` empty until the cleaned PDF is uploaded to
-# /assets/talks/<id>/; the page then shows `slides_pending` instead of a link.
+# link points at it. `slides`, `video`, `event.url` and `track` are optional;
+# leave a field empty and nothing is shown for it. Before the talk date, an
+# entry without slides shows `slides_pending`; after it, nothing.
 #
 # Public only: the client is never named and never called a bank, and nothing
 # goes here that is not already on the slides.
 
-- id: ai2future-2026
-  date: 2026-10-29
-  title: Shadow AI Is Already in Your Company. Here Is What We Built Instead.
-  talk_lang: en
+- id: voogle-2026
+  date: 2026-11-12
+  title: "Private Claude Deployment: How to Give Your Employees an AI Tool and Keep Control"
+  talk_lang: hr
   event:
-    name: AI2Future 2026
-    url: https://ai2future.com/
+    name: kAI? by Voogle 2026
   place:
-    en: Kraš Auditorium, Zagreb
-    hr: Kraš Auditorium, Zagreb
-  track:
-    en: Business & Implementation track
-    hr: Business & Implementation
+    en: HNK Varaždin
+    hr: HNK Varaždin
   summary:
     en: >-
-      How a customer in a regulated industry replaced shadow AI with a private,
-      EU-hosted AI assistant for a hundred non-technical users, and what it took
-      to get the auditors to sign off.
+      Employees already use AI on company documents, often through private
+      accounts. How a customer in a regulated industry gave its staff an
+      approved, EU-hosted Claude assistant with controlled access, data
+      safeguards and an audit trail, and what it costs to run.
     hr: >-
-      Kako je naručitelj iz reguliranog sektora shadow AI zamijenio privatnim AI
-      asistentom u EU za stotinjak netehničkih korisnika, i što je trebalo da ga
-      revizori odobre.
-  slides:
-  video:
+      Zaposlenici već koriste AI za rad s dokumentima tvrtke, često preko
+      privatnih računa. Kako je naručitelj iz reguliranog sektora svojim
+      zaposlenicima dao odobreni Claude asistent u EU, s kontroliranim
+      pristupom, zaštitom podataka i revizijskim zapisom, i koliko to košta.
