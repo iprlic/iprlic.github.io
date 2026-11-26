@@ -2,18 +2,24 @@
 en:
   copyright: '&copy; 2026 Prlić Consulting d.o.o.'
   privacy: 'Visit statistics by Cloudflare Web Analytics: no cookies, no personal data.'
+  legal: 'Prlić Consulting d.o.o. za usluge, Malogorička ulica 42, 10000 Zagreb, Croatia. Registered at the Commercial Court in Zagreb, MBS 081127680. OIB / VAT ID HR84570551730. Share capital EUR 2,654.46 (HRK 20,000.00), paid in full. Director: Ivan Prlić. Bank: Revolut Bank UAB, IBAN LT70 3250 0738 9769 1945.'
   links:
     - text: Training
       url: /training/
+    - text: Privacy
+      url: /privacy/
     - text: LinkedIn
       url: https://www.linkedin.com/in/iprlic/
       new_window: true
 hr:
   copyright: '&copy; 2026 Prlić Consulting d.o.o.'
   privacy: 'Statistika posjeta: Cloudflare Web Analytics, bez kolačića i osobnih podataka.'
+  legal: 'Prlić Consulting d.o.o. za usluge, Malogorička ulica 42, 10000 Zagreb. Upisano u sudski registar Trgovačkog suda u Zagrebu, MBS 081127680. OIB 84570551730. Temeljni kapital 2.654,46 EUR (20.000,00 kn), uplaćen u cijelosti. Uprava: Ivan Prlić, direktor. Banka: Revolut Bank UAB, IBAN LT70 3250 0738 9769 1945.'
   links:
     - text: Edukacija
       url: /hr/edukacija/
+    - text: Privatnost
+      url: /hr/privatnost/
     - text: LinkedIn
       url: https://www.linkedin.com/in/iprlic/
       new_window: true

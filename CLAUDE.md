@@ -41,6 +41,8 @@ This is a Jekyll static site deployed to GitHub Pages at `prlic.io` (CNAME). It 
 | `hr/edukacija/ai-agenti.md` | `/hr/edukacija/ai-agenti/` | hr | `training-build-ai-agents` | Croatian equivalent |
 | `training/ai-regulated-public-sector.md` | `/training/ai-regulated-public-sector/` | en | `training-ai-regulated-public-sector` | Course page: AI in Regulated and Public-Sector Organisations (2 days in-house, not exam-linked; EU AI Act, GDPR, NIS2, classified information, AI security, procurement, governance). Promo only, added 21 Nov 2026: no slides yet, CTA is "Register interest"; remove the "New course" note once the first run is booked. Linked from the `#practical-ai` section |
 | `hr/edukacija/ai-regulirane-djelatnosti.md` | `/hr/edukacija/ai-regulirane-djelatnosti/` | hr | `training-ai-regulated-public-sector` | Croatian equivalent (adds Croatian law: Zakon o provedbi Opće uredbe o zaštiti podataka, Zakon o kibernetičkoj sigurnosti, Zakon o tajnosti podataka levels) |
+| `privacy.md` | `/privacy/` | en | `privacy` | Privacy notice (GDPR Art. 13: controller, e-mail enquiries, Calendly, Cloudflare Web Analytics, GitHub Pages hosting, Google Fonts, retention, rights, AZOP). Linked from the footer. Update when a processor changes (e.g. if Inter is self-hosted, drop Google Fonts) |
+| `hr/privatnost.md` | `/hr/privatnost/` | hr | `privacy` | Croatian equivalent |
 | `training/claude-mock-exams.html` | `/training/claude-mock-exams/` | - | - | Redirect stub to `https://certdrill.io/exams/` (the old self-hosted practice app was removed); `sitemap: false`, `noindex`, canonical to certdrill.io. Keep it: the URL was public |
 | `training/claude-certifications.md` | `/training/claude-certifications/` | en | `training-claude-certifications` | Guide: "Which Claude certification should I take?" One comparison table of all five exams (`comparison-table.html`), how to choose by role, FAQ. Linked from the `#claude` intro, every course page's exam section. Update it whenever an exam guide changes |
 | `hr/edukacija/claude-certifikacije.md` | `/hr/edukacija/claude-certifikacije/` | hr | `training-claude-certifications` | Croatian equivalent |
@@ -166,7 +168,7 @@ All body text meets WCAG AA (4.5:1). The greys are chosen for it: `#5b6b81` is t
 
 Anchor-only URLs (`#work`) are emitted bare and get the theme's smooth scroll; everything else goes through `relative_url`. Do not pipe `#foo` through `relative_url` — it becomes `/#foo` and jumps to the homepage from any subpage.
 
-**`_data/footer.yml`** contains the footer copyright string.
+**`_data/footer.yml`** contains the footer copyright string, the analytics note, and `legal`: the company details a Croatian d.o.o. must show on its website (ZTD Art. 21 / ZET Art. 6: full name, seat, registry court and MBS 081127680, OIB, share capital and that it is paid in full, director, bank and IBAN). Keep them in step with the court register; never add Ivan's phone number.
 
 The `_site/` directory is build output — never edit it directly, it's gitignored.
 
