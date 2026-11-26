@@ -65,6 +65,12 @@ defaults:
       path: ""
     values:
       image: /assets/img/og-image.png
+  # Talk slides are shared by direct link only: keep them out of the sitemap
+  # (and so out of IndexNow submissions).
+  - scope:
+      path: "assets/talks"
+    values:
+      sitemap: false
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
